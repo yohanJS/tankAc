@@ -4,7 +4,7 @@
   <nav id="home" class="navbar bg-color p-0 shadow-lg" v-if="isMobile">
     <div class="container-fluid">
       <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-        <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 60px; height: 60px;" />
+        <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 80px; height: 60px;" />
         <div>
           TANK A/C & HEAT
           <br />
@@ -90,7 +90,7 @@
   </div>
   
   <!-- Right Column for Text -->
-  <div class="col-6 d-flex flex-column justify-content-center text-center">
+  <div class="col-6 d-flex flex-column justify-content-center">
     <h3 class="text-white">AC REPAIR</h3>
     <p>
       Get your air conditioner 
@@ -102,7 +102,7 @@
   </div>
   
   <!-- Right Column for Text -->
-  <div class="col-6 d-flex flex-column justify-content-center text-center">
+  <div class="col-6 d-flex flex-column justify-content-center">
     <h3 class="text-white">AC MAINTENANCE</h3>
     <p>
       Keep your cooling 
@@ -123,7 +123,7 @@
   </div>
   
   <!-- Right Column for Text -->
-  <div class="col-6 d-flex flex-column justify-content-center text-center">
+  <div class="col-6 d-flex flex-column justify-content-center">
     <h3 class="text-white">AC INSTALLATION</h3>
     <p>
       Trust our experts for seamless 
