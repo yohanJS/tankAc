@@ -77,7 +77,7 @@
             Book Visit
             <i class="bi bi-chevron-double-right"></i>
           </router-link>
-          <button type="button" class="btn btn-color text-color btn-sm">Call Now</button>
+          <button type="button" class="btn btn-color btn-sm"><a href="tel:+6494461709" class="text-decoration-none text-color">Call Now</a></button>
         </div>
       </div>
     </div>
