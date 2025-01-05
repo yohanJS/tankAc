@@ -3,14 +3,13 @@
   <!-- MOBILE VERSION -->
   <nav id="home" class="navbar bg-color p-0 shadow-lg" v-if="isMobile">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <a class="navbar-brand fw-bold d-flex align-items-center m-0" href="#">
         <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 80px; height: 60px;" />
-        <div>
-          TANK A/C & HEAT
-          <br />
-          <span class="fw-bold" style="font-size: 0.7rem;">VETERAN OWNED</span>
-        </div>
       </a>
+      <div class="col">
+          <h3 class="m-0">TANK A/C & HEAT</h3>
+          <p class="fw-bold m-0" style="font-size: 0.7rem;">VETERAN OWNED</p>
+        </div>
       <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span>
