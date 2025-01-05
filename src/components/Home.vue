@@ -88,7 +88,7 @@
 /* HERO SECTION CSS */
 .hero-section {
   position: relative;
-  background: url('../assets/heroImg.png') no-repeat center center/cover;
+  background: url('../assets/heroImg.png') no-repeat left center/cover;
   min-height: 400px;
   display: flex;
   flex-direction: column;
