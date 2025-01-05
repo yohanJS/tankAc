@@ -82,7 +82,8 @@
 </div>
 
 <!--SERVICES SECTION-->
-<div class="row bg-color">
+<div class="container-fluid">
+  <div class="row bg-color">
   <!-- Left Column for Image -->
   <div class="col-6 p-0">
     <img src="../assets/serviceImg1.png" class="img-fluid w-100" alt="AC Repair">
@@ -131,6 +132,7 @@
       to your needs.
     </p>
   </div>
+</div>
 </div>
 
 </template>
