@@ -82,7 +82,56 @@
 </div>
 
 <!--SERVICES SECTION-->
+<div class="row bg-color">
+  <!-- Left Column for Image -->
+  <div class="col-6 p-0">
+    <img src="../assets/serviceImg1.png" class="img-fluid w-100" alt="AC Repair">
+  </div>
+  
+  <!-- Right Column for Text -->
+  <div class="col-6 d-flex flex-column justify-content-center text-center">
+    <h3 class="text-white">AC REPAIR</h3>
+    <p>
+      Get your air conditioner 
+      back to optimal 
+      performance with 
+      our fast, reliable repair 
+      services.
+    </p>
+  </div>
+  
+  <!-- Right Column for Text -->
+  <div class="col-6 d-flex flex-column justify-content-center text-center">
+    <h3 class="text-white">AC MAINTENANCE</h3>
+    <p>
+      Keep your cooling 
+      system running 
+      efficiently year-round 
+      with our comprehensive
+      maintenance plans.
+    </p>
+  </div>
+     <!-- Left Column for Image -->
+     <div class="col-6 p-0">
+    <img src="../assets/serviceImg2.png" class="img-fluid w-100" alt="AC Repair">
+  </div>
 
+   <!-- Left Column for Image -->
+   <div class="col-6 p-0">
+    <img src="../assets/serviceImg3.png" class="img-fluid w-100" alt="AC Repair">
+  </div>
+  
+  <!-- Right Column for Text -->
+  <div class="col-6 d-flex flex-column justify-content-center text-center">
+    <h3 class="text-white">AC INSTALLATION</h3>
+    <p>
+      Trust our experts for seamless 
+      and energy-efficient AC 
+      installations tailored 
+      to your needs.
+    </p>
+  </div>
+</div>
 
 </template>
 
@@ -118,7 +167,7 @@
 }
 
 .btn-color {
-  background-color: #c75e5e;
+  background-color: #d9d9d9;
 }
 
 .btn-grad {
