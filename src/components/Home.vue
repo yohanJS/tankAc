@@ -81,6 +81,8 @@
   </div>
 </div>
 
+<!--SERVICES SECTION-->
+
 
 </template>
 
@@ -116,7 +118,7 @@
 }
 
 .btn-color {
-  background-color: #d9d9d9;
+  background-color: #c75e5e;
 }
 
 .btn-grad {
@@ -141,7 +143,7 @@
 }
 
 .toggler-icon {
-  width: 20px;
+  width: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
