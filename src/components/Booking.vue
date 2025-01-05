@@ -1,5 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <NavBar />
   <div id="bookingFormContainer" class="container py-2 p-2 mb-5 text-dark min-vh-100">
     <div class="text-center mb-4 mt-2">
       <div class="px-5" role="group" aria-label="First group">
@@ -206,6 +207,7 @@
         </div>
       </div>
     </form>
+
     <!--SUCCESS MODAL-->
     <div>
       <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel"
@@ -227,6 +229,7 @@
         {{ errorMessage }}
       </div>-->
     </div>
+
   </div>
 </template>
 
@@ -235,12 +238,13 @@
 import moment from 'moment';
 import axios from "axios";
 import { Modal } from "bootstrap";
+import NavBar from './NavBar.vue';
 
 export default {
   name: "BookingForm",
-  //components: {
-  //  DatePicker,
-  //},
+  components: {
+    NavBar,
+  },
   data() {
     const today = new Date();
     return {
