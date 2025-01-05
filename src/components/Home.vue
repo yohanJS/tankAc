@@ -74,8 +74,8 @@
     <div class="col-lg-6 mx-auto">
       <p class="m-0 text-white fw-bold">Help is one click away</p>
       <div class="d-flex justify-content-center gap-2 mt-3">
-        <button type="button" class="btn btn-primary btn-sm">Book Visit</button>
-        <button type="button" class="btn btn-outline-secondary btn-sm">Call Now</button>
+        <button type="button" class="btn btn-color text-color btn-sm">Book Visit</button>
+        <button type="button" class="btn btn-color text-color btn-sm">Call Now</button>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
 }
 
 .btn-color {
-  background-color: #101010;
+  background-color: #d9d9d9;
 }
 
 .btn-grad {
@@ -137,7 +137,7 @@
 }
 
 .text-color {
-  color: #cfdd51;
+  color: #E95722;
 }
 
 .toggler-icon {
