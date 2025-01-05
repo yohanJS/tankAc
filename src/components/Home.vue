@@ -1,5 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<template>
+<template id="home">
   <!--NAVBAR COMPONENT-->
   <NavBar />
   <!--HERO SECTION-->
@@ -205,6 +205,11 @@ import NavBar from './NavBar.vue';
 export default {
   components: {
     NavBar,
+  },
+  async created() {
+    await this.$nextTick();
+    const home = document.getElementById("home");
+    home.scrollIntoView({ behavior: "smooth", block: "start" });
   },
   data() {
     return {
