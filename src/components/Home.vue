@@ -65,9 +65,56 @@
       </div>
     </div>
   </nav>
+
+<!-- HERO SECTION -->
+<div class="text-center hero-section">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1 class="fw-bold text-white">PROBLEMS WITH YOUR A/C & HEATER</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="m-0 text-white fw-bold">Help is one click away</p>
+      <div class="d-flex justify-content-center gap-2 mt-3">
+        <button type="button" class="btn btn-primary btn-sm">Book Visit</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm">Call Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </template>
 
 <style scoped>
+/* HERO SECTION CSS */
+.hero-section {
+  position: relative;
+  background: url('../assets/heroImg.png') no-repeat center center/cover;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content .btn {
+  padding: 0.5rem 1.5rem;
+}
+
 .btn-color {
   background-color: #101010;
 }
