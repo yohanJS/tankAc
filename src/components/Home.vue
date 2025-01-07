@@ -55,29 +55,31 @@
     </div>
   </div>
 
-  <!--VIDEO SECTION-->
+  <!--BANNER SECTION-->
   <div class="container">
     <div class="row">
-        <!-- Basic video with controls -->
-        <iframe
-          class="p-0"
-          width="560" 
-          height="315" 
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-      </iframe>
+      <div class="col-12 p-0">
+        <img src="../assets/bannerImg.png" class="img-fluid w-100">
+      </div>
     </div>
   </div>
 
   <!--SERVICES SECTION-->
   <div class="container">
     <div class="row bg-color">
+
       <!-- Left Column for Image -->
       <div class="col-6 p-0">
-        <img src="../assets/serviceImg1.png" class="img-fluid w-100" alt="AC Repair">
+        <!-- Video Player -->
+        <video 
+          class="video-fluid w-100" 
+          autoplay 
+          muted 
+          loop 
+          controls>
+          <source src="../assets/tankVideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <!-- Right Column for Text -->
