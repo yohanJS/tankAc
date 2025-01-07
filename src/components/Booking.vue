@@ -12,18 +12,15 @@
           class="btn btn-primary m-1 rounded-5 my-bg border-0 small-btn">3</button>
         <button @click="goToStep(4)" id="step4" type="button"
           class="btn btn-primary m-1 rounded-5 my-bg border-0 small-btn">4</button>
-        <button @click="goToStep(5)" id="step5" type="button"
-          class="btn btn-primary m-1 rounded-5 my-bg border-0 small-btn">5</button>
       </div>
     </div>
 
     <form @submit.prevent="submitForm" class="box-shadow p-2 rounded-1 min-vh-100">
       <!--Booking Details-->
       <!-- Booking Details -->
-      <div v-if="step === 5 && formData.service !== ''" class="text-white p-4 m-3 rounded box-shadow">
+      <div v-if="step === 4 && formData.service !== ''" class="text-white p-4 m-3 rounded box-shadow">
         <p class="mb-3 text-center fs-6 fw-bold">Your Appointment Details:</p>
         <div class="mb-2">
-          <p class="mb-1"><strong>Meeting Type:</strong> {{ formData.meetingType }}</p>
           <p class="mb-1"><strong>Service:</strong> {{ formData.service }}</p>
           <p class="mb-1"><strong>Date:</strong> {{ formattedDate }}</p>
           <p class="mb-1"><strong>Time:</strong> {{ formattedTime }}</p>
@@ -47,34 +44,8 @@
         </div>
       </div>
 
-      <!-- Step 2 In Peson/Online/Phone-->
-      <div v-if="step === 2" class="text-center text-white p-2 mt-5">
-        <p class="text-center mb-3 mt-5 pt-2 text-white">Type of meeting</p>
-        <button @click="inPersonMeeting(true)" class="btn btn-outline-primary border-0 w-50 mb-2 text-white box-shadow">
-          <span class="f-s">
-            In Person
-            <i class="bi bi-arrow-right-circle orange-txt"></i>
-          </span>
-        </button>
-        <br />
-        <button @click="inPersonMeeting(false)" class="btn btn-outline-primary border-0 w-50 text-white box-shadow">
-          <span class="f-s">
-            Online/Phone
-            <i class="bi bi-arrow-right-circle orange-txt"></i>
-          </span>
-        </button>
-        <div class="d-flex justify-content-between rounded-2 shadow-sm mx-auto" style="max-width: 300px;">
-          <button type="button" class="btn w-25" @click="goToStep(1)">
-            <i class="bi bi-arrow-left-circle text-dark"></i>
-          </button>
-          <button type="button" class="btn w-25" @click="goToStep(3)">
-            <i class="bi bi-arrow-right-circle text-dark"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Step 3: Date -->
-      <div v-if="step === 3">
+      <!-- Step 2: Date -->
+      <div v-if="step === 2">
         <p class="text-center mb-3 mt-5 pt-2 text-white">Select date</p>
         <div class="datepicker-container m-2 mx-auto">
           <div class="calendar rounded-2">
@@ -112,8 +83,8 @@
     </div>-->
       </div>
 
-      <!-- Step 4: Time Picker -->
-      <div v-if="step === 4">
+      <!-- Step 3: Time Picker -->
+      <div v-if="step === 3">
         <p class="text-center mb-3 mt-5 pt-2 text-white">Select time</p>
         <div class="timepicker-container m-2 mx-auto rounded-2">
           <div class="time-grid">
@@ -126,14 +97,13 @@
         </div>
       </div>
 
-      <!-- Step 5: Personal Details -->
-      <div v-if="step === 5">
+      <!-- Step 4: Personal Details -->
+      <div v-if="step === 4">
         <p class="text-center mb-3 mt-5 pt-2 text-white">Enter personal details</p>
         <!--In Person-->
         <div class="p-3 m-3 rounded-2 box-shadow">
           <!--In Person-->
-          <div v-if="isInPerson">
-
+          <div>
             <div class="mb-2">
               <label for="name" class="form-label text-white">Name</label>
               <input type="text" id="name" class="form-control" v-model="formData.name" placeholder="" required />
@@ -167,24 +137,6 @@
                 <label for="zip" class="form-label text-white">ZIP Code</label>
                 <input type="text" id="zip" class="form-control" v-model="formData.zip" placeholder="" required />
               </div>
-            </div>
-          </div>
-          <!--Online/Phone-->
-          <div v-else>
-
-            <div class="mb-2">
-              <label for="name" class="form-label text-white">Name</label>
-              <input type="text" id="name" class="form-control" v-model="formData.name" placeholder="" required />
-            </div>
-
-            <div class="mb-2">
-              <label for="email" class="form-label text-white">Email</label>
-              <input type="email" id="email" class="form-control" v-model="formData.email" placeholder="" required />
-            </div>
-
-            <div class="mb-2">
-              <label for="phone" class="form-label text-white">Phone Number</label>
-              <input type="tel" id="phone" class="form-control" v-model="formData.phone" placeholder="" required />
             </div>
           </div>
           <!--Buttons Section-->
@@ -420,7 +372,7 @@ export default {
       this.selectedDate = date;
       this.formData.date = moment(date).format('YYYY/MM/DD');
       this.fetchTimes(moment(date).format('YYYY/MM/DD'));
-      this.goToStep(4);
+      this.goToStep(3);
     },
     isToday(date) {
       const today = new Date();
@@ -450,7 +402,7 @@ export default {
     selectTime(time) {
       this.selectedTime = time;
       this.formData.time = time;
-      this.goToStep(5);
+      this.goToStep(4);
     },
     async fetchTimes(date) {
       await axios.get(this.GetTimes, { params: { serviceDate: date } })
@@ -516,41 +468,32 @@ export default {
 .f-s {
   font-size: 0.8rem;
 }
-
 .orange-txt {
   color: #F28C28;
 }
-
 .max-w {
   max-width: 300px;
 }
-
 .my-bg {
-  background-color: #F28C28 !important;
+  background-color: #1a1919 !important;
 }
-
 .small-btn {
   font-size: 0.7rem !important;
 }
-
 .form-check-input {
   background-color: #000000 !important;
   border: 1px solid #2C3539;
 }
-
 p,
 label {
   font-size: 0.9rem;
 }
-
 .steel-blue-color {
   color: #4682B4;
 }
-
 .box-shadow {
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
 }
-
 .service-card {
   font-size: 0.8rem;
   background-size: cover;
@@ -563,7 +506,6 @@ label {
   /* Adjust the height as needed */
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
 }
-
 .service-card .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -572,23 +514,19 @@ label {
   right: 0;
   bottom: 0;
 }
-
 .card-header {
   font-size: 1.2rem;
 }
-
 .form-label {
   font-size: 0.8rem !important;
 }
-
 .form-select {
   font-size: 0.8rem !important;
 }
-
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background-color: #001524;
+  background-color: #1a1919;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
