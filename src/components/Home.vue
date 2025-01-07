@@ -59,7 +59,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 p-0">
-        <img src="../assets/bannerImg.png" class="img-fluid w-100">
+        <img src="../assets/bannerImg.png" class="img-fluid w-100" style="height: 135px;">
       </div>
     </div>
   </div>
