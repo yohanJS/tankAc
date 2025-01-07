@@ -1,5 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<template>
+<template id="home">
   <!--NAVBAR COMPONENT-->
   <NavBar />
   <!--HERO SECTION-->
@@ -17,6 +17,56 @@
           <button type="button" class="btn btn-color btn-sm"><a href="tel:+6494461709" class="text-decoration-none text-color">Call Now</a></button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!--FINANCING OPTIONS SECTION-->
+  <div class="container-fluid bg-color p-3">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 text-center mb-3">
+        <h1 class="text-white">Financing Options</h1>
+      </div>
+      <div class="col-5 card-color d-flex flex-column p-3 m-1 rounded-2">
+        <img src="../assets/synchronyCard.png" class="img-fluid mt-3">
+        <button class="btn card-btn-color btn-sm mt-5 mb-3">
+          <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white" target="_blank">Apply Here</a>
+        </button>
+      </div>
+      <div class="col-5 card-color d-flex flex-column p-3 m-1 rounded-2">
+        <img src="../assets/breezeCard.png" class="img-fluid mt-3">
+        <button class="btn card-btn-color btn-sm mt-53 mb-3">
+          <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning" class="text-decoration-none text-white" target="_blank">Apply Here</a>
+        </button>
+      </div>
+    </div>
+    <div class="row mt-5 mb-4">
+      <div class="col-12 text-center">
+        <h6>
+          Great Options for Financing Your New Air Conditioning System!
+        </h6>
+        <p class="mt-4">
+          A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods 
+          and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits 
+          available throughout the year
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--VIDEO SECTION-->
+  <div class="container-fluid">
+    <div class="row">
+        <!-- Basic video with controls -->
+        <iframe
+            class="p-0"
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
   </div>
 
@@ -183,6 +233,21 @@
 .btn-color {
   background-color: #d9d9d9;
 }
+/* FINANCIAL SECTION CSS */
+/* TEMPORARY CLASS FOR BREEZE CARD */
+.mt-53 {
+  margin-top: 53px;;
+}
+.card-color {
+  background-color: #484847;
+}
+.card-btn-color {
+  background-color: #E95722;
+}
+/* SERVICES SECTION CSS */
+.bg-color {
+  background-color: #BFB59F;
+}
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
   background-color: #0F0F0F;
@@ -205,6 +270,11 @@ import NavBar from './NavBar.vue';
 export default {
   components: {
     NavBar,
+  },
+  async created() {
+    await this.$nextTick();
+    const home = document.getElementById("home");
+    home.scrollIntoView({ behavior: "smooth", block: "start" });
   },
   data() {
     return {
