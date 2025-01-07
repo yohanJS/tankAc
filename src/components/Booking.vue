@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <form @submit.prevent="submitForm" class="box-shadow p-2 rounded-1 min-vh-100">
+    <form @submit.prevent="submitForm" class="p-2 rounded-1 min-vh-100">
       <!--Booking Details-->
       <!-- Booking Details -->
       <div v-if="step === 4 && formData.service !== ''" class="text-white p-4 m-3 rounded box-shadow">
@@ -181,7 +181,8 @@
         {{ errorMessage }}
       </div>-->
     </div>
-
+    
+    <FooterComp></FooterComp>
   </div>
 </template>
 
@@ -191,11 +192,13 @@ import moment from 'moment';
 import axios from "axios";
 import { Modal } from "bootstrap";
 import NavBar from './NavBar.vue';
+import FooterComp from './FooterComp.vue'
 
 export default {
   name: "BookingForm",
   components: {
     NavBar,
+    FooterComp,
   },
   data() {
     const today = new Date();
