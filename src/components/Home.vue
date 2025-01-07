@@ -76,7 +76,8 @@
           autoplay 
           muted 
           loop 
-          controls>
+          controls 
+          playsinline>
           <source src="../assets/tankVideo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
