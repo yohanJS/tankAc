@@ -147,9 +147,14 @@
     </div>
   </div>
 
+  <!--CAMOUFLAGE SECTION-->
+  <div class="container-fluid p-0">
+    <img src="../assets/rect.png" class="img-fluid w-100">
+  </div>
+
   <!--FOOTER SECTION-->
   <div class="container-fluid p-4 footer-bg">
-    <div class="row">
+    <div class="row container">
       <!--IMG LOGO-->
       <div class="col-12">
         <a class="navbar-brand fw-bold d-flex align-items-center m-0" href="#">
@@ -252,8 +257,60 @@
 .aboutUs-bg {
   background-color: #0F0F0F;
 }
+/* CAMOUFLAGE CSS */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensures content appears above the overlay */
+  text-align: center; /* Centers the text horizontally */
+  top: 50%; /* Vertically centers the text */
+  transform: translateY(-50%); /* Adjusts for perfect vertical centering */
+  padding: 20px;
+}
+
+
+/* Movement effect */
+@keyframes camouflage-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20px, -20px);
+  }
+}
+
+/* FOOTER SECTION CSS */
 .footer-bg {
-  background-color: #131313;
+  background-color: #0F0F0F;
+  position: relative; /* Ensure child elements like .overlay are positioned relative to the footer */
+  background-image: url(../assets/tankFooter.png);
+  background-size: cover; /* Make the image cover the entire footer */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  color: white; /* Default text color */
+  padding: 20px 0; /* Add padding for spacing */
+}
+.footer-bg .overlay {
+  position: absolute; /* Overlay spans the entire footer */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
+.footer-bg .container {
+  position: relative; /* Position text above the overlay */
+  z-index: 2; /* Ensure text is above the overlay */
 }
 /* COPYRIGHT SECTION CSS */
 .copy-right-txt {
