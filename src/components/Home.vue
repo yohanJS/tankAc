@@ -153,9 +153,7 @@
   </div>
 
   <!--CAMOUFLAGE SECTION-->
-  <div class="container p-0">
-    <img src="../assets/rect.png" class="img-fluid w-100" style="height: 50px;">
-  </div>
+  <Camouflage></Camouflage>
 
   <!--FOOTER SECTION-->
   <FooterComp></FooterComp>
@@ -248,12 +246,14 @@
 
 <script>
 import NavBar from './NavBar.vue';
+import Camouflage from './Camouflage.vue'
 import FooterComp from './FooterComp.vue'
 
 export default {
   components: {
     NavBar,
-    FooterComp
+    FooterComp,
+    Camouflage
   },
   async created() {
     await this.$nextTick();

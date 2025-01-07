@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <NavBar />
-  <div id="bookingFormContainer" class="container py-2 p-2 mb-5 text-dark min-vh-100">
+  <div id="bookingFormContainer" class="container py-2 p-0 text-dark min-vh-100">
     <div class="text-center mb-4 mt-2">
       <div class="px-5" role="group" aria-label="First group">
         <button @click="goToStep(1)" id="step1" type="button"
@@ -181,7 +181,11 @@
         {{ errorMessage }}
       </div>-->
     </div>
-    
+
+    <!--CAMOUFLAGE SECTION-->
+    <Camouflage></Camouflage>
+
+    <!--FOOTER SECTION-->
     <FooterComp></FooterComp>
   </div>
 </template>
@@ -192,6 +196,7 @@ import moment from 'moment';
 import axios from "axios";
 import { Modal } from "bootstrap";
 import NavBar from './NavBar.vue';
+import Camouflage from './Camouflage.vue'
 import FooterComp from './FooterComp.vue'
 
 export default {
@@ -199,6 +204,7 @@ export default {
   components: {
     NavBar,
     FooterComp,
+    Camouflage
   },
   data() {
     const today = new Date();
