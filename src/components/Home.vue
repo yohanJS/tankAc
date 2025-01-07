@@ -3,25 +3,27 @@
   <!--NAVBAR COMPONENT-->
   <NavBar />
   <!--HERO SECTION-->
-  <div class="text-center hero-section">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1 class="fw-bold text-white">PROBLEMS WITH YOUR A/C & HEATER</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="m-0 text-white fw-bold">Help is one click away</p>
-        <div class="d-flex justify-content-center gap-2 mt-3">
-          <router-link to="/Booking" class="btn btn-color text-color btn-sm">
-            Book Visit
-            <i class="bi bi-chevron-double-right"></i>
-          </router-link>
-          <button type="button" class="btn btn-color btn-sm"><a href="tel:+6494461709" class="text-decoration-none text-color">Call Now</a></button>
+  <div class="container p-0">
+    <div class="text-center hero-section">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1 class="fw-bold text-white">PROBLEMS WITH YOUR A/C & HEATER</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="m-0 text-white fw-bold">Help is one click away</p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <router-link to="/Booking" class="btn btn-color text-color btn-sm">
+              Book Visit
+              <i class="bi bi-chevron-double-right"></i>
+            </router-link>
+            <button type="button" class="btn btn-color btn-sm"><a href="tel:+6494461709" class="text-decoration-none text-color">Call Now</a></button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <!--FINANCING OPTIONS SECTION-->
-  <div class="container-fluid bg-color p-3">
+  <div class="container bg-color p-3">
     <div class="row d-flex justify-content-center">
       <div class="col-12 text-center mb-3">
         <h1 class="text-white">Financing Options</h1>
@@ -54,7 +56,7 @@
   </div>
 
   <!--VIDEO SECTION-->
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
         <!-- Basic video with controls -->
         <iframe
@@ -71,7 +73,7 @@
   </div>
 
   <!--SERVICES SECTION-->
-  <div class="container-fluid">
+  <div class="container">
     <div class="row bg-color">
       <!-- Left Column for Image -->
       <div class="col-6 p-0">
@@ -125,7 +127,7 @@
   </div>
 
   <!--ABOUT US SECTION-->
-  <div class="container-fluid p-5 aboutUs-bg text-white">
+  <div class="container p-5 aboutUs-bg text-white">
     <div class="row">
       <div class="col-12 text-center mb-4">
         <h4>ABOUT US</h4>
@@ -148,12 +150,12 @@
   </div>
 
   <!--CAMOUFLAGE SECTION-->
-  <div class="container-fluid p-0">
+  <div class="container p-0">
     <img src="../assets/rect.png" class="img-fluid w-100">
   </div>
 
   <!--FOOTER SECTION-->
-  <div class="container-fluid p-4 footer-bg">
+  <div class="container p-4 footer-bg">
     <div class="row container">
       <!--IMG LOGO-->
       <div class="col-12">
