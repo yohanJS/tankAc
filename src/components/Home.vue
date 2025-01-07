@@ -154,7 +154,7 @@
 
   <!--CAMOUFLAGE SECTION-->
   <div class="container p-0">
-    <img src="../assets/rect.png" class="img-fluid w-100">
+    <img src="../assets/rect.png" class="img-fluid w-100" style="height: 50px;">
   </div>
 
   <!--FOOTER SECTION-->
