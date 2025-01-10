@@ -172,7 +172,7 @@
             <div class="modal-body text-center p-4">
               <h5 class="modal-title fw-bold mb-1">Thank You!</h5>
               <i class="bi bi-emoji-smile-fill"></i>
-              <p>Your quote appointment has been successfully scheduled. We’ll be in touch soon!</p>
+              <p>Your appointment has been successfully scheduled. We’ll be in touch soon!</p>
             </div>
           </div>
         </div>
@@ -450,7 +450,7 @@ export default {
           submissionModal.show();
         }
       } catch (error) {
-        console.log("Failed to submit form. Please try again.", error);
+        alert("Failed to submit form. Please try again.", error);
       }
       // Clear the form
       this.step = 1;
