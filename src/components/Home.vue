@@ -168,9 +168,9 @@
           got you covered—no hassle, just great service to keep you chill.
         </p>
       </div>
-      <div class="col-12 p-0">
+      <!-- <div class="col-12 p-0">
         <img src="../assets/fleetImg.png" class="img-fluid w-100" alt="Fleet truck of Tank AC and Heat">
-      </div>
+      </div> -->
     </div>
   </div>
 
