@@ -7,7 +7,7 @@
     <div class="text-center hero-section">
       <div class="overlay"></div>
       <div class="hero-content mt-5">
-        <h1 class="fw-bold text-white">PROBLEMS WITH YOUR A/C & HEATER</h1>
+        <h1 class="fw-bold text-white m-3">PROBLEMS WITH YOUR A/C & HEATER</h1>
         <div class="col-lg-6 mx-auto">
           <p class="m-0 text-white fw-bold">Help is one click away</p>
           <div class="d-flex justify-content-center gap-2 mt-3">
