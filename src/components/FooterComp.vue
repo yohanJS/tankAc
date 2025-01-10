@@ -1,18 +1,18 @@
 <template>
-      <div class="container p-4 footer-bg">
+      <div class="container p-5 footer-bg">
     <div class="row container">
       <!--IMG LOGO-->
-      <div class="col-12">
+      <!-- <div class="col-12">
         <a class="navbar-brand fw-bold d-flex align-items-center m-0" href="#">
           <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 80px; height: 60px;" />
         </a>
-      </div>
+      </div> -->
       <!--WHITE HORIZONTAL LINE-->
       <!-- <div class="col-12 text-center">
         <hr class="border border-white border-1 my-4" />
       </div> -->
       <!--SOCIAL MEDIA ICONS-->
-      <div class="col-12 d-flex justify-content-center">
+      <div class="col-12 mt-5 d-flex justify-content-center">
         <a href="#" class="nav-link m-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-google"
             viewBox="0 0 16 16">
