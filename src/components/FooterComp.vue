@@ -46,7 +46,7 @@
       <div class="col-12 text-center mt-3 text-white">
         <p class="mb-0 copy-right-txt">
           &copy; {{ currentYear }} TANK A/C & HEAT<br />
-          Designed by Engfuel.com LLC
+          Designed by LuvoAI.com LLC
         </p>
       </div>
     </div>

@@ -224,7 +224,7 @@ export default {
       isInPerson: false,
       isSubmissionOk: false,
       formData: {
-        businessId: "YohanJS",
+        businessId: "TankAC&HeatingLLC",
         name: "",
         email: "",
         phone: "",
@@ -241,7 +241,7 @@ export default {
         {
           name: "AC Repair",
           description: "Fast and reliable air conditioning repair services to restore comfort to your home.",
-          image: "/assets/acRepair.png",
+          image: "~/acRepair.png",
         },
         {
           name: "AC Maintenance",
