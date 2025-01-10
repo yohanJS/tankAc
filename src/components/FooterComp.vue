@@ -8,9 +8,9 @@
         </a>
       </div>
       <!--WHITE HORIZONTAL LINE-->
-      <div class="col-12 text-center">
+      <!-- <div class="col-12 text-center">
         <hr class="border border-white border-1 my-4" />
-      </div>
+      </div> -->
       <!--SOCIAL MEDIA ICONS-->
       <div class="col-12 d-flex justify-content-center">
         <a href="#" class="nav-link m-2">
@@ -74,7 +74,7 @@ export default {
   background-color: #0F0F0F;
   position: relative; /* Ensure child elements like .overlay are positioned relative to the footer */
   background-image: url(../assets/tankFooter.png);
-  background-size: cover; /* Make the image cover the entire footer */
+  background-size: contain; /* Make the image cover the entire footer */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
   color: white; /* Default text color */
