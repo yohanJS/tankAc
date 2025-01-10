@@ -47,15 +47,6 @@
         </button>
       </div>
     </div>
-    <div class="row mt-5 mb-4">
-      <div class="col-12">
-        <p class="mt-3">
-          A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods
-          and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits
-          available throughout the year
-        </p>
-      </div>
-    </div>
   </div>
 
   <!--BANNER SECTION-->
