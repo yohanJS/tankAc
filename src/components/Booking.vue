@@ -29,7 +29,7 @@
 
       <!-- Step 1: Booking Service -->
       <div v-if="step === 1">
-        <p class="text-center mb-1 mt-5 pt-2 text-white">Select service</p>
+        <p class="text-center mb-1 pt-2 text-white">Select service</p>
         <div class="d-flex flex-column gap-3 mb-5">
           <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
             @click="selectService(service)" :style="{ backgroundImage: `url(${service.image})` }">
@@ -37,7 +37,7 @@
               <h4 class="mb-1 p-3 card-header">{{ service.name }}</h4>
               <p class="mb-2" style="font-size: 0.8rem;">{{ service.description }}</p>
               <div class="text-end m-3">
-                <i class="bi bi-arrow-right-circle orange-txt"></i>
+                <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@
 
       <!-- Step 2: Date -->
       <div v-if="step === 2">
-        <p class="text-center mb-3 mt-5 pt-2 text-white">Select date</p>
+        <p class="text-center mb-3 pt-2 text-white">Select date</p>
         <div class="datepicker-container m-2 mx-auto">
           <div class="calendar rounded-2">
             <div class="calendar-header">
@@ -85,7 +85,7 @@
 
       <!-- Step 3: Time Picker -->
       <div v-if="step === 3">
-        <p class="text-center mb-3 mt-5 pt-2 text-white">Select time</p>
+        <p class="text-center mb-3 pt-2 text-white">Select time</p>
         <div class="timepicker-container m-2 mx-auto rounded-2">
           <div class="time-grid">
             <div v-for="(time, index) in timeSlots" :key="index"
@@ -99,7 +99,7 @@
 
       <!-- Step 4: Personal Details -->
       <div v-if="step === 4">
-        <p class="text-center mb-3 mt-5 pt-2 text-white">Enter personal details</p>
+        <p class="text-center mb-3 pt-2 text-white">Enter personal details</p>
         <!--In Person-->
         <div class="p-3 m-3 rounded-2 box-shadow">
           <!--In Person-->
@@ -183,7 +183,9 @@
     </div>
 
     <!--CAMOUFLAGE SECTION-->
-    <Camouflage></Camouflage>
+    <div class="mt-5">
+      <Camouflage></Camouflage>
+    </div>
 
     <!--FOOTER SECTION-->
     <FooterComp></FooterComp>
@@ -241,32 +243,32 @@ export default {
         {
           name: "AC Repair",
           description: "Fast and reliable air conditioning repair services to restore comfort to your home.",
-          image: "~/acRepair.png",
+          image: "src/assets/serviceImg1.png",
         },
         {
           name: "AC Maintenance",
           description: "Comprehensive maintenance plans to keep your air conditioning running efficiently year-round.",
-          image: "/assets/acMaintenance.png",
+          image: "src/assets/serviceImg1.png",
         },
         {
           name: "AC Installation",
           description: "Professional and energy-efficient air conditioning installations tailored to your needs.",
-          image: "/assets/acInstallation.png",
+          image: "src/assets/serviceImg1.png",
         },
         {
           name: "Duct Cleaning",
           description: "Improve air quality and system efficiency with our thorough duct cleaning services.",
-          image: "/assets/ductCleaning.png",
+          image: "src/assets/serviceImg1.png",
         },
         {
           name: "Thermostat Upgrades",
           description: "Upgrade to a smart thermostat for better energy management and comfort control.",
-          image: "/assets/thermostatUpgrade.png",
+          image: "src/assets/serviceImg1.png",
         },
         {
           name: "Emergency AC Service",
           description: "24/7 emergency air conditioning services to address urgent cooling issues.",
-          image: "/assets/emergencyService.png",
+          image: "src/assets/serviceImg1.png",
         },
       ],
     };
