@@ -78,7 +78,7 @@
       <div class="col-12 mt-4 mb-4 text-center">
         <h2>Services</h2>
       </div>
-      <div class="col-12 mb-4">
+      <div class="col-10 mb-4 p-0">
         <p>
           As a proud veteran-owned business, we bring the same dedication, discipline,
           and commitment to excellence that we upheld in service to our country. We know
@@ -129,14 +129,13 @@
     </div>
   </div>
 
-
   <!--ABOUT US SECTION-->
   <div class="container p-3 pt-4 pb-4 aboutUs-bg text-white">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <div class="col-12 text-center mb-4">
         <h4>ABOUT US</h4>
       </div>
-      <div class="col-12">
+      <div class="col-10 p-0">
         <p>
           At TANK A/C & HEAT, we take pride in providing
           top-notch heating and cooling solutions with military precision
@@ -155,13 +154,13 @@
 
   <!--ELITE SECTION-->
   <div class="container pb-0 bg-color">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <!-- Left Column for Image -->
       <div class="col-12 p-0">
         <img src="../assets/truckImg.png" class="img-fluid w-100" alt="Fleet truck of Tank AC and Heat">
       </div>
       <!-- Right Column for Text -->
-      <div class="col-12 mt-3 d-flex flex-column justify-content-center">
+      <div class="col-10 p-0 mt-3 d-flex flex-column justify-content-center">
         <h3 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h3>
         <p>
           Stay cool and comfortable with top-notch AC service right at your fingertips. 
@@ -170,9 +169,6 @@
           got you covered—no hassle, just great service to keep you chill.
         </p>
       </div>
-      <!-- <div class="col-12 p-0">
-        <img src="../assets/fleetImg.png" class="img-fluid w-100" alt="Fleet truck of Tank AC and Heat">
-      </div> -->
     </div>
   </div>
 
