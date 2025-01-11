@@ -32,7 +32,7 @@
         <p class="text-center mb-1 pt-2 text-white">Select service</p>
         <div class="d-flex flex-column gap-3 mb-5">
           <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
-            @click="selectService(service)" :style="{ backgroundImage: `src(${service.image})` }">
+            @click="selectService(service)" :style="{ backgroundImage: `url(${service.image})` }">
             <div class="overlay rounded-2 d-flex flex-column">
               <h4 class="mb-1 p-3 card-header">{{ service.name }}</h4>
               <p class="mb-2" style="font-size: 0.8rem;">{{ service.description }}</p>
@@ -200,6 +200,7 @@ import { Modal } from "bootstrap";
 import NavBar from './NavBar.vue';
 import Camouflage from './Camouflage.vue'
 import FooterComp from './FooterComp.vue'
+import serviceImg1 from '../assets/serviceImg1.png';
 
 export default {
   name: "BookingForm",
@@ -243,32 +244,32 @@ export default {
         {
           name: "AC Repair",
           description: "Fast and reliable air conditioning repair services to restore comfort to your home.",
-          image: "src/assets/serviceImg1.png",
+          image: serviceImg1,
         },
         {
           name: "AC Maintenance",
           description: "Comprehensive maintenance plans to keep your air conditioning running efficiently year-round.",
-          image: "src/assets/serviceImg1.png",
+          image: serviceImg1,
         },
         {
           name: "AC Installation",
           description: "Professional and energy-efficient air conditioning installations tailored to your needs.",
-          image: "src/assets/serviceImg1.png",
+          image: serviceImg1,
         },
         {
           name: "Duct Cleaning",
           description: "Improve air quality and system efficiency with our thorough duct cleaning services.",
-          image: "src/assets/serviceImg1.png",
+          image: serviceImg1,
         },
         {
           name: "Thermostat Upgrades",
           description: "Upgrade to a smart thermostat for better energy management and comfort control.",
-          image: "src/assets/serviceImg1.png",
+          image: serviceImg1,
         },
         {
           name: "Emergency AC Service",
           description: "24/7 emergency air conditioning services to address urgent cooling issues.",
-          image: "src/assets/serviceImg1.png",
+          image: serviceImg1,
         },
       ],
     };
