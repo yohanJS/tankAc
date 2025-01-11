@@ -32,19 +32,33 @@
           Great Options for Financing Your New Air Conditioning System!
         </h6>
       </div>
-      <div class="col-5 card-color d-flex flex-column p-3 m-1 rounded-2">
+      <div class="col-10 card-color d-flex flex-column p-3 m-1 rounded-2">
         <img src="../assets/synchronyCard.png" class="img-fluid mt-3">
         <button class="btn card-btn-color btn-sm mt-5 mb-3">
           <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white"
             target="_blank">Apply Here</a>
         </button>
       </div>
-      <div class="col-5 card-color d-flex flex-column p-3 m-1 rounded-2">
+      <div class="col-10 p-0 mt-4 mb-4">
+        <p>
+          A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods 
+          and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits 
+          available throughout the year
+        </p>
+      </div>
+      <div class="col-10 card-color d-flex flex-column p-3 m-1 rounded-2">
         <img src="../assets/breezeCard.png" class="img-fluid mt-3">
         <button class="btn card-btn-color btn-sm mt-53 mb-3">
           <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
             class="text-decoration-none text-white" target="_blank">Apply Here</a>
         </button>
+      </div>
+      <div class="col-10 p-0 mt-4 mb-4">
+        <p>
+          A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods 
+          and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits 
+          available throughout the year
+        </p>
       </div>
     </div>
   </div>
@@ -60,7 +74,7 @@
 
   <!--SERVICES SECTION-->
   <div class="container">
-    <div class="row bg-color">
+    <div class="row bg-color d-flex justify-content-center">
       <div class="col-12 mt-4 mb-4 text-center">
         <h2>Services</h2>
       </div>
@@ -73,60 +87,48 @@
           That’s why we’re here to provide solutions tailored to your specific needs.
         </p>
       </div>
-      <!-- Left Column for Image -->
-      <div class="col-6 p-0">
-        <!-- Video Player -->
-        <video class="video-fluid w-100" autoplay muted loop controls playsinline>
-          <source src="../assets/tankVideo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <!-- Card: AC Repair -->
+      <div class="col-10 col-md-4 mb-4 p-0">
+        <div class="service-card position-relative rounded-3 text-white"
+          style="background-image: url('/assets/serviceImg1.png'); background-size: cover; background-position: center;">
+          <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
+          <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="text-white mb-2">AC REPAIR</h3>
+            <p class="text-center">
+              Get your air conditioner back to optimal performance with our fast, reliable repair services.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <!-- Right Column for Text -->
-      <div class="col-6 d-flex flex-column justify-content-center">
-        <h3 class="text-white">AC REPAIR</h3>
-        <p>
-          Get your air conditioner
-          back to optimal
-          performance with
-          our fast, reliable repair
-          services.
-        </p>
+      <!-- Card: AC Maintenance -->
+      <div class="col-10 col-md-4 mb-4 p-0">
+        <div class="service-card position-relative rounded-3 text-white"
+          style="background-image: url('/assets/serviceImg2.png'); background-size: cover; background-position: center;">
+          <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
+          <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="text-white mb-2">AC MAINTENANCE</h3>
+            <p class="text-center">
+              Keep your cooling system running efficiently year-round with our comprehensive maintenance plans.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <!-- Right Column for Text -->
-      <div class="col-6 d-flex flex-column justify-content-center">
-        <h3 class="text-white">AC MAINTENANCE</h3>
-        <p>
-          Keep your cooling
-          system running
-          efficiently year-round
-          with our comprehensive
-          maintenance plans.
-        </p>
-      </div>
-      <!-- Left Column for Image -->
-      <div class="col-6 p-0">
-        <img src="../assets/serviceImg2.png" class="img-fluid w-100" alt="AC Repair">
-      </div>
-
-      <!-- Left Column for Image -->
-      <div class="col-6 p-0">
-        <img src="../assets/serviceImg3.png" class="img-fluid w-100" alt="AC Repair">
-      </div>
-
-      <!-- Right Column for Text -->
-      <div class="col-6 d-flex flex-column justify-content-center">
-        <h3 class="text-white">AC INSTALLATION</h3>
-        <p>
-          Trust our experts for seamless
-          and energy-efficient AC
-          installations tailored
-          to your needs.
-        </p>
+      <!-- Card: AC Installation -->
+      <div class="col-10 col-md-4 mb-4 p-0">
+        <div class="service-card position-relative rounded-3 text-white"
+          style="background-image: url('/assets/serviceImg3.png'); background-size: cover; background-position: center;">
+          <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
+          <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="text-white mb-2">AC INSTALLATION</h3>
+            <p class="text-center">
+              Trust our experts for seamless and energy-efficient AC installations tailored to your needs.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 
   <!--ABOUT US SECTION-->
   <div class="container p-3 pt-4 pb-4 aboutUs-bg text-white">
@@ -193,7 +195,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .hero-section .overlay {
   position: absolute;
   top: 0;
@@ -203,16 +204,13 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
 }
-
 .hero-content .btn {
   padding: 0.5rem 1.5rem;
 }
-
 .btn-color {
   background-color: #d9d9d9;
 }
@@ -223,20 +221,31 @@
   margin-top: 53px;
   ;
 }
-
 .card-color {
   background-color: #484847;
 }
-
 .card-btn-color {
   background-color: #E95722;
 }
-
 /* SERVICES SECTION CSS */
 .bg-color {
   background-color: #BFB59F;
 }
-
+.service-card {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.service-card .content {
+  z-index: 2;
+  text-align: center;
+}
+.service-card .overlay {
+  z-index: 1;
+}
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
   background-color: #0F0F0F;

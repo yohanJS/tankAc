@@ -200,7 +200,7 @@ import { Modal } from "bootstrap";
 import NavBar from './NavBar.vue';
 import Camouflage from './Camouflage.vue'
 import FooterComp from './FooterComp.vue'
-import serviceImg1 from '../assets/serviceImg1.png';
+import serviceImg1 from '/assets/serviceImg1.png';
 
 export default {
   name: "BookingForm",
