@@ -3,7 +3,7 @@
     <nav id="home" class="navbar bg-color p-0 shadow-lg" v-if="isMobile">
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand fw-bold d-flex align-items-center m-0">
-            <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 80px; height: 60px;" />
+            <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 60px; height: 40px;" />
         </router-link>
         <div class="col">
           <h3 class="m-0">TANK A/C & HEAT</h3>
@@ -34,7 +34,7 @@
         </div>
       </div>
     </nav>
-  
+
     <!-- DESKTOP VERSION -->
     <nav id="home" class="navbar-custom bg-color shadow-lg" v-else>
       <div class="container-fluid">
@@ -71,34 +71,34 @@
       </div>
     </nav>
   </template>
-  
+
   <script>
   import { ref, onMounted, onBeforeUnmount } from 'vue';
-  
+
   export default {
     setup() {
       const isMobile = ref(false);
-  
+
       onMounted(() => {
         isMobile.value = window.innerWidth <= 768;
-  
+
         window.addEventListener('resize', updateIsMobile);
         window.addEventListener('scroll', makeNavBarSticky);
       });
-  
+
       onBeforeUnmount(() => {
         window.removeEventListener('resize', updateIsMobile);
         window.removeEventListener('scroll', makeNavBarSticky);
       });
-  
+
       const updateIsMobile = () => {
         isMobile.value = window.innerWidth <= 768;
       };
-  
+
       const makeNavBarSticky = () => {
         const navbar = document.getElementById("home");
         const sticky = 64;
-  
+
         if (navbar) {
           if (window.scrollY >= sticky) {
             navbar.classList.add("position-sticky", "sticky");
@@ -109,7 +109,7 @@
           console.error('Navbar element not found.');
         }
       };
-  
+
       return {
         isMobile,
         makeNavBarSticky,
@@ -118,7 +118,7 @@
     }
   };
   </script>
-  
+
   <style scoped>
   .toggler-icon {
     width: 30px;
@@ -127,26 +127,26 @@
     justify-content: space-between;
     cursor: pointer;
   }
-  
+
   .line {
     width: 100%;
     height: 3px;
     background-color: #cfdd51;
   }
-  
+
   .bg-color {
     background-color: #BFB59F;
   }
-  
+
   .secondary-bg-color {
     background-color: #f3f3f3;
   }
-  
+
   .navbar-toggler {
     border: none !important;
     box-shadow: none !important;
   }
-  
+
   .sticky {
     position: fixed;
     top: 0;
@@ -154,4 +154,3 @@
     z-index: 9999;
   }
   </style>
-  

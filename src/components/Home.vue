@@ -7,10 +7,10 @@
     <div class="text-center hero-section">
       <div class="overlay"></div>
       <div class="hero-content mt-5">
-        <h1 class="fw-bold text-white m-3">PROBLEMS WITH YOUR A/C & HEATER</h1>
+        <h1 class="text-white m-3">PROBLEMS WITH YOUR A/C & HEATER</h1>
         <div class="col-lg-6 mx-auto">
-          <p class="m-0 text-white fw-bold">Help is one click away</p>
-          <div class="d-flex justify-content-center gap-2 mt-3">
+          <p class="m-0 text-white">Help is one click away</p>
+          <div class="d-flex justify-content-center gap-2 mt-4">
             <router-link to="/Booking" class="btn btn-color text-color btn-sm">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
@@ -26,48 +26,73 @@
   <!--FINANCING OPTIONS SECTION-->
   <div class="container bg-color p-3">
     <div class="row d-flex justify-content-center">
-      <div class="col-12 text-center mb-3 mt-3">
-        <h2 class="text-white">Financing Options</h2>
-        <h6 class="mt-4 mb-3">
-          Great Options for Financing Your New Air Conditioning System!
-        </h6>
+
+        <div class="col-12 text-center mb-3 mt-3">
+          <h2 class="">Financing Options</h2>
+          <h6 class="mt-4 mb-3">
+            Great Options for Financing
+            <br>Your New Air Conditioning System!
+          </h6>
+        </div>
+
+    </div>
+
+    <div class="row d-flex justify-content-center m-1">
+      <div class="col-6">
+        <div class=" card-color d-flex flex-column">
+            <div class="d-flex justify-content-center">
+              <img src="../assets/synchronyCard.png" class="img-fluid mt-3 mb-3">
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button class="btn card-btn-color btn-sm mt-3 mb-3">
+                <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white"
+                  target="_blank">Apply Here</a>
+              </button>
+            </div>
+
+          </div>
+          <div class="p-0 mt-4 mb-4">
+            <p class="financing-desc">
+                A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods
+                and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits
+                available throughout the year
+            </p>
+          </div>
       </div>
-      <div class="col-10 card-color d-flex flex-column p-3 m-1 rounded-2">
-        <img src="../assets/synchronyCard.png" class="img-fluid mt-3">
-        <button class="btn card-btn-color btn-sm mt-5 mb-3">
-          <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white"
-            target="_blank">Apply Here</a>
-        </button>
-      </div>
-      <div class="col-10 p-0 mt-4 mb-4">
-        <p>
-          A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods 
-          and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits 
-          available throughout the year
-        </p>
-      </div>
-      <div class="col-10 card-color d-flex flex-column p-3 m-1 rounded-2">
-        <img src="../assets/breezeCard.png" class="img-fluid mt-3">
-        <button class="btn card-btn-color btn-sm mt-53 mb-3">
-          <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
-            class="text-decoration-none text-white" target="_blank">Apply Here</a>
-        </button>
-      </div>
-      <div class="col-10 p-0 mt-4 mb-4">
-        <p>
-          A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods 
-          and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits 
-          available throughout the year
-        </p>
+
+      <div class="col-6 ">
+        <div class="card-color d-flex flex-column">
+          <div class="d-flex justify-content-center">
+            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank" style="width: 120px; height: 59px;">
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button class="btn card-btn-color btn-sm mt-4 mb-3">
+            <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
+                class="text-decoration-none text-white"  >Apply Here</a>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="p-0 mt-4 mb-4">
+            <p class="financing-desc">
+              A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods
+              and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits
+              available throughout the year
+            </p>
       </div>
     </div>
+
   </div>
+</div>
 
   <!--BANNER SECTION-->
   <div class="container">
     <div class="row">
       <div class="col-12 p-0">
-        <img src="../assets/bannerImg.png" class="img-fluid w-100" style="height: 135px;">
+        <img src="../assets/bannerImg.png" class="img-fluid w-100" style="height: 105px;">
       </div>
     </div>
   </div>
@@ -75,11 +100,11 @@
   <!--SERVICES SECTION-->
   <div class="container">
     <div class="row bg-color d-flex justify-content-center">
-      <div class="col-12 mt-4 mb-4 text-center">
+      <div class="col-12 mt-5 mb-4 text-center">
         <h2>Services</h2>
       </div>
       <div class="col-10 mb-4 p-0">
-        <p>
+        <p class="mb-5">
           As a proud veteran-owned business, we bring the same dedication, discipline,
           and commitment to excellence that we upheld in service to our country. We know
           the challenges our customers face when dealing with unexpected breakdowns,
@@ -153,21 +178,28 @@
   </div>
 
   <!--ELITE SECTION-->
-  <div class="container pb-0 bg-color">
-    <div class="row d-flex justify-content-center">
+  <div class="container bg-color mt-5 ">
+    <div class="row">
       <!-- Left Column for Image -->
-      <div class="col-12 p-0">
-        <img src="../assets/truckImg.png" class="img-fluid w-100" alt="Fleet truck of Tank AC and Heat">
+      <div class="col-6 d-flex justify-content-center">
+        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
       </div>
       <!-- Right Column for Text -->
-      <div class="col-10 p-0 mt-3 d-flex flex-column justify-content-center">
-        <h3 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h3>
-        <p>
-          Stay cool and comfortable with top-notch AC service right at your fingertips. 
-          We’re here to make sure your home feels just right, with easy, reliable, and 
-          friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve 
+      <div class="col-6 mr-5">
+        <h6 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h6>
+        <p class="" style="font-size: 12px;">
+          Stay cool and comfortable with top-notch AC service right at your fingertips.
+          We’re here to make sure your home feels just right, with easy, reliable, and
+          friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve
           got you covered—no hassle, just great service to keep you chill.
         </p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col">
+        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
+        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
       </div>
     </div>
   </div>
@@ -207,6 +239,10 @@
 .hero-content .btn {
   padding: 0.5rem 1.5rem;
 }
+
+.navbar{
+  height: 70px;
+}
 .btn-color {
   background-color: #d9d9d9;
 }
@@ -217,8 +253,18 @@
   margin-top: 53px;
   ;
 }
+h1{
+  font-size: calc(0.9rem + 1.5vw) !important;
+}
+.financing-desc{
+  font-size: 9px;
+  font-family: Helvetica, sans-serif;
+}
 .card-color {
   background-color: #484847;
+  border-radius: 15px;
+    width: 150px;
+    height: 176px;
 }
 .card-btn-color {
   background-color: #E95722;
