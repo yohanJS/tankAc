@@ -171,8 +171,14 @@
             </div>
             <div class="modal-body text-center p-4">
               <h5 class="modal-title fw-bold mb-1">Thank You!</h5>
-              <i class="bi bi-emoji-smile-fill"></i>
-              <p>Your appointment has been successfully scheduled. We’ll be in touch soon!</p>
+              <i class="bi bi-emoji-smile-fill fs-4"></i>
+              <p>
+                Your appointment has been successfully scheduled. 
+                We’ll be in touch soon! Please check your email for confirmation, and 
+                <span class="text-danger fw-bold">
+                  don't forget to check your spam or junk folder if you don't see it in your inbox.
+                </span>
+              </p>
             </div>
           </div>
         </div>
