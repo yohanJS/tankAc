@@ -32,7 +32,7 @@
         <p class="text-center mb-1 pt-2 text-white">Select service</p>
         <div class="d-flex flex-column gap-3 mb-5">
           <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
-            @click="selectService(service)" :style="{ backgroundImage: `url(${service.image})` }">
+            @click="selectService(service)" :style="{ backgroundImage: `src(${service.image})` }">
             <div class="overlay rounded-2 d-flex flex-column">
               <h4 class="mb-1 p-3 card-header">{{ service.name }}</h4>
               <p class="mb-2" style="font-size: 0.8rem;">{{ service.description }}</p>
