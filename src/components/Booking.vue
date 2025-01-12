@@ -27,22 +27,31 @@
         </div>
       </div>
 
-      <!-- Step 1: Booking Service -->
-      <div v-if="step === 1">
-        <p class="text-center mb-1 pt-2 text-white">Select service</p>
-        <div class="d-flex flex-column gap-3 mb-5">
-          <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
-            @click="selectService(service)" :style="{ backgroundImage: `url(${service.image})` }">
-            <div class="overlay rounded-2 d-flex flex-column">
-              <h4 class="mb-1 p-3 card-header">{{ service.name }}</h4>
-              <p class="mb-2" style="font-size: 0.8rem;">{{ service.description }}</p>
-              <div class="text-end m-3">
-                <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
-              </div>
-            </div>
-          </div>
+<!-- Step 1: Booking Service -->
+<div v-if="step === 1">
+  <p class="text-center mb-1 pt-2 text-white">Select service</p>
+  <div class="d-flex flex-column gap-3 mb-5">
+    <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
+      @click="selectService(service)">
+      <div class="overlay rounded-2 d-flex flex-row align-items-center p-3">
+        <!-- Small image on the left -->
+        <img :src="service.image" alt="service image" class="service-image me-3 rounded-2" style="width: 100%; height: 100%; object-fit: cover;">
+        
+        <!-- Description on the right -->
+        <div class="service-info d-flex flex-column">
+          <h4 class="mb-1 card-header">{{ service.name }}</h4>
+          <p class="mb-2" style="font-size: 0.8rem;">{{ service.description }}</p>
+        </div>
+        
+        <!-- Arrow icon stays in the same place -->
+        <div class="text-end ms-auto mt-5">
+          <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- Step 2: Date -->
       <div v-if="step === 2">
@@ -207,6 +216,9 @@ import NavBar from './NavBar.vue';
 import Camouflage from './Camouflage.vue'
 import FooterComp from './FooterComp.vue'
 import serviceImg1 from '/assets/serviceImg1.png';
+import serviceImg2 from '/assets/serviceImg2.png';
+import serviceImg3 from '/assets/serviceImg3.png';
+import serviceImg4 from '/assets/serviceImg4.png';
 
 export default {
   name: "BookingForm",
@@ -248,34 +260,24 @@ export default {
       },
       services: [
         {
-          name: "AC Repair",
+          name: "AC REPAIR",
           description: "Fast and reliable air conditioning repair services to restore comfort to your home.",
           image: serviceImg1,
         },
         {
-          name: "AC Maintenance",
+          name: "AC MAINTENANCE",
           description: "Comprehensive maintenance plans to keep your air conditioning running efficiently year-round.",
-          image: serviceImg1,
+          image: serviceImg2,
         },
         {
-          name: "AC Installation",
+          name: "AC INSTALLATION",
           description: "Professional and energy-efficient air conditioning installations tailored to your needs.",
-          image: serviceImg1,
+          image: serviceImg3,
         },
         {
-          name: "Duct Cleaning",
-          description: "Improve air quality and system efficiency with our thorough duct cleaning services.",
-          image: serviceImg1,
-        },
-        {
-          name: "Thermostat Upgrades",
-          description: "Upgrade to a smart thermostat for better energy management and comfort control.",
-          image: serviceImg1,
-        },
-        {
-          name: "Emergency AC Service",
-          description: "24/7 emergency air conditioning services to address urgent cooling issues.",
-          image: serviceImg1,
+          name: "UV LIGHT INSTALL",
+          description: "Get your air conditioner back to optimal performance with our fast, reliable repair services.",
+          image: serviceImg4,
         },
       ],
     };
