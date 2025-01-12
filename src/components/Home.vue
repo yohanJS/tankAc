@@ -25,8 +25,7 @@
 
   <!--FINANCING OPTIONS SECTION-->
   <div class="container bg-color p-3">
-    <div class="row d-flex justify-content-center">
-
+    <div class="row">
         <div class="col-12 text-center mb-3 mt-3">
           <h2 class="">Financing Options</h2>
           <h6 class="mt-4 mb-3">
@@ -38,10 +37,10 @@
     </div>
 
     <div class="row d-flex justify-content-center m-1">
-      <div class="col-6">
-        <div class=" card-color d-flex flex-column">
+      <div class="col-6 col-md-3">
+        <div class="card-color">
             <div class="d-flex justify-content-center">
-              <img src="../assets/synchronyCard.png" class="img-fluid mt-3 mb-3">
+              <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;">
             </div>
 
             <div class="d-flex justify-content-center">
@@ -61,14 +60,14 @@
           </div>
       </div>
 
-      <div class="col-6 ">
-        <div class="card-color d-flex flex-column">
+      <div class="col-6 col-md-3">
+        <div class="card-color">
           <div class="d-flex justify-content-center">
-            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank" style="width: 120px; height: 59px;">
+            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank" style="width: 130px; height: 59px;">
           </div>
 
           <div class="d-flex justify-content-center">
-            <button class="btn card-btn-color btn-sm mt-4 mb-3">
+            <button class="btn card-btn-color btn-sm mt-3 mb-3">
             <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
                 class="text-decoration-none text-white"  >Apply Here</a>
             </button>
@@ -89,10 +88,10 @@
 </div>
 
   <!--BANNER SECTION-->
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-0">
-        <img src="../assets/bannerImg.png" class="img-fluid w-100" style="height: 105px;">
+        <img src="../assets/bannerImg.png" class="img-fluid w-100">
       </div>
     </div>
   </div>
@@ -113,7 +112,7 @@
         </p>
       </div>
       <!-- Card: AC Repair -->
-      <div class="col-10 col-md-4 mb-4 p-0">
+      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg1.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
@@ -126,7 +125,7 @@
         </div>
       </div>
       <!-- Card: AC Maintenance -->
-      <div class="col-10 col-md-4 mb-4 p-0">
+      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg2.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
@@ -139,7 +138,7 @@
         </div>
       </div>
       <!-- Card: AC Installation -->
-      <div class="col-10 col-md-4 mb-4 p-0">
+      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg3.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
@@ -155,12 +154,12 @@
   </div>
 
   <!--ABOUT US SECTION-->
-  <div class="container p-3 pt-4 pb-4 aboutUs-bg text-white">
+  <div class="container-fluid p-3 pt-4 pb-4 aboutUs-bg text-white">
     <div class="row d-flex justify-content-center">
       <div class="col-12 text-center mb-4">
         <h4>ABOUT US</h4>
       </div>
-      <div class="col-10 p-0">
+      <div class="col-10 col-md-8 p-0">
         <p>
           At TANK A/C & HEAT, we take pride in providing
           top-notch heating and cooling solutions with military precision
@@ -239,32 +238,24 @@
 .hero-content .btn {
   padding: 0.5rem 1.5rem;
 }
-
-.navbar{
+.navbar {
   height: 70px;
 }
 .btn-color {
   background-color: #d9d9d9;
 }
-
 /* FINANCIAL SECTION CSS */
-/* TEMPORARY CLASS FOR BREEZE CARD */
-.mt-53 {
-  margin-top: 53px;
-  ;
-}
 h1{
   font-size: calc(0.9rem + 1.5vw) !important;
 }
-.financing-desc{
+.financing-desc {
   font-size: 9px;
   font-family: Helvetica, sans-serif;
 }
 .card-color {
   background-color: #484847;
   border-radius: 15px;
-    width: 150px;
-    height: 176px;
+  height: 176px;
 }
 .card-btn-color {
   background-color: #E95722;
@@ -287,6 +278,16 @@ h1{
 }
 .service-card .overlay {
   z-index: 1;
+}
+/* BANNER IMG SECTION CSS */
+.banner-img {
+  height: 105px;
+  object-fit: cover; /* Ensures the image looks good while maintaining its aspect ratio */
+}
+@media (min-width: 992px) {
+  .banner-img {
+    height: 200px;
+  }
 }
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
