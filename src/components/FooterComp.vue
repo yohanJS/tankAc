@@ -12,7 +12,7 @@
         <hr class="border border-white border-1 my-4" />
       </div> -->
       <!--SOCIAL MEDIA ICONS-->
-      <div class="col-12 mt-5 d-flex justify-content-center">
+      <div class="col-12 mt-5 d-flex justify-content-center" style="border-top: 1px solid #ffffff45;">
         <a href="#" class="nav-link m-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-google"
             viewBox="0 0 16 16">
