@@ -1,19 +1,19 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div class="container p-0 position-relative">
+    <div class="container-fluid p-0 position-relative">
       <img src="../assets/rect.png" class="img-fluid w-100" style="height: 50px;">
       <div class="overlay"></div>
     </div>
   </template>
-  
+
   <script>
   </script>
-  
+
   <style scoped>
   .container {
     position: relative;
   }
-  .container .overlay {
+  .container-fluid .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -23,4 +23,3 @@
     z-index: 1;
   }
   </style>
-  

@@ -25,10 +25,10 @@
           </div>
           <div class="offcanvas-body bg-color">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">BOOK</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">FINANCIAL</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
             </ul>
           </div>
         </div>
@@ -36,37 +36,42 @@
     </nav>
 
     <!-- DESKTOP VERSION -->
-    <nav id="home" class="navbar-custom bg-color shadow-lg" v-else>
+    <nav id="home" class="navbar-custom bg-color shadow-lg d-flex align-items-center" v-else>
       <div class="container-fluid">
         <div class="row text-dark align-items-center">
+
+          <div class="col">
+            <div class="row">
+              <!-- Logo -->
+              <div class="col-3 d-flex justify-content-center">
+                <a href="#">
+                  <img src="../assets/logo.png" alt="Logo" class="" style="width: 60px; height: 40px;" />
+                </a>
+              </div>
+
+              <div class="col">
+                <h3 class="m-0">TANK A/C & HEAT</h3>
+                <p class="fw-bold m-0" style="font-size: 0.7rem;">VETERAN OWNED</p>
+              </div>
+            </div>
+
+          </div>
+
+
+
           <!-- Links -->
-          <div class="col-4 d-flex justify-content-center">
-            <a class="nav-link m-3" href="#">Home</a>
-            <a class="nav-link m-3" href="#">Link 1</a>
-            <a class="nav-link m-3" href="#">Link 2</a>
-            <a class="nav-link m-3" href="#">Link 3</a>
+          <div class="desktop-navbar col-6">
+            <ul class="navbar-nav d-flex flex-row">
+              <li class="nav-item"><a class="nav-link active m-3 pt-4" href="#">HOME</a></li>
+              <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">BOOK</a></li>
+              <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">FINANCIAL</a></li>
+              <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">CONTACT US</a></li>
+            </ul>
+
+
+
           </div>
-          <!-- Logo -->
-          <div class="col-4 d-flex justify-content-center">
-            <a href="#">
-              <img src="../assets/logo.png" alt="Logo" style="width: 100px; height: 80px;" />
-            </a>
-          </div>
-          <!-- Social Media Icons -->
-          <div class="col-4 d-flex justify-content-center">
-            <a href="#" class="text-dark m-2">
-              <i class="bi bi-facebook fs-3"></i>
-            </a>
-            <a href="#" class="text-dark m-2">
-              <i class="bi bi-instagram fs-3"></i>
-            </a>
-            <a href="#" class="text-dark m-2">
-              <i class="bi bi-twitter fs-3"></i>
-            </a>
-            <a href="#" class="text-dark m-2">
-              <i class="bi bi-linkedin fs-3"></i>
-            </a>
-          </div>
+
         </div>
       </div>
     </nav>
@@ -142,9 +147,17 @@
     background-color: #f3f3f3;
   }
 
+  .navbar-custom{
+    height: 70px;
+  }
   .navbar-toggler {
     border: none !important;
     box-shadow: none !important;
+  }
+
+
+  .desktop-navbar ul li:hover{
+    background-color: #919191c9;
   }
 
   .sticky {
