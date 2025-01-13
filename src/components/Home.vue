@@ -37,7 +37,7 @@
     </div>
 
     <div class="row d-flex justify-content-center m-1">
-      <div class="col-6 col-md-3">
+      <div class="card-container col-6 col-md-5 col-xl-4 me-md-2">
         <div class="card-color">
             <div class="d-flex justify-content-center">
               <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;">
@@ -60,7 +60,7 @@
           </div>
       </div>
 
-      <div class="col-6 col-md-3">
+      <div class="card-container col-6 col-md-5 col-xl-4 ms-md-2">
         <div class="card-color">
           <div class="d-flex justify-content-center">
             <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank" style="width: 130px; height: 59px;">
@@ -88,22 +88,26 @@
 </div>
 
   <!--BANNER SECTION-->
-  <div class="container-fluid">
+  <section>
+    <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-0">
         <img src="../assets/bannerImg.png" class="img-fluid w-100">
       </div>
     </div>
   </div>
+  </section>
+
 
   <!--SERVICES SECTION-->
-  <div class="container">
+  <section>
+    <div class="container mb-5">
     <div class="row bg-color d-flex justify-content-center">
       <div class="col-12 mt-5 mb-4 text-center">
         <h2>Services</h2>
       </div>
       <div class="col-10 mb-4 p-0">
-        <p class="mb-5">
+        <p class="mb-5" >
           As a proud veteran-owned business, we bring the same dedication, discipline,
           and commitment to excellence that we upheld in service to our country. We know
           the challenges our customers face when dealing with unexpected breakdowns,
@@ -112,39 +116,39 @@
         </p>
       </div>
       <!-- Card: AC Repair -->
-      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+      <div class="col-10 col-md-4 mb-4">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg1.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
           <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
-            <h3 class="text-white mb-2">AC REPAIR</h3>
-            <p class="text-center">
+            <h4 class="text-white mb-2">AC REPAIR</h4>
+            <p class="" style="font-size: small;">
               Get your air conditioner back to optimal performance with our fast, reliable repair services.
             </p>
           </div>
         </div>
       </div>
       <!-- Card: AC Maintenance -->
-      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+      <div class="col-10 col-md-4  mb-4">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg2.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
           <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
-            <h3 class="text-white mb-2">AC MAINTENANCE</h3>
-            <p class="text-center">
+            <h4 class="text-white mb-2">AC MAINTENANCE</h4>
+            <p class="" style="font-size: small;">
               Keep your cooling system running efficiently year-round with our comprehensive maintenance plans.
             </p>
           </div>
         </div>
       </div>
       <!-- Card: AC Installation -->
-      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+      <div class="col-10 col-md-4 mb-4">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg3.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
           <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
-            <h3 class="text-white mb-2">AC INSTALLATION</h3>
-            <p class="text-center">
+            <h4 class="text-white mb-2">AC INSTALLATION</h4>
+            <p class="" style="font-size: small;">
               Trust our experts for seamless and energy-efficient AC installations tailored to your needs.
             </p>
           </div>
@@ -152,9 +156,12 @@
       </div>
     </div>
   </div>
+  </section>
+
 
   <!--ABOUT US SECTION-->
-  <div class="container-fluid p-3 pt-4 pb-4 aboutUs-bg text-white">
+  <section>
+    <div class="container-fluid p-5 pt-5 pb-5 aboutUs-bg text-white">
     <div class="row d-flex justify-content-center">
       <div class="col-12 text-center mb-4">
         <h4>ABOUT US</h4>
@@ -175,18 +182,22 @@
       </div>
     </div>
   </div>
+  </section>
+
 
   <!--ELITE SECTION-->
-  <div class="container bg-color mt-5 ">
-    <div class="row">
+  <section class="d-flex justify-content-center">
+    <div class="container bg-color mt-5 m-md-5 p-md-5">
+
+    <div class="row d-flex justify-content-center">
       <!-- Left Column for Image -->
-      <div class="col-6 d-flex justify-content-center">
-        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
+      <div class="col-6">
+        <video controls src="../assets/tankVideo.mp4" type="video/mp4" class="img-fluid" alt="Fleet truck of Tank AC and Heat"></video>
       </div>
       <!-- Right Column for Text -->
       <div class="col-6 mr-5">
         <h6 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h6>
-        <p class="" style="font-size: 12px;">
+        <p class="elite-p">
           Stay cool and comfortable with top-notch AC service right at your fingertips.
           We’re here to make sure your home feels just right, with easy, reliable, and
           friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve
@@ -195,13 +206,15 @@
       </div>
     </div>
 
-    <div class="row mt-4">
+    <div class="row mt-5">
       <div class="col">
-        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
-        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
+        <img src="../assets/elite truck.png" class="elite-image-1" alt="Fleet truck of Tank AC and Heat">
+        <img src="../assets/LaPuerca.png" class="elite-image-2" alt="Fleet truck of Tank AC and Heat">
       </div>
     </div>
   </div>
+  </section>
+
 
   <!--CAMOUFLAGE SECTION-->
   <Camouflage></Camouflage>
@@ -248,6 +261,9 @@
 h1{
   font-size: calc(0.9rem + 1.5vw) !important;
 }
+section p{
+  text-align: left;
+}
 .financing-desc {
   font-size: 9px;
   font-family: Helvetica, sans-serif;
@@ -263,6 +279,17 @@ h1{
 /* SERVICES SECTION CSS */
 .bg-color {
   background-color: #BFB59F;
+}
+
+.elite-image-1{
+  width: 70%;
+  height: 65%;
+}
+.elite-image-2{
+  width: 58%;
+    position: relative;
+    top: -80px;
+    left: 150px;
 }
 .service-card {
   height: 300px;
@@ -284,14 +311,11 @@ h1{
   height: 105px;
   object-fit: cover; /* Ensures the image looks good while maintaining its aspect ratio */
 }
-@media (min-width: 992px) {
-  .banner-img {
-    height: 200px;
-  }
-}
+
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
   background-color: #0F0F0F;
+
 }
 
 /* CAMOUFLAGE CSS */
@@ -333,6 +357,40 @@ h1{
 
 .text-color {
   color: #E95722;
+}
+
+
+/*********MEDIA QUERIES*****/
+/*****MEDIUM******/
+@media (min-width: 768px) {
+  .elite-image-2{
+    width: 61%;
+    position: relative;
+    top: -107px;
+    left: 278px;
+  }
+  .elite-p{
+    font-size: 1rem;
+  }
+  .financial-card-container
+  {
+      margin: 0 16px;
+  }
+  .card-container{
+    max-width: 366px;
+  }
+
+
+}
+
+/*****LARGE******/
+@media (min-width: 992px) {
+  .banner-img {
+    height: 200px;
+  }
+  .aboutUs-bg {
+  height: 380px;
+ }
 }
 </style>
 

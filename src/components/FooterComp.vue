@@ -1,6 +1,6 @@
 <template>
-      <div class="container p-5 footer-bg">
-    <div class="row container">
+  <div class="container-fluid p-5 footer-bg">
+    <div class="row">
       <!--IMG LOGO-->
       <!-- <div class="col-12">
         <a class="navbar-brand fw-bold d-flex align-items-center m-0" href="#">
