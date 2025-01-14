@@ -18,7 +18,7 @@
     <form @submit.prevent="submitForm" class="p-2 rounded-1 min-vh-100">
       <!--Booking Details-->
       <!-- Booking Details -->
-      <div v-if="step === 4 && formData.service !== ''" class="text-white p-4 m-3 rounded box-shadow">
+      <div v-if="step === 4 && formData.service !== ''" class="p-4 m-3 rounded box-shadow form-style">
         <p class="mb-3 text-center fs-6 fw-bold">Your Appointment Details:</p>
         <div class="mb-2">
           <p class="mb-1"><strong>Service:</strong> {{ formData.service }}</p>
@@ -27,30 +27,31 @@
         </div>
       </div>
 
-<!-- Step 1: Booking Service -->
-<div v-if="step === 1">
-  <p class="text-center mb-1 pt-2 text-white">Select service</p>
-  <div class="d-flex flex-column gap-3 mb-5">
-    <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
-      @click="selectService(service)">
-      <div class="overlay rounded-2 d-flex flex-row align-items-center p-3">
-        <!-- Small image on the left -->
-        <img :src="service.image" alt="service image" class="service-image me-3 rounded-2" style="width: 100px; height: 100%; object-fit: cover;">
-        
-        <!-- Description on the right -->
-        <div class="service-info d-flex flex-column">
-          <h4 class="mb-1 card-header">{{ service.name }}</h4>
-          <p class="mb-2" style="font-size: 0.8rem;">{{ service.description }}</p>
-        </div>
-        
-        <!-- Arrow icon stays in the same place -->
-        <div class="text-end ms-auto mt-5">
-          <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
+      <!-- Step 1: Booking Service -->
+      <div v-if="step === 1">
+        <p class="text-center mb-1 pt-2 text-white">Select service</p>
+        <div class="d-flex flex-column gap-3 mb-5">
+          <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
+            @click="selectService(service)">
+            <div class="overlay rounded-2 d-flex flex-row align-items-center p-3">
+              <!-- Small image on the left -->
+              <img :src="service.image" alt="service image" class="service-image me-3 rounded-2"
+                style="width: 100px; height: 100%; object-fit: cover;">
+
+              <!-- Description on the right -->
+              <div class="service-info d-flex flex-column text-start">
+                <h4 class="mb-1 card-header">{{ service.name }}</h4>
+                <p class="mb-2" style="font-size: 0.8rem;">{{ service.description }}</p>
+              </div>
+
+              <!-- Arrow icon stays in the same place -->
+              <div class="text-end ms-auto mt-5 pt-5">
+                <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
       <!-- Step 2: Date -->
@@ -108,60 +109,60 @@
 
       <!-- Step 4: Personal Details -->
       <div v-if="step === 4">
-        <p class="text-center mb-3 pt-2 text-white">Enter personal details</p>
+        <p class="text-center mb-3 pt-2">Enter personal details</p>
         <!--In Person-->
-        <div class="p-3 m-3 rounded-2 box-shadow">
+        <div class="p-3 m-3 rounded-2 box-shadow form-style">
           <!--In Person-->
           <div>
             <div class="mb-2">
-              <label for="name" class="form-label text-white">Name</label>
+              <label for="name" class="form-label">Name</label>
               <input type="text" id="name" class="form-control" v-model="formData.name" placeholder="" required />
             </div>
 
             <div class="mb-2">
-              <label for="email" class="form-label text-white">Email</label>
+              <label for="email" class="form-label">Email</label>
               <input type="email" id="email" class="form-control" v-model="formData.email" placeholder="" required />
             </div>
 
             <div class="mb-2">
-              <label for="phone" class="form-label text-white">Phone Number</label>
+              <label for="phone" class="form-label">Phone Number</label>
               <input type="tel" id="phone" class="form-control" v-model="formData.phone" placeholder="" required />
             </div>
 
             <div class="mb-2">
-              <label for="street" class="form-label text-white">Street Address</label>
+              <label for="street" class="form-label">Street Address</label>
               <input type="text" id="street" class="form-control" v-model="formData.street" placeholder="" required />
             </div>
 
             <div class="row mb-2">
               <div class="col">
-                <label for="city" class="form-label text-white">City</label>
+                <label for="city" class="form-label">City</label>
                 <input type="text" id="city" class="form-control" v-model="formData.city" placeholder="" required />
               </div>
               <div class="col">
-                <label for="state" class="form-label text-white">State</label>
+                <label for="state" class="form-label">State</label>
                 <input type="text" id="state" class="form-control" v-model="formData.state" placeholder="" required />
               </div>
               <div class="col">
-                <label for="zip" class="form-label text-white">ZIP Code</label>
+                <label for="zip" class="form-label">ZIP Code</label>
                 <input type="text" id="zip" class="form-control" v-model="formData.zip" placeholder="" required />
               </div>
             </div>
           </div>
           <!--Buttons Section-->
           <div class="d-flex justify-content-between mt-4">
-            <button type="button" class="btn" @click="goToStep(4)">
-              <i class="bi bi-arrow-left-circle orange-txt"></i>
+            <button type="button" class="btn" @click="goToStep(3)">
+              <i class="bi bi-arrow-left-circle fs-2"></i>
             </button>
             <div v-if="displaySpinnerMessage">
               <button class="btn btn-outline-success border-0" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-
               </button>
             </div>
             <div v-else>
-              <button type="submit" class="btn w-25">
-                <i class="bi bi-send-check-fill orange-txt"></i>
+              <button type="submit" class="btn btn-outline-dark">
+                Submit
+                <i class="bi bi-send-check-fill"></i>
               </button>
             </div>
           </div>
@@ -176,14 +177,14 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content modern-modal rounded-2 border-0 shadow-lg">
             <div class="modal-header border-0">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center p-4">
               <h5 class="modal-title fw-bold mb-1">Thank You!</h5>
               <i class="bi bi-emoji-smile-fill fs-4"></i>
               <p>
-                Your appointment has been successfully scheduled. 
-                We’ll be in touch soon! Please check your email for confirmation, and 
+                Your appointment has been successfully scheduled.
+                We’ll be in touch soon! Please check your email for confirmation, and
                 <span class="text-danger fw-bold">
                   don't forget to check your spam or junk folder if you don't see it in your inbox.
                 </span>
@@ -488,32 +489,41 @@ export default {
 .f-s {
   font-size: 0.8rem;
 }
+
 .orange-txt {
   color: #F28C28;
 }
+
 .max-w {
   max-width: 300px;
 }
+
 .my-bg {
   background-color: #1a1919 !important;
 }
+
 .small-btn {
   font-size: 0.7rem !important;
 }
+
 .form-check-input {
   background-color: #000000 !important;
   border: 1px solid #2C3539;
 }
+
 p,
 label {
   font-size: 0.9rem;
 }
+
 .steel-blue-color {
   color: #4682B4;
 }
+
 .box-shadow {
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
 }
+
 .service-card {
   font-size: 0.8rem;
   background-size: cover;
@@ -526,6 +536,7 @@ label {
   /* Adjust the height as needed */
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
 }
+
 .service-card .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -534,19 +545,22 @@ label {
   right: 0;
   bottom: 0;
 }
+
 .card-header {
   font-size: 1.2rem;
 }
+
 .form-label {
   font-size: 0.8rem !important;
 }
+
 .form-select {
   font-size: 0.8rem !important;
 }
+
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background-color: #1a1919;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -571,16 +585,17 @@ button:hover {
 
 /*InPerson/Online CSS*/
 .datepicker-container {
-  max-width: 300px;
+  max-width: 350px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
 }
 
 .calendar {
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .calendar-header {
@@ -595,7 +610,7 @@ button:hover {
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 2rem;
   padding: 5px;
   color: #F28C28;
 }
@@ -629,15 +644,16 @@ button:hover {
 }
 
 .selected-date {
-  background-color: #4682B4;
-  color: #fff;
+  background-color: #E9A992;
+  color: #000;
 }
 
 /*TIME PICKER CSS*/
 .timepicker-container {
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
-  max-width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 350px;
 }
 
 .time-grid {
@@ -648,8 +664,9 @@ button:hover {
 }
 
 .time-box {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   text-align: center;
+  padding: 2px;
   border: 1px solid #ddd;
   border-radius: 4px;
   color: #ffffff;
@@ -658,14 +675,14 @@ button:hover {
 }
 
 .time-box.taken {
-  background-color: #b15454;
+  background-color: #E9A992;
   cursor: not-allowed;
-  color: #ffffff;
+  color: #000;
 }
 
 .time-box.selected {
-  background-color: #4682B4;
-  color: white;
+  background-color: #E9A992;
+  color: #000;
 }
 
 .time-box:hover:not(.taken):not(.selected) {
@@ -674,13 +691,13 @@ button:hover {
 
 /*MODAL*/
 .modern-modal {
-  background-color: #001524;
-  color: #fff;
+  background-color: #d9d9d9;
+  color: #000;
 }
 
 .modal-title {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #000;
 }
 
 .modal-body {
@@ -690,7 +707,9 @@ button:hover {
 
 .btn-close {
   filter: invert(1);
-  /* Makes the close button white for dark backgrounds */
+  color: #000;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .shadow-lg {
@@ -699,5 +718,9 @@ button:hover {
 
 .rounded-3 {
   border-radius: 1rem !important;
+}
+
+.form-style {
+  background-color: #d9d9d9;
 }
 </style>
