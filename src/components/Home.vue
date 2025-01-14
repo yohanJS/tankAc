@@ -26,66 +26,67 @@
   <!--FINANCING OPTIONS SECTION-->
   <div class="container bg-color p-3">
     <div class="row">
-        <div class="col-12 text-center mb-3 mt-3">
-          <h2 class="">Financing Options</h2>
-          <h6 class="mt-4 mb-3">
-            Great Options for Financing
-            <br>Your New Air Conditioning System!
-          </h6>
-        </div>
+      <div class="col-12 text-center mb-3 mt-3">
+        <h2 class="">Financing Options</h2>
+        <h6 class="mt-4 mb-3">
+          Great Options for Financing
+          <br>Your New Air Conditioning System!
+        </h6>
+      </div>
 
     </div>
 
     <div class="row d-flex justify-content-center m-1">
       <div class="col-6 col-md-3">
         <div class="card-color">
-            <div class="d-flex justify-content-center">
-              <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;">
-            </div>
-
-            <div class="d-flex justify-content-center">
-              <button class="btn card-btn-color btn-sm mt-3 mb-3">
-                <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white"
-                  target="_blank">Apply Here</a>
-              </button>
-            </div>
-
+          <div class="d-flex justify-content-center">
+            <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;">
           </div>
-          <div class="p-0 mt-4 mb-4">
-            <p class="financing-desc">
-                A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods
-                and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits
-                available throughout the year
-            </p>
+
+          <div class="d-flex justify-content-center">
+            <button class="btn card-btn-color btn-sm mt-3 mb-3">
+              <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white"
+                target="_blank">Apply Here</a>
+            </button>
           </div>
+
+        </div>
+        <div class="p-0 mt-4 mb-4">
+          <p class="financing-desc">
+            A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods
+            and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits
+            available throughout the year
+          </p>
+        </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="card-color">
           <div class="d-flex justify-content-center">
-            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank" style="width: 130px; height: 59px;">
+            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank"
+              style="width: 130px; height: 59px;">
           </div>
 
           <div class="d-flex justify-content-center">
             <button class="btn card-btn-color btn-sm mt-3 mb-3">
-            <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
-                class="text-decoration-none text-white"  >Apply Here</a>
+              <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
+                class="text-decoration-none text-white">Apply Here</a>
             </button>
           </div>
 
         </div>
 
         <div class="p-0 mt-4 mb-4">
-            <p class="financing-desc">
-              A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods
-              and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits
-              available throughout the year
-            </p>
+          <p class="financing-desc">
+            A Carrier® credit card* from Wells Fargo Bank, N.A. is an easy and convenient way to pay for goods
+            and services you purchase. And, as a Carrier® cardholder you can take advantage of other great benefits
+            available throughout the year
+          </p>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
-</div>
 
   <!--BANNER SECTION-->
   <div class="container-fluid">
@@ -154,6 +155,23 @@
             <h3 class="text-white mb-2">AC INSTALLATION</h3>
             <p class="text-center">
               Trust our experts for seamless and energy-efficient AC installations tailored to your needs.
+            </p>
+            <router-link to="/Booking" class="btn btn-color text-color btn">
+              Book Visit
+              <i class="bi bi-chevron-double-right"></i>
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <!-- Card: UV Light -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+        <div class="service-card position-relative rounded-3 text-white"
+          style="background-image: url('/assets/serviceImg4.png'); background-size: cover; background-position: center;">
+          <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
+          <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="text-white mb-2">UV LIGHT INSTALL</h3>
+            <p class="text-center">
+              Get your air conditioner back to optimal performance with our fast, reliable repair services.
             </p>
             <router-link to="/Booking" class="btn btn-color text-color btn">
               Book Visit
