@@ -3,7 +3,7 @@
   <NavBar />
   <div id="bookingFormContainer" class="container p-0 text-dark min-vh-100">
     <div class="row text-center mb-4 p-4 text-white" style="background-color: #454B1BB8;">
-      <div class="col-12">
+      <div class="col-12 p-0">
         <h4>TRUST OUR HVAC EXPECTS</h4>
         <p>Professional cooling and heating services at your finger tips</p>
         <p v-if="step === 1" class="text-center mb-1 pt-2 select-txt-color">Select service</p>
@@ -334,10 +334,10 @@ export default {
     },
     goToStep(stepNumber) {
       // Check if the step has changed
-      if (this.step !== stepNumber) {
-        // Scroll up to the top of the page
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-      }
+      // if (this.step !== stepNumber) {
+      //   // Scroll up to the top of the page
+      //   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      // }
       // Set the new step
       this.step = stepNumber;
     },
