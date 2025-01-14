@@ -6,9 +6,8 @@
       <div class="col-12">
         <h4>TRUST OUR HVAC EXPECTS</h4>
         <p>Professional cooling and heating services at your finger tips</p>
-        <p v-if="step === 1" class="text-center mb-1 pt-2 select-txt-color">Select service</p>
-        <p v-if="step === 4" class="text-center mb-3 pt-2 select-txt-color">Enter personal details</p>
-
+        <p v-if="step === 1" class="text-center mb-0 select-txt-color">Select service</p>
+        <!--Step 2-->
         <div class="row align-items-center" v-if="step === 2">
           <!-- Left arrow -->
           <div class="col-3 text-start">
@@ -17,7 +16,7 @@
 
           <!-- Center text -->
           <div class="col-6 text-center">
-            <p class="mb-0 pt-2 select-txt-color">Select date</p>
+            <p class="mb-0 select-txt-color">Select date</p>
           </div>
 
           <!-- Right arrow -->
@@ -25,7 +24,7 @@
             <i @click="goToStep(3)" id="step3" class="bi bi-arrow-right-circle fs-5"></i>
           </div>
         </div>
-
+        <!--Step 3-->
         <div class="row align-items-center" v-if="step === 3">
           <!-- Left arrow -->
           <div class="col-3 text-start">
@@ -34,7 +33,7 @@
 
           <!-- Center text -->
           <div class="col-6 text-center">
-            <p class="mb-0 pt-2 select-txt-color">Select time</p>
+            <p class="mb-0 select-txt-color">Select time</p>
           </div>
 
           <!-- Right arrow -->
@@ -42,13 +41,18 @@
             <i @click="goToStep(4)" id="step3" class="bi bi-arrow-right-circle fs-5"></i>
           </div>
         </div>
-
+        <!--Step 4-->
         <div class="row align-items-center" v-if="step === 4">
           <!-- Left arrow -->
           <div class="col-3 text-start">
-            <i @click="goToStep(3)" id="step1" class="bi bi-arrow-left-circle fs-5"></i>
+            <i @click="goToStep(3)" id="step3" class="bi bi-arrow-left-circle fs-5"></i>
           </div>
-        </div> 
+
+          <!-- Center text -->
+          <div class="col-7 text-center">
+            <p class="mb-0 select-txt-color">Enter personal details</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -59,12 +63,9 @@
         <i class="bi bi-info-circle fs-5"></i>
         <p class=" fs-6 fw-bold">Your Appointment Details:</p>
         <div class="mb-2 m-3">
-          <p class="mb-1"><strong>Service:</strong> {{ formData.service }} <i
-              class="bi bi-pencil-square orange-txt"></i></p>
+          <p class="mb-1"><strong>Service:</strong> {{ formData.service }}</p>
           <p class="mb-1"><strong>Date:</strong> {{ formattedDate }}</p>
-          <p v-if="selectedTime !== null || selectedTime !== ''" class="mb-1"><strong>Time:</strong> {{ formattedTime }}
-          </p>
-          <p v-else class="text-danger">PLEASE SELECT TIME</p>
+          <p class="mb-1"><strong>Time:</strong> {{ formattedTime }} </p>
         </div>
       </div>
 
