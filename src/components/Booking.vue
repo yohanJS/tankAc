@@ -358,10 +358,10 @@ export default {
     },
     goToStep(stepNumber) {
       // Check if the step has changed
-      // if (this.step !== stepNumber) {
-      //   // Scroll up to the top of the page
-      //   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-      // }
+      if (this.step !== stepNumber) {
+        // Scroll up to the top of the page
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }
       // Set the new step
       this.step = stepNumber;
     },
