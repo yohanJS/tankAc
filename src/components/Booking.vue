@@ -7,9 +7,48 @@
         <h4>TRUST OUR HVAC EXPECTS</h4>
         <p>Professional cooling and heating services at your finger tips</p>
         <p v-if="step === 1" class="text-center mb-1 pt-2 select-txt-color">Select service</p>
-        <p v-if="step === 2" class="text-center mb-3 pt-2 select-txt-color">Select date</p>
-        <p v-if="step === 3" class="text-center mb-1 pt-2 select-txt-color">Select time</p>
         <p v-if="step === 4" class="text-center mb-3 pt-2 select-txt-color">Enter personal details</p>
+
+        <div class="row align-items-center" v-if="step === 2">
+          <!-- Left arrow -->
+          <div class="col-3 text-start">
+            <i @click="goToStep(1)" id="step1" class="bi bi-arrow-left-circle fs-5"></i>
+          </div>
+
+          <!-- Center text -->
+          <div class="col-6 text-center">
+            <p class="mb-0 pt-2 select-txt-color">Select date</p>
+          </div>
+
+          <!-- Right arrow -->
+          <div class="col-3 text-end">
+            <i @click="goToStep(3)" id="step3" class="bi bi-arrow-right-circle fs-5"></i>
+          </div>
+        </div>
+
+        <div class="row align-items-center" v-if="step === 3">
+          <!-- Left arrow -->
+          <div class="col-3 text-start">
+            <i @click="goToStep(2)" id="step1" class="bi bi-arrow-left-circle fs-5"></i>
+          </div>
+
+          <!-- Center text -->
+          <div class="col-6 text-center">
+            <p class="mb-0 pt-2 select-txt-color">Select time</p>
+          </div>
+
+          <!-- Right arrow -->
+          <div class="col-3 text-end">
+            <i @click="goToStep(4)" id="step3" class="bi bi-arrow-right-circle fs-5"></i>
+          </div>
+        </div>
+
+        <div class="row align-items-center" v-if="step === 4">
+          <!-- Left arrow -->
+          <div class="col-3 text-start">
+            <i @click="goToStep(3)" id="step1" class="bi bi-arrow-left-circle fs-5"></i>
+          </div>
+        </div> 
       </div>
     </div>
 
@@ -20,9 +59,12 @@
         <i class="bi bi-info-circle fs-5"></i>
         <p class=" fs-6 fw-bold">Your Appointment Details:</p>
         <div class="mb-2 m-3">
-          <p class="mb-1"><strong>Service:</strong> {{ formData.service }}</p>
+          <p class="mb-1"><strong>Service:</strong> {{ formData.service }} <i
+              class="bi bi-pencil-square orange-txt"></i></p>
           <p class="mb-1"><strong>Date:</strong> {{ formattedDate }}</p>
-          <p class="mb-1"><strong>Time:</strong> {{ formattedTime }}</p>
+          <p v-if="selectedTime !== null || selectedTime !== ''" class="mb-1"><strong>Time:</strong> {{ formattedTime }}
+          </p>
+          <p v-else class="text-danger">PLEASE SELECT TIME</p>
         </div>
       </div>
 
@@ -73,14 +115,6 @@
                 </span>
               </div>
             </div>
-            <div class="d-flex justify-content-between rounded-2 mx-auto mt-3">
-              <button type="button" class="btn" @click="goToStep(1)">
-                <i class="bi bi-arrow-left-circle orange-txt fs-4"></i>
-              </button>
-              <button type="button" class="btn" @click="goToStep(3)">
-                <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -95,14 +129,6 @@
               {{ time }}
             </div>
           </div>
-          <div class="d-flex justify-content-between rounded-2 mx-auto mt-3">
-              <button type="button" class="btn" @click="goToStep(2)">
-                <i class="bi bi-arrow-left-circle orange-txt fs-4"></i>
-              </button>
-              <button type="button" class="btn" @click="goToStep(4)">
-                <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
-              </button>
-            </div>
         </div>
       </div>
 
@@ -148,10 +174,7 @@
             </div>
           </div>
           <!--Buttons Section-->
-          <div class="d-flex justify-content-between mt-4">
-            <button type="button" class="btn" @click="goToStep(3)">
-              <i class="bi bi-arrow-left-circle orange-txt fs-2"></i>
-            </button>
+          <div class="d-flex justify-content-end mt-4">
             <div v-if="displaySpinnerMessage">
               <button class="btn btn-outline-success border-0" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
@@ -479,6 +502,7 @@ export default {
 .select-txt-color {
   color: #F6A487;
 }
+
 .f-s {
   font-size: 0.8rem;
 }
