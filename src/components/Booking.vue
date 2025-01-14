@@ -1,17 +1,15 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <NavBar />
-  <div id="bookingFormContainer" class="container py-2 p-0 text-dark min-vh-100">
-    <div class="text-center mb-4 mt-2">
-      <div class="px-5" role="group" aria-label="First group">
-        <button @click="goToStep(1)" id="step1" type="button"
-          class="btn btn-primary m-1 rounded-5 my-bg border-0 small-btn fw-bold steel-blue-color">1</button>
-        <button @click="goToStep(2)" id="step2" type="button"
-          class="btn btn-primary m-1 rounded-5 my-bg border-0 small-btn">2</button>
-        <button @click="goToStep(3)" id="step3" type="button"
-          class="btn btn-primary m-1 rounded-5 my-bg border-0 small-btn">3</button>
-        <button @click="goToStep(4)" id="step4" type="button"
-          class="btn btn-primary m-1 rounded-5 my-bg border-0 small-btn">4</button>
+  <div id="bookingFormContainer" class="container p-0 text-dark min-vh-100">
+    <div class="row text-center mb-4 p-4 text-white" style="background-color: #454B1BB8;">
+      <div class="col-12">
+        <h4>TRUST OUR HVAC EXPECTS</h4>
+        <p>Professional cooling and heating services at your finger tips</p>
+        <p v-if="step === 1" class="text-center mb-1 pt-2 select-txt-color">Select service</p>
+        <p v-if="step === 2" class="text-center mb-3 pt-2 select-txt-color">Select date</p>
+        <p v-if="step === 3" class="text-center mb-1 pt-2 select-txt-color">Select time</p>
+        <p v-if="step === 4" class="text-center mb-3 pt-2 select-txt-color">Enter personal details</p>
       </div>
     </div>
 
@@ -19,8 +17,9 @@
       <!--Booking Details-->
       <!-- Booking Details -->
       <div v-if="step === 4 && formData.service !== ''" class="p-4 m-3 rounded box-shadow form-style">
-        <p class="mb-3 text-center fs-6 fw-bold">Your Appointment Details:</p>
-        <div class="mb-2">
+        <i class="bi bi-info-circle fs-5"></i>
+        <p class=" fs-6 fw-bold">Your Appointment Details:</p>
+        <div class="mb-2 m-3">
           <p class="mb-1"><strong>Service:</strong> {{ formData.service }}</p>
           <p class="mb-1"><strong>Date:</strong> {{ formattedDate }}</p>
           <p class="mb-1"><strong>Time:</strong> {{ formattedTime }}</p>
@@ -29,9 +28,8 @@
 
       <!-- Step 1: Booking Service -->
       <div v-if="step === 1">
-        <p class="text-center mb-1 pt-2 text-white">Select service</p>
         <div class="d-flex flex-column gap-3 mb-5">
-          <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 text-white m-3 btn"
+          <div v-for="service in services" :key="service.id" class="service-card border-0 rounded-2 m-3 btn"
             @click="selectService(service)">
             <div class="overlay rounded-2 d-flex flex-row align-items-center p-3">
               <!-- Small image on the left -->
@@ -56,7 +54,6 @@
 
       <!-- Step 2: Date -->
       <div v-if="step === 2">
-        <p class="text-center mb-3 pt-2 text-white">Select date</p>
         <div class="datepicker-container m-2 mx-auto">
           <div class="calendar rounded-2">
             <div class="calendar-header">
@@ -76,26 +73,20 @@
                 </span>
               </div>
             </div>
+            <div class="d-flex justify-content-between rounded-2 mx-auto mt-3">
+              <button type="button" class="btn" @click="goToStep(1)">
+                <i class="bi bi-arrow-left-circle orange-txt fs-4"></i>
+              </button>
+              <button type="button" class="btn" @click="goToStep(3)">
+                <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
+              </button>
+            </div>
           </div>
         </div>
-
-        <!--<div class="d-flex justify-content-between my-bg rounded-2 shadow-sm mx-auto" style="max-width: 300px;">
-      <button type="button"
-              class="btn w-25"
-              @click="goToStep(2)">
-        <i class="bi bi-arrow-left-circle text-dark"></i>
-      </button>
-      <button type="button"
-              class="btn w-25"
-              @click="goToStep(4)">
-        <i class="bi bi-arrow-right-circle text-dark"></i>
-      </button>
-    </div>-->
       </div>
 
       <!-- Step 3: Time Picker -->
       <div v-if="step === 3">
-        <p class="text-center mb-3 pt-2 text-white">Select time</p>
         <div class="timepicker-container m-2 mx-auto rounded-2">
           <div class="time-grid">
             <div v-for="(time, index) in timeSlots" :key="index"
@@ -104,12 +95,19 @@
               {{ time }}
             </div>
           </div>
+          <div class="d-flex justify-content-between rounded-2 mx-auto mt-3">
+              <button type="button" class="btn" @click="goToStep(2)">
+                <i class="bi bi-arrow-left-circle orange-txt fs-4"></i>
+              </button>
+              <button type="button" class="btn" @click="goToStep(4)">
+                <i class="bi bi-arrow-right-circle orange-txt fs-4"></i>
+              </button>
+            </div>
         </div>
       </div>
 
       <!-- Step 4: Personal Details -->
       <div v-if="step === 4">
-        <p class="text-center mb-3 pt-2">Enter personal details</p>
         <!--In Person-->
         <div class="p-3 m-3 rounded-2 box-shadow form-style">
           <!--In Person-->
@@ -152,7 +150,7 @@
           <!--Buttons Section-->
           <div class="d-flex justify-content-between mt-4">
             <button type="button" class="btn" @click="goToStep(3)">
-              <i class="bi bi-arrow-left-circle fs-2"></i>
+              <i class="bi bi-arrow-left-circle orange-txt fs-2"></i>
             </button>
             <div v-if="displaySpinnerMessage">
               <button class="btn btn-outline-success border-0" type="button" disabled>
@@ -339,17 +337,9 @@ export default {
       if (this.step !== stepNumber) {
         // Scroll up to the top of the page
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        // Clear previous step's styles
-        var previousStep = document.getElementById("step" + this.step);
-        previousStep.classList.remove('fw-bold', 'steel-blue-color');
       }
-
       // Set the new step
       this.step = stepNumber;
-
-      // Add styles to the current step
-      var step = document.getElementById("step" + stepNumber);
-      step.classList.add('fw-bold', 'steel-blue-color', 'bg-danger');
     },
     getDates() {
       const dates = [];
@@ -486,6 +476,9 @@ export default {
 
 <!--CSS-->
 <style scoped>
+.select-txt-color {
+  color: #F6A487;
+}
 .f-s {
   font-size: 0.8rem;
 }
@@ -513,7 +506,7 @@ export default {
 
 p,
 label {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .steel-blue-color {
@@ -527,18 +520,13 @@ label {
 .service-card {
   font-size: 0.8rem;
   background-size: cover;
-  /* Ensure the background image covers the entire card */
   background-position: center;
-  /* Center the image */
   position: relative;
-  /* Required for overlay positioning */
   min-height: 150px;
-  /* Adjust the height as needed */
-  box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
 }
 
 .service-card .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #d9d9d9;
   position: absolute;
   top: 0;
   left: 0;
@@ -551,7 +539,7 @@ label {
 }
 
 .form-label {
-  font-size: 0.8rem !important;
+  font-size: 1rem !important;
 }
 
 .form-select {
@@ -591,11 +579,11 @@ button:hover {
 }
 
 .calendar {
-  color: #ffffff;
+  color: #000;
   font-size: 1rem;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #d9d9d9;
 }
 
 .calendar-header {
@@ -652,7 +640,7 @@ button:hover {
 .timepicker-container {
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #d9d9d9;
   max-width: 350px;
 }
 
@@ -669,7 +657,7 @@ button:hover {
   padding: 2px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  color: #ffffff;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s;
 }

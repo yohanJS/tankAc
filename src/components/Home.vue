@@ -121,6 +121,10 @@
             <p class="text-center">
               Get your air conditioner back to optimal performance with our fast, reliable repair services.
             </p>
+            <router-link to="/Booking" class="btn btn-color text-color btn">
+              Book Visit
+              <i class="bi bi-chevron-double-right"></i>
+            </router-link>
           </div>
         </div>
       </div>
@@ -134,6 +138,10 @@
             <p class="text-center">
               Keep your cooling system running efficiently year-round with our comprehensive maintenance plans.
             </p>
+            <router-link to="/Booking" class="btn btn-color text-color btn">
+              Book Visit
+              <i class="bi bi-chevron-double-right"></i>
+            </router-link>
           </div>
         </div>
       </div>
@@ -147,6 +155,10 @@
             <p class="text-center">
               Trust our experts for seamless and energy-efficient AC installations tailored to your needs.
             </p>
+            <router-link to="/Booking" class="btn btn-color text-color btn">
+              Book Visit
+              <i class="bi bi-chevron-double-right"></i>
+            </router-link>
           </div>
         </div>
       </div>
@@ -192,13 +204,6 @@
           friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve
           got you covered—no hassle, just great service to keep you chill.
         </p>
-      </div>
-    </div>
-
-    <div class="row mt-4">
-      <div class="col">
-        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
-        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
       </div>
     </div>
   </div>

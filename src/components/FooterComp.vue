@@ -75,10 +75,8 @@ export default {
   position: relative; /* Ensure child elements like .overlay are positioned relative to the footer */
   background-image: url(../assets/tankFooter.png);
   background-size: contain; /* Make the image cover the entire footer */
-  background-position: center; /* Center the image */
   background-repeat: no-repeat;
   color: white; /* Default text color */
-  padding: 20px 0; /* Add padding for spacing */
 }
 .footer-bg .overlay {
   position: absolute; /* Overlay spans the entire footer */
