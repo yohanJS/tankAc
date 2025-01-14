@@ -199,7 +199,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content modern-modal rounded-2 border-0 shadow-lg">
             <div class="modal-header border-0">
-              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close" @click="goToHome()"></button>
             </div>
             <div class="modal-body text-center p-4">
               <h5 class="modal-title fw-bold mb-1">Thank You!</h5>
@@ -493,6 +493,9 @@ export default {
       this.displaySpinnerMessage = false;
       // Handle form submission (e.g., send to an API)
       //alert(`Booking submitted: \n${JSON.stringify(this.formData, null, 2)}`);
+    },
+    goToHome() {
+      window.location.href = "/";
     },
   },
 };

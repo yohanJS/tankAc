@@ -207,11 +207,11 @@
   </div>
 
   <!--ELITE SECTION-->
-  <div class="container bg-color mt-5 ">
+  <div class="container bg-color mt-5 mb-5">
     <div class="row">
       <!-- Left Column for Image -->
       <div class="col-6 d-flex justify-content-center">
-        <img src="../assets/truckImg.png" class="img-fluid" alt="Fleet truck of Tank AC and Heat">
+        <img src="../assets/truckImg.png" class="img-fluid rounded-2" alt="Fleet truck of Tank AC and Heat">
       </div>
       <!-- Right Column for Text -->
       <div class="col-6 mr-5">
