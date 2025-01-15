@@ -211,7 +211,7 @@
   <div class="container p-3 pt-4 pb-4 mb-4">
     <div class="row d-flex justify-content-around">
       <div class="col-12 col-md-5 p-0">
-      <div class="row d-flex justify-content-center">
+      <div class="d-flex justify-content-center">
         <div class="col-10">
           <section class="p-0">
             <div class="image rounded-2">
@@ -227,7 +227,7 @@
     <br>
     <div class="col-10 col-md-6 p-0">
       <div class="row d-flex justify-content-around mt-5">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-5 align-self-center">
           <h6 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h6>
           <p>
             Stay cool and comfortable with top-notch AC service right at your fingertips.
@@ -391,7 +391,7 @@ section {
   grid-template-areas: "image image image" ". text image-stop" ". text .";
 }
 
-@media (width > 600px) {
+@media (min-width: 600px) {
   section {
     grid-template-columns: 2fr .5fr 1fr;
     grid-template-rows: 100px auto;
