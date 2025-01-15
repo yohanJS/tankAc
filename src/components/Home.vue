@@ -374,7 +374,7 @@ h1 {
 
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
-  background-color: #0F0F0F;
+  background-color: #1A1919DB;
 }
 
 /* CAMOUFLAGE CSS */
