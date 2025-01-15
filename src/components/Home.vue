@@ -237,7 +237,7 @@
           </p>
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center">
-          <video class="rounded-2 w-100" autoplay muted loop controls playsinline>
+          <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
             <source src="../assets/tankVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
