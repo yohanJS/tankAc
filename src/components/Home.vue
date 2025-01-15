@@ -235,7 +235,7 @@
       <div class="col-10 col-md-6 p-0">
         <div class="row d-flex justify-content-around mt-5">
           <div class="col-12 col-md-5 align-self-center">
-            <h6 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h6>
+            <h2 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h2>
             <p>
               Stay cool and comfortable with top-notch AC service right at your fingertips.
               We’re here to make sure your home feels just right, with easy, reliable, and
