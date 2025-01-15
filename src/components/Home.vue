@@ -1,5 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template id="home">
+  <div>
+    <!-- Floating Booking Icon -->
+    <router-link to="/Booking" class="booking-icon btn btn-color text-color btn-sm">
+      Book Visit
+      <i class="bi bi-chevron-double-right"></i>
+    </router-link>
+  </div>
+
   <!--NAVBAR COMPONENT-->
   <NavBar />
   <!--HERO SECTION-->
@@ -206,44 +214,43 @@
     </div>
   </div>
 
-
   <!--ELITE SECTION-->
   <div class="container p-3 pt-4 pb-4 mb-4">
     <div class="row d-flex justify-content-around">
       <div class="col-12 col-md-5 p-0">
-      <div class="d-flex justify-content-center">
-        <div class="col-10">
-          <section class="p-0">
-            <div class="image rounded-2">
-              <img src="../assets/truckImg.png" alt="Fleet truck of Tank AC and Heat" />
-            </div>
-            <div class="text">
-              <img src="../assets/fleetImg.png" class="img-fluid rounded-2" alt="Fleet of Tank AC and Heat">
-            </div>
-          </section>
+        <div class="d-flex justify-content-center">
+          <div class="col-10">
+            <section class="p-0">
+              <div class="image rounded-2">
+                <img src="../assets/truckImg.png" alt="Fleet truck of Tank AC and Heat" />
+              </div>
+              <div class="text">
+                <img src="../assets/fleetImg.png" class="img-fluid rounded-2" alt="Fleet of Tank AC and Heat">
+              </div>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
-    <br>
-    <div class="col-10 col-md-6 p-0">
-      <div class="row d-flex justify-content-around mt-5">
-        <div class="col-12 col-md-5 align-self-center">
-          <h6 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h6>
-          <p>
-            Stay cool and comfortable with top-notch AC service right at your fingertips.
-            We’re here to make sure your home feels just right, with easy, reliable, and
-            friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve
-            got you covered—no hassle, just great service to keep you chill.
-          </p>
-        </div>
-        <div class="col-12 col-md-6 d-flex justify-content-center">
-          <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
-            <source src="../assets/tankVideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+      <br>
+      <div class="col-10 col-md-6 p-0">
+        <div class="row d-flex justify-content-around mt-5">
+          <div class="col-12 col-md-5 align-self-center">
+            <h6 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h6>
+            <p>
+              Stay cool and comfortable with top-notch AC service right at your fingertips.
+              We’re here to make sure your home feels just right, with easy, reliable, and
+              friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve
+              got you covered—no hassle, just great service to keep you chill.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
+              <source src="../assets/tankVideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 
@@ -256,6 +263,21 @@
 </template>
 
 <style scoped>
+ /* Styles for the floating booking button */
+ .booking-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 35px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
 /* HERO SECTION CSS */
 .hero-section {
   position: relative;
