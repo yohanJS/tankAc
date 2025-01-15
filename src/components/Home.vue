@@ -328,8 +328,8 @@ h1 {
 
 .card-color {
   background-color: #484847;
-  border-radius: 15px;
-  height: 176px;
+  border-radius: 5px;
+  height: 175px;
 }
 
 .card-btn-color {
