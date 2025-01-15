@@ -98,7 +98,7 @@
   </div>
 
   <!--SERVICES SECTION-->
-  <div class="container">
+  <div class="container mb-5">
     <div class="row bg-color d-flex justify-content-center">
       <div class="col-12 mt-5 mb-4 text-center">
         <h2>Services</h2>
@@ -113,7 +113,7 @@
         </p>
       </div>
       <!-- Card: AC Repair -->
-      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+      <div class="col-10 col-md-4 col-lg-2 mb-4 p-0 m-1">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg1.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
@@ -130,7 +130,7 @@
         </div>
       </div>
       <!-- Card: AC Maintenance -->
-      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+      <div class="col-10 col-md-4 col-lg-2 mb-4 p-0 m-1">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg2.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
@@ -147,7 +147,7 @@
         </div>
       </div>
       <!-- Card: AC Installation -->
-      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+      <div class="col-10 col-md-4 col-lg-2 mb-4 p-0 m-1">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg3.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
@@ -164,7 +164,7 @@
         </div>
       </div>
       <!-- Card: UV Light -->
-      <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+      <div class="col-10 col-md-4 col-lg-2 mb-4 p-0 m-1">
         <div class="service-card position-relative rounded-3 text-white"
           style="background-image: url('/assets/serviceImg4.png'); background-size: cover; background-position: center;">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
