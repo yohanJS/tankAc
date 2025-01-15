@@ -49,14 +49,14 @@
           </div>
 
           <!-- Center text -->
-          <div class="col-7 text-center">
+          <div class="col-8 text-center">
             <p class="mb-0 select-txt-color">Enter personal details</p>
           </div>
         </div>
       </div>
     </div>
 
-    <form @submit.prevent="submitForm" class="p-2 rounded-1 min-vh-100">
+    <form @submit.prevent="submitForm" class="p-2 rounded-1">
       <!--Booking Details-->
       <!-- Booking Details -->
       <div v-if="step === 4 && formData.service !== ''" class="p-4 m-3 rounded box-shadow form-style">
@@ -65,7 +65,8 @@
         <div class="mb-2 m-3">
           <p class="mb-1"><strong>Service:</strong> {{ formData.service }}</p>
           <p class="mb-1"><strong>Date:</strong> {{ formattedDate }}</p>
-          <p class="mb-1"><strong>Time:</strong> {{ formattedTime }} </p>
+          <p v-if="formattedTime !== ''" class="mb-1"><strong>Time:</strong> {{ formattedTime }} </p>
+          <p v-else class="text-danger">Select time</p>
         </div>
       </div>
 
@@ -309,7 +310,7 @@ export default {
     formattedTime() {
       // Format as HH:MM AM/PM
       if (this.selectedTime === "" || this.selectedTime === null) {
-        return "Select time"
+        return ""
       }
       return moment(this.selectedTime, 'HH:mm').format('h:mm A');
     },
