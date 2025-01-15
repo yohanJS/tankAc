@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <form @submit.prevent="submitForm" class="p-2 rounded-1">
+    <form @submit.prevent="submitForm" class="p-2 rounded-1 min-vh-100">
       <!--Booking Details-->
       <!-- Booking Details -->
       <div v-if="step === 4 && formData.service !== ''" class="p-4 m-3 rounded box-shadow form-style">

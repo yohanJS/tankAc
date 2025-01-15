@@ -1,12 +1,14 @@
 <template>
-      <div class="container p-5 footer-bg">
-    <div class="row container">
+      <div class="container pt-5 pb-5 footer-bg">
+    <div class="row">
       <!--IMG LOGO-->
-      <!-- <div class="col-12">
+      <div class="col-12">
         <a class="navbar-brand fw-bold d-flex align-items-center m-0" href="#">
-          <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 80px; height: 60px;" />
+          <router-link to="/" class="navbar-brand fw-bold d-flex align-items-center m-0">
+            <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 70px; height: 50px;" />
+          </router-link>
         </a>
-      </div> -->
+      </div>
       <!--WHITE HORIZONTAL LINE-->
       <!-- <div class="col-12 text-center">
         <hr class="border border-white border-1 my-4" />
