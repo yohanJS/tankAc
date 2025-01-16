@@ -27,8 +27,6 @@
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
             </ul>
           </div>
         </div>
@@ -41,16 +39,16 @@
         <div class="row text-dark align-items-center">
           <!-- Links -->
           <div class="col-4 d-flex justify-content-center">
-            <a class="nav-link m-3" href="#">Home</a>
+            <router-link to="/" class="nav-link m-3" >
+              Home
+            </router-link>
             <a class="nav-link m-3" href="#">Link 1</a>
-            <a class="nav-link m-3" href="#">Link 2</a>
-            <a class="nav-link m-3" href="#">Link 3</a>
           </div>
           <!-- Logo -->
           <div class="col-4 d-flex justify-content-center">
-            <a href="#">
-              <img src="../assets/logo.png" alt="Logo" style="width: 100px; height: 80px;" />
-            </a>
+            <router-link to="/" class="navbar-brand fw-bold d-flex align-items-center m-0">
+              <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 120px; height: 80px;" />
+            </router-link>
           </div>
           <!-- Social Media Icons -->
           <div class="col-4 d-flex justify-content-center">

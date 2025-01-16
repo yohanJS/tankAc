@@ -49,7 +49,7 @@
           </div>
 
           <!-- Center text -->
-          <div class="col-8 text-center">
+          <div class="col-8 text-start">
             <p class="mb-0 select-txt-color">Enter personal details</p>
           </div>
         </div>
@@ -94,7 +94,6 @@
           </div>
         </div>
       </div>
-
 
       <!-- Step 2: Date -->
       <div v-if="step === 2">
@@ -178,12 +177,12 @@
           <!--Buttons Section-->
           <div class="d-flex justify-content-end mt-4">
             <div v-if="displaySpinnerMessage">
-              <button class="btn btn-outline-success border-0" type="button" disabled>
+              <button class="btn btn-outline-dark border-0" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
               </button>
             </div>
             <div v-else>
-              <button type="submit" class="btn btn-outline-dark">
+              <button type="submit" class="submit-btn mt-3 mb-3">
                 Submit
                 <i class="bi bi-send-check-fill"></i>
               </button>
@@ -243,6 +242,7 @@ import serviceImg1 from '/assets/serviceImg1.png';
 import serviceImg2 from '/assets/serviceImg2.png';
 import serviceImg3 from '/assets/serviceImg3.png';
 import serviceImg4 from '/assets/serviceImg4.png';
+import serviceImg5 from '/assets/serviceImg5.png';
 
 export default {
   name: "BookingForm",
@@ -300,8 +300,13 @@ export default {
         },
         {
           name: "UV LIGHT INSTALL",
-          description: "Get your air conditioner back to optimal performance with our fast, reliable repair services.",
+          description: "Prevent Mold & Bacteria Growth. UV Light Installation for Your HVAC System.",
           image: serviceImg4,
+        },
+        {
+          name: "AIR DUCT CLEANING",
+          description: "Improve Indoor Air Quality. Professional Air Duct Cleaning.",
+          image: serviceImg5,
         },
       ],
     };
@@ -574,9 +579,26 @@ label {
 .form-select {
   font-size: 0.8rem !important;
 }
-
+.submit-btn {
+    border: none;
+    outline: none;
+    background: #F6A487;
+    color: #fff;
+    border-radius: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.submit-btn:hover {
+  color: #1a1919;
+  background-color: #d9d9d9;
+  border-radius: 40px;
+}
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
