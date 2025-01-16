@@ -300,11 +300,6 @@ export default {
           image: serviceImg3,
         },
         {
-          name: "UV LIGHT INSTALL",
-          description: "Prevent Mold & Bacteria Growth. UV Light Installation for Your HVAC System.",
-          image: serviceImg4,
-        },
-        {
           name: "AIR DUCT CLEANING",
           description: "Improve Indoor Air Quality. Professional Air Duct Cleaning.",
           image: serviceImg5,
@@ -313,6 +308,11 @@ export default {
           name: "INDOOR AIR QUALITY TESTING",
           description: "Identify & Eliminate Indoor Air Pollutants. Comprehensive IAQ Testing.",
           image: serviceImg6,
+        },
+        {
+          name: "UV LIGHT INSTALL",
+          description: "Prevent Mold & Bacteria Growth. UV Light Installation for Your HVAC System.",
+          image: serviceImg4,
         },
       ],
     };
