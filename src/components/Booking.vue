@@ -77,7 +77,7 @@
             @click="selectService(service)">
             <div class="overlay rounded-2 d-flex flex-row align-items-center p-3">
               <!-- Small image on the left -->
-              <img :src="service.image" alt="service image" class="service-image me-3 rounded-2"
+              <img :src="service.image" alt="service image" class="me-3 rounded-2"
                 style="width: 100px; height: 100%; object-fit: cover;">
 
               <!-- Description on the right -->
