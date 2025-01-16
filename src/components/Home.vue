@@ -205,6 +205,23 @@
           </div>
         </div>
       </div>
+            <!-- Card: Air Duct Cleaning-->
+            <div class="col-10 col-md-4 col-lg-3 mb-4 p-0 m-1">
+        <div class="service-card position-relative rounded-3 text-white"
+          style="background-image: url('/assets/serviceImg6.png'); background-size: cover; background-position: center;">
+          <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></div>
+          <div class="content position-relative p-4 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="text-white mb-2">INDOOR AIR QUALITY TESTING</h3>
+            <p class="text-center">
+              Identify & Eliminate Indoor Air Pollutants. Comprehensive IAQ Testing.
+            </p>
+            <router-link to="/Booking" class="btn btn-color text-color btn">
+              Book Visit
+              <i class="bi bi-chevron-double-right"></i>
+            </router-link>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -243,6 +243,7 @@ import serviceImg2 from '/assets/serviceImg2.png';
 import serviceImg3 from '/assets/serviceImg3.png';
 import serviceImg4 from '/assets/serviceImg4.png';
 import serviceImg5 from '/assets/serviceImg5.png';
+import serviceImg6 from '/assets/serviceImg6.png';
 
 export default {
   name: "BookingForm",
@@ -269,7 +270,7 @@ export default {
       isInPerson: false,
       isSubmissionOk: false,
       formData: {
-        businessId: "TankAC&HeatingLLC",
+        businessId: "se",
         name: "",
         email: "",
         phone: "",
@@ -307,6 +308,11 @@ export default {
           name: "AIR DUCT CLEANING",
           description: "Improve Indoor Air Quality. Professional Air Duct Cleaning.",
           image: serviceImg5,
+        },
+        {
+          name: "INDOOR AIR QUALITY TESTING",
+          description: "Identify & Eliminate Indoor Air Pollutants. Comprehensive IAQ Testing.",
+          image: serviceImg6,
         },
       ],
     };
