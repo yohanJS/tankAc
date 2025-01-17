@@ -233,7 +233,7 @@
 <!--JS-->
 <script>
 import moment from 'moment';
-import axios from "axios";
+import axiosClient from "../util/axiosClient";
 import { Modal } from "bootstrap";
 import NavBar from './NavBar.vue';
 import Camouflage from './Camouflage.vue'
@@ -452,7 +452,7 @@ export default {
       this.goToStep(4);
     },
     async fetchTimes(date) {
-      await axios.get(this.GetTimes, { params: { serviceDate: date } })
+      await axiosClient.get(this.GetTimes, { params: { serviceDate: date } })
         .then((response) => {
           this.takenTimes = response.data;
         });
@@ -460,7 +460,7 @@ export default {
     async submitForm() {
       try {
         this.displaySpinnerMessage = true;
-        await axios
+        await axiosClient
           .post(
             this.CreateBookingUrl,
             {

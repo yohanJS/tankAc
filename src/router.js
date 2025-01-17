@@ -1,20 +1,42 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import Home from './components/Home.vue'
-import Booking from './components/Booking.vue'
-//import Register from './components/Register.vue'
-//import FetchData from './components/FetchData.vue'
-//import BookingForm from './components/BookingForm.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "./components/Home.vue";
+import Booking from "./components/Booking.vue";
+import Login from "./components/Login.vue";
+import UpcomingBookings from "./components/UpcomingBookings.vue";
+
+const isLoggedIn = () => {
+  // Check if the user is logged in
+  return sessionStorage.getItem("isLoggedIn") === "true";
+};
 
 const routes = [
-  { path: '/', component: Home, name: 'Home' },
-  { path: '/Booking', component: Booking, name: 'Booking' },
-  //{ path: '/Register', component: Register, name: 'Register' },
-  //{ path: '/UpcomingBookings', component: FetchData, name: 'UpcomingBookings' },
-  //{ path: '/BookingForm', component: BookingForm, name: 'Book' },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/Booking",
+    name: "Booking",
+    component: Booking,
+  },
+  { path: "/Login", name: "Login", component: Login },
+  {
+    path: "/UpcomingBookings",
+    component: UpcomingBookings,
+    name: "UpcomingBookings",
+    beforeEnter: (to, from, next) => {
+      if (isLoggedIn()) {
+        next(); // Allow access
+      } else {
+        next("/login"); // Redirect to login page
+      }
+    },
+  },
 ];
 
 const router = createRouter({
-  mode: 'hash',
+  mode: "hash",
   history: createWebHistory(),
   routes,
 });
