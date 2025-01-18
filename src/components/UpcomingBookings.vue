@@ -72,7 +72,7 @@
                             <div class="col-10">
                                 <div class="m-0 details-card mb-3 rounded-3">
                                     <p class="mb-0"><span class="fw-bold">Client: </span>{{ service.name }}</p>
-                                    <p class="mb-0"><span class="fw-bold">Service requested: </span>{{
+                                    <p class="mb-0"><span class="fw-bold">Service: </span>{{
                                         service.serviceName }}</p>
                                     <!--Collapse Button-->
                                     <button class="btn btn-sm w-100 btn-details mt-2 mb-2" type="button"
@@ -110,11 +110,11 @@
                                         </p>
                                     </div>
                                     <!--Edit btn-->
-                                    <!-- <div class="text-end mt-2">
+                                    <div class="text-end mt-2">
                                         <i @click="deleteService(service.serviceId)" class="bi bi-trash3 me-2">
                                             Cancel</i>
-                                        <i @click="test" class="bi bi-pencil"> Edit</i>
-                                    </div> -->
+                                        <!-- <i @click="test" class="bi bi-pencil"> Edit</i> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
