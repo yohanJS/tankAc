@@ -67,7 +67,7 @@
             sessionStorage.setItem("isLoggedIn", "true");
   
             // Redirect to the home page or any desired page
-            window.location.href = "/";
+            window.location.href = "/UpcomingBookings";
           } catch (error) {
             this.message = error.response.data.message;
           }
