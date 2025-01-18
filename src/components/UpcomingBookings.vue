@@ -521,6 +521,9 @@ export default {
         height: 355px;
         font-size: 0.8rem;
     }
+    .details-card:hover {
+        background-color: #E9A992;
+    }
 }
 
 @media screen and (min-width: 1920px) {
