@@ -20,7 +20,10 @@ const routes = [
     name: "Booking",
     component: Booking,
   },
-  { path: "/Login", name: "Login", component: Login },
+  { path: "/Login", 
+    name: "Login", 
+    component: Login 
+  },
   {
     path: "/UpcomingBookings",
     component: UpcomingBookings,
