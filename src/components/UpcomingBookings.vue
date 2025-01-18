@@ -129,7 +129,9 @@
                 </div>
                 <div class="d-flex flex-wrap justify-content-evenly p-3 rounded-2" style="background-color: #ABA18B;">                   
                     <div v-for="record in services" :key="record.id" class="record-card">
-                        <h5 class="text-dark mb-2 p-2" v-if="isDateInWeekRange(record.serviceDate)">
+                        <h5 class="text-dark mb-2 p-2" v-if="isDateInWeekRange(record.serviceDate)" :class="{
+                        'today-class': isToday(record.serviceDate)
+                    }">
                             {{ formatMonthAndDay(record.serviceDate) }}
                             <hr class="border-2 mt-2" style="width:50%; color: #000;">
                         </h5>
