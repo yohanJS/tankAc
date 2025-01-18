@@ -183,23 +183,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row p-3">
-                <!-- Display Weekdays -->
-                <!-- <div class="col-12 p-0 d-flex justify-content-around">
-                    <div v-for="day in weekDays" :key="day.date">
-                        <h4 class="text-dark" style="width: 180px; background-color: #F6A487;">
-                            <span :class="{ 'vl': day.name !== 'Sunday' }" class="p-2">
-                                {{ day.name }}
-                            </span>
-                            <br>
-                            <span :class="{ 'vl': day.name !== 'Sunday' }" class="p-2">
-                                {{ day.date }}
-                            </span>
-                        </h4>
-                    </div>
-                </div> -->
-            </div>
         </div>
         <i class="bi bi-arrow-up-circle up-icon text-dark fs-5 fw-bold" @click="takeMeUp"></i>
     </div>
