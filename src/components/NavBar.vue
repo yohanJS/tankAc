@@ -59,9 +59,9 @@
           <div class="row">
             <!-- Logo -->
             <div class="col-3 d-flex justify-content-center">
-              <a href="#">
-                <img src="../assets/logo.png" alt="Logo" class="" style="width: 80px; height: 60px;" />
-              </a>
+              <router-link to="/" class="navbar-brand fw-bold d-flex align-items-center m-0">
+                <img src="../assets/logo.png" alt="Logo" class="me-2" style="width: 80px; height: 60px;" />
+              </router-link>
             </div>
 
             <div class="col">

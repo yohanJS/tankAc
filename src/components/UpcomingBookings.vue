@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <NavBar></NavBar>
-    <div class="container p-0 mb-5 text-white">
+    <div class="container-fluid p-0 mb-5 text-white">
         <!-- Loading State with Placeholder Cards -->
         <div v-if="loading" class="mt-4">
             <div class="skeleton-card mb-3" v-for="n in 9" :key="n">
@@ -49,8 +49,8 @@
         </div>
 
         <div class="mt-2 mb-5 m-2" v-if="services !== null">
-            <!--Services Section-->
-            <div v-for="record in services">
+            <!--Mobile Services Section-->
+            <div v-if="isMobile" v-for="record in services">
                 <p v-if="isDateInWeekRange(record.serviceDate)" :id="isToday(record.serviceDate) ? 'today' : null"
                     :class="{
                         'mb-2': true,
@@ -86,7 +86,7 @@
                                         <a :href="'mailto:' + service.email" class="text-decoration-none">
                                             <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email
                                                 }}</span>
-                                            <i class="bi bi-envelope-plus"></i>
+                                            <i class="m-1 bi bi-envelope-plus"></i>
                                         </a>
                                     </p>
                                     <p class="card-text mb-1">
@@ -94,7 +94,7 @@
                                         <a :href="'tel:' + service.phone" class="text-decoration-none">
                                             <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone
                                                 }}</span>
-                                            <i class="bi bi-telephone-outbound"></i>
+                                            <i class="m-1 bi bi-telephone-outbound"></i>
                                         </a>
                                     </p>
                                     <p class="card-text">
@@ -120,15 +120,87 @@
                 </div>
                 <hr v-if="isDateInWeekRange(record.serviceDate)" class="border-2 mt-3 w-75 m-4">
             </div>
+            <!--Desktop Services Section-->
+            <div v-else class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-3 mb-3">
+                        <h2 class="text-dark">{{ currentMonth }}</h2>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-evenly p-3 rounded-2" style="background-color: #ABA18B;">
+                    <div v-for="record in services" :key="record.id" class="record-card">
+                        <h5 class="text-dark mb-2 p-2" v-if="isDateInWeekRange(record.serviceDate)">
+                            {{ formatMonthAndDay(record.serviceDate) }}
+                            <hr class="border-2 mt-2" style="width:50%; color: #000;">
+                        </h5>
+                        <div v-for="service in record.services" v-if="isDateInWeekRange(record.serviceDate)">
+                            <div class="m-0 details-card mb-3 rounded-3">
+                                <p class="mb-0"><span class="fs-6">Client: <br></span><span
+                                        style="font-family: Arial, Helvetica, sans-serif">{{ service.name }}</span>
+                                </p>
+                                <p class="mb-0"><span class="fs-6">Service:<br> </span><span
+                                        style="font-family: Arial, Helvetica, sans-serif">{{ service.serviceName
+                                        }}</span></p>
+
+                                <p class="card-text mb-1 mt-2">
+                                    <span class="fs-6">Email:</span><br>
+                                    <a :href="'mailto:' + service.email" class="text-decoration-none">
+                                        <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email
+                                            }}</span>
+                                        <i class="m-1 bi bi-envelope-plus"></i>
+                                    </a>
+                                </p>
+                                <p class="card-text mb-1">
+                                    <span class="fs-6">Phone:</span><br>
+                                    <a :href="'tel:' + service.phone" class="text-decoration-none">
+                                        <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone
+                                            }}</span>
+                                        <i class="m-1 bi bi-telephone-outbound"></i>
+                                    </a>
+                                </p>
+                                <p class="card-text mb-0">
+                                <div v-if="!service.address">Online</div>
+                                <div v-else> <span class="fs-6">Address:</span> <br><span
+                                        style="font-family: Arial, Helvetica, sans-serif">{{
+                                            service.address }}</span>
+                                </div>
+                                </p>
+                                <!-- Edit button -->
+                                <div class="text-end mt-3">
+                                    <i @click="editService(service.serviceId)" class="bi bi-pencil"
+                                        style="font-family: Arial, Helvetica, sans-serif"> Edit</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-3">
+                <!-- Display Weekdays -->
+                <!-- <div class="col-12 p-0 d-flex justify-content-around">
+                    <div v-for="day in weekDays" :key="day.date">
+                        <h4 class="text-dark" style="width: 180px; background-color: #F6A487;">
+                            <span :class="{ 'vl': day.name !== 'Sunday' }" class="p-2">
+                                {{ day.name }}
+                            </span>
+                            <br>
+                            <span :class="{ 'vl': day.name !== 'Sunday' }" class="p-2">
+                                {{ day.date }}
+                            </span>
+                        </h4>
+                    </div>
+                </div> -->
+            </div>
         </div>
     </div>
-    <!-- <FooterComp></FooterComp> -->
 </template>
 
 <script>
 import axiosClient from "../util/axiosClient";
 import moment from 'moment';
 import NavBar from './NavBar.vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
     components: {
@@ -138,6 +210,7 @@ export default {
         return {
             today: moment().format('MMM DD'),
             todaysDate: "",
+            desktopServiceDate: "",
             currentMonth: moment().format('MMM YYYY'),
             weekDays: moment.weekdays(),
             weekRange: "",
@@ -178,7 +251,7 @@ export default {
             const serviceDateMoment = moment(serviceDate, "YYYY/MM/DD", true);
 
             if (serviceDateMoment.isValid() && serviceDateMoment.isSame(today, 'day')) {
-                return serviceDateMoment.format("MMM D") + " Today";
+                return serviceDateMoment.format("MMM DD") + " Today";
             }
 
             return serviceDateMoment.isValid() ? serviceDateMoment.format("MMM D") : "Invalid Date";
@@ -222,6 +295,7 @@ export default {
         },
         getWeekRange() {
             const startOfWeekFormatted = moment(this.startOfWeek, 'YYYY-MM-DD').format('DD');
+            this.weekDays = moment.weekdays().map((day, index) => ({ name: day, date: moment(this.startOfWeek).clone().add(index, 'days').format('D') }));
             const endOfWeekFormatted = moment(this.endOfWeek, 'YYYY-MM-DD').format('DD');
 
             this.weekRange = `Week ${startOfWeekFormatted}-${endOfWeekFormatted}`;
@@ -265,6 +339,9 @@ export default {
             this.endOfWeek = newEndOfWeek.format('YYYY-MM-DD');
             this.getWeekRange();
         },
+        formatDate(date) {
+            return moment(date).format('D'); // Format date to numeric day of the month
+        },
         async fetchServices() {
             this.services = null;
             this.loading = true;
@@ -302,6 +379,46 @@ export default {
             }
         },
     },
+    setup() {
+    const isMobile = ref(false);
+
+    onMounted(() => {
+      isMobile.value = window.innerWidth <= 1024;
+
+      window.addEventListener('resize', updateIsMobile);
+      window.addEventListener('scroll', makeNavBarSticky);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', updateIsMobile);
+      window.removeEventListener('scroll', makeNavBarSticky);
+    });
+
+    const updateIsMobile = () => {
+      isMobile.value = window.innerWidth <= 1024;
+    };
+
+    const makeNavBarSticky = () => {
+      const navbar = document.getElementById("home");
+      const sticky = 64;
+
+      if (navbar) {
+        if (window.scrollY >= sticky) {
+          navbar.classList.add("position-sticky", "sticky");
+        } else {
+          navbar.classList.remove("position-sticky", "sticky");
+        }
+      } else {
+        console.error('Navbar element not found.');
+      }
+    };
+
+    return {
+      isMobile,
+      makeNavBarSticky,
+      updateIsMobile,
+    };
+  }
 };
 </script>
 
@@ -337,6 +454,16 @@ export default {
 
 .skeleton-line.short {
     width: 70%;
+}
+
+.border-color {
+    border: 2px solid rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+    ;
+}
+
+.vl {
+    border-left: 2px solid rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+    height: 50px;
 }
 
 @keyframes pulse {
@@ -385,6 +512,22 @@ export default {
     background-color: #D9D9D9;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
+}
+
+/* ONLY DESKTOP */
+@media screen and (min-width: 1024px) {
+    .details-card {
+        width: 180px;
+        height: 355px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .details-card {
+        width: 250px;
+        height: 320px;
+    }
 }
 
 /* Modern pastel card styling */
@@ -456,6 +599,7 @@ export default {
     justify-content: center;
 }
 
+/* DESKTOP CARD */
 .mr {
     margin-right: 10px;
 }
