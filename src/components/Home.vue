@@ -81,7 +81,6 @@
                 class="text-decoration-none text-white">Apply Here</a>
             </button>
           </div>
-
         </div>
 
         <div class="p-0 mt-4 mb-4">
@@ -488,8 +487,6 @@ section>.text {
 .text-color {
   color: #E95722;
 }
-
-
 </style>
 
 <script>

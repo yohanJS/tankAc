@@ -201,6 +201,7 @@
                 </div> -->
             </div>
         </div>
+        <i class="bi bi-arrow-up-circle up-icon text-dark fs-5 fw-bold" @click="takeMeUp"></i>
     </div>
 </template>
 
@@ -254,6 +255,13 @@ export default {
         }
     },
     methods: {
+        takeMeUp() {
+            window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth' // Optional for smooth scrolling
+            });
+        },
         formatMonthAndDay(serviceDate) {
             const today = moment().startOf('day');
             const serviceDateMoment = moment(serviceDate, "YYYY/MM/DD", true);
@@ -431,6 +439,23 @@ export default {
 </script>
 
 <style scoped>
+/* Styles for the floating booking button */
+.up-icon {
+  position: fixed;
+  border-radius: 10px;
+  bottom: 20px;
+  right: 20px;
+  height: 35px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #E9A992;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
 #today {
     top: 10px;
     scroll-margin-top: 1000px;
