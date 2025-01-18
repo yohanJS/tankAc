@@ -26,7 +26,7 @@
             </div> -->
         <div class="row m-0 p-4 text-center text-white" style="background-color: #454B1BB8;">
             <div class="col-12 p-0" v-if="services !== null">
-                <p>Admin Dashboard</p>
+                <h4>ADMIN DASHBOARD</h4>
                 <!-- Month and Year Section -->
                 <div class="row m-0 justify-content-center align-items-center p-0 rounded-bottom-2">
                     <!-- Week Range Section -->
