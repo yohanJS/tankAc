@@ -39,12 +39,12 @@
               <i class="bi bi-caret-right-fill" @click="nextMonth"></i>
             </div>-->
                     <!-- Week Range Section -->
-                    <div class="row align-items-center text-dark text-center m-1">
+                    <div class="row align-items-center text-dark text-center m-1 p-0">
                         <div class="col-auto">
                             <i class="bi bi-chevron-left px-2 py-1 fs-2 rounded-5 orange-bg" @click="previousWeek"></i>
                         </div>
-                        <div class="col text-center">
-                            <p class="p-2 rounded-5 m-0 fs-5 rounded-5 fs-2 orange-bg">{{ weekRange }}, <span
+                        <div class="col p-0 text-center">
+                            <p class="pt-2 pb-2 rounded-5 m-0 fs-5 rounded-5 fs-2 orange-bg">{{ weekRange }}, <span
                                     class="fw-bold">{{ currentMonth }}</span></p>
                         </div>
                         <div class="col-auto">
