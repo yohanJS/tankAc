@@ -57,19 +57,19 @@
                 <div v-for="record in services">
                     <p v-if="isDateInWeekRange(record.serviceDate)" :id="isToday(record.serviceDate) ? 'today' : null"
                         :class="{
-                            'mb-4': true,
+                            'mb-2': true,
                             'fs-2': true,
                             'today-class': isToday(record.serviceDate)
                         }">
                         {{ formatMonthAndDay(record.serviceDate) }}
                     </p>
                     <div>
-                        <div class="row d-flex justify-content-between" v-if="isDateInWeekRange(record.serviceDate)"
+                        <div class="row d-flex justify-content-end" v-if="isDateInWeekRange(record.serviceDate)"
                             v-for="service in record.services">
-                            <div class="col-3 mb-2">
+                            <div class="col-12 mb-2">
                                 <p class="mb-1 text-dark fs-5">{{ service.time }}</p>
                             </div>
-                            <div class="col-8">
+                            <div class="col-10">
                                 <div class="m-0 details-card mb-3 rounded-3">
                                     <p class="mb-0"><span class="fw-bold">Client: </span>{{ service.name }}</p>
                                     <p class="mb-0"><span class="fw-bold">Service requested: </span>{{
@@ -384,7 +384,6 @@ export default {
 .details-card {
     color: #000000;
     font-size: 1rem;
-    letter-spacing: 1px;;
     background-color: #D9D9D9;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);

@@ -68,6 +68,12 @@
               <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">BOOK</a></li>
               <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">FINANCIAL</a></li>
               <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">CONTACT US</a></li>
+              <router-link v-if="!isLoggedIn" to="/Login" class="nav-link m-3 pt-4 text-primary">
+                LOGIN
+              </router-link>
+            <router-link v-else to="/Login" class="nav-link m-3 pt-4 text-danger" @click="logout">
+              LOGOUT
+            </router-link>
             </ul>
           </div>
         </div>
