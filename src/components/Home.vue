@@ -11,7 +11,7 @@
   <!--NAVBAR COMPONENT-->
   <NavBar />
   <!--HERO SECTION-->
-  <div class="container p-0">
+  <div class="container-fluid p-0">
     <div class="text-center hero-section">
       <div class="overlay"></div>
       <div class="hero-content mt-5">
@@ -97,10 +97,10 @@
   </div>
 
   <!--BANNER SECTION-->
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-0">
-        <img src="../assets/bannerImg.png" class="img-fluid w-100">
+        <img src="../assets/bannerImg.png" class=" banner-img img-fluid">
       </div>
     </div>
   </div>
@@ -226,12 +226,12 @@
   </div>
 
   <!--ABOUT US SECTION-->
-  <div class="container p-3 pt-4 pb-4 aboutUs-bg text-white">
+  <div class="container-fluid p-3 pt-5 pb-5 aboutUs-bg text-white">
     <div class="row d-flex justify-content-center">
       <div class="col-12 text-center mb-4">
         <h4>ABOUT US</h4>
       </div>
-      <div class="col-10 col-md-8 p-0">
+      <div class="col-10 col-md-9 col-lg-8 col-xxl-8 p-0">
         <p>
           At TANK A/C & HEAT, we take pride in providing
           top-notch heating and cooling solutions with military precision
@@ -317,7 +317,7 @@
 .hero-section {
   position: relative;
   background: url('../assets/heroImg.png') no-repeat left center/cover;
-  min-height: 400px;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -396,20 +396,21 @@ h1 {
 
 /* BANNER IMG SECTION CSS */
 .banner-img {
-  height: 105px;
-  object-fit: cover;
+  width: 100%;
+  max-height: 17vh;
   /* Ensures the image looks good while maintaining its aspect ratio */
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1440px) {
   .banner-img {
-    height: 200px;
+    max-height: 24vh;
   }
 }
 
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
   background-color: #1A1919DB;
+  height: 39vh;
 }
 
 /* CAMOUFLAGE CSS */
@@ -488,6 +489,8 @@ section>.text {
 .text-color {
   color: #E95722;
 }
+
+
 </style>
 
 <script>
