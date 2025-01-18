@@ -6,7 +6,7 @@
         <div class="mt-3">
             <!-- Button to Fetch services -->
             <!-- <div class="text-end">
-                <button @click="fetchServices" class="btn btn-small rounded-pill py-2 fw-bold"
+                <button @click="fetchServices" class="btn btn-small rounded-pill py-2 "
                     style="background-color: #f8b195; font-size: 0.8rem;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
                         class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
@@ -44,8 +44,7 @@
                             <i class="bi bi-chevron-left px-2 py-1 fs-2 rounded-5 orange-bg" @click="previousWeek"></i>
                         </div>
                         <div class="col p-0 text-center">
-                            <p class="pt-2 pb-2 rounded-5 m-0 fs-5 rounded-5 fs-2 orange-bg">{{ weekRange }}, <span
-                                    class="fw-bold">{{ currentMonth }}</span></p>
+                            <p class="pt-2 pb-2 rounded-5 m-0 fs-5 rounded-5 fs-2 orange-bg">{{ weekRange }}, <span>{{ currentMonth }}</span></p>
                         </div>
                         <div class="col-auto">
                             <i class="bi bi-chevron-right px-2 py-1 fs-2 rounded-5 orange-bg" @click="nextWeek"></i>
@@ -71,8 +70,8 @@
                             </div>
                             <div class="col-10">
                                 <div class="m-0 details-card mb-3 rounded-3">
-                                    <p class="mb-0"><span class="fw-bold">Client: </span>{{ service.name }}</p>
-                                    <p class="mb-0"><span class="fw-bold">Service: </span>{{
+                                    <p class="mb-0"><span class="">Client: </span>{{ service.name }}</p>
+                                    <p class="mb-0"><span class="">Service: </span>{{
                                         service.serviceName }}</p>
                                     <!--Collapse Button-->
                                     <button class="btn btn-sm w-100 btn-details mt-3 mb-2" type="button"
