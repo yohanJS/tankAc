@@ -7,7 +7,7 @@
       </router-link>
       <div class="col">
         <h3 class="m-0">TANK A/C & HEAT</h3>
-        <p class="fw-bold m-0" style="font-size: 0.7rem;">VETERAN OWNED</p>
+        <p class="m-0" style="font-size: 0.7rem;">VETERAN OWNED</p>
       </div>
       <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
 
             <div class="col">
               <h3 class="m-0">TANK A/C & HEAT</h3>
-              <p class="fw-bold m-0" style="font-size: 0.7rem;">VETERAN OWNED</p>
+              <p class=" m-0" style="font-size: 0.7rem;">VETERAN OWNED</p>
             </div>
           </div>
         </div>
