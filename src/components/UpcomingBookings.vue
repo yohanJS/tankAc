@@ -124,7 +124,7 @@
             </div>
         </div>
     </div>
-    <FooterComp></FooterComp>
+    <!-- <FooterComp></FooterComp> -->
 </template>
 
 <script>
