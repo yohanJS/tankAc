@@ -1,11 +1,19 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <NavBar></NavBar>
-    <div class="container p-0 mb-5 text-white min-vh-100">
+    <div class="container p-0 mb-5 text-white">
+        <!-- Loading State with Placeholder Cards -->
+        <div v-if="loading" class="mt-4">
+            <div class="skeleton-card mb-3" v-for="n in 9" :key="n">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+        </div>
         <!-- Services Section -->
-        <div class="">
-            <!-- Button to Fetch services -->
-            <!-- <div class="text-end">
+        <!-- Button to Fetch services -->
+        <!-- <div class="text-end">
                 <button @click="fetchServices" class="btn btn-small rounded-pill py-2 "
                     style="background-color: #f8b195; font-size: 0.8rem;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
@@ -16,111 +24,101 @@
                     </svg>
                 </button>
             </div> -->
-            <!-- Loading State with Placeholder Cards -->
-            <div v-if="loading" class="mt-4">
-                <div class="skeleton-card mb-3" v-for="n in 9" :key="n">
-                    <div class="skeleton-title"></div>
-                    <div class="skeleton-line"></div>
-                    <div class="skeleton-line"></div>
-                    <div class="skeleton-line short"></div>
-                </div>
-            </div>
-            <div class="row m-0 p-4 text-center text-white" style="background-color: #454B1BB8;">
-
-                <div class="col-12" v-if="services !== null">
-                    <p>Admin Dashboard</p>
-                    <!-- Month and Year Section -->
-                    <div class="row justify-content-center align-items-center p-0 rounded-bottom-2">
-                        <!-- Week Range Section -->
-                        <div class="row align-items-center text-dark text-center m-1 p-0">
-                            <div class="col-auto">
-                                <i @click="previousWeek" id="step1" class="bi bi-arrow-left-circle fs-2 text-white"></i>
-                            </div>
-                            <div class="col p-0 text-center">
-                                <p class="pt-2 pb-2 rounded-5 m-0 fs-5 rounded-5 fs-2" style="color: #F6A487;">{{ weekRange }},
-                                    <span>{{ currentMonth }}</span>
-                                </p>
-                            </div>
-                            <div class="col-auto">
-                                <i @click="nextWeek" id="step1" class="bi bi-arrow-right-circle fs-2 text-white"></i>
-                            </div>
+        <div class="row m-0 p-4 text-center text-white" style="background-color: #454B1BB8;">
+            <div class="col-12 p-0" v-if="services !== null">
+                <p>Admin Dashboard</p>
+                <!-- Month and Year Section -->
+                <div class="row m-0 justify-content-center align-items-center p-0 rounded-bottom-2">
+                    <!-- Week Range Section -->
+                    <div class="row align-items-center text-dark text-center m-1 p-0">
+                        <div class="col-2 p-0">
+                            <i @click="previousWeek" class="bi bi-arrow-left-circle fs-5 text-white"></i>
+                        </div>
+                        <div class="col-8 p-0 text-center">
+                            <p class="pt-2 pb-2 rounded-5 m-0 fs-5 rounded-5" style="color: #F6A487;">{{ weekRange
+                                }},
+                                <span>{{ currentMonth }}</span>
+                            </p>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i @click="nextWeek" class="bi bi-arrow-right-circle fs-5 text-white"></i>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="mt-2 mb-5 m-2" v-if="services !== null">
-                <!--Services Section-->
-                <div v-for="record in services">
-                    <p v-if="isDateInWeekRange(record.serviceDate)" :id="isToday(record.serviceDate) ? 'today' : null"
-                        :class="{
-                            'mb-2': true,
-                            'fs-2': true,
-                            'today-class': isToday(record.serviceDate)
-                        }">
-                        {{ formatMonthAndDay(record.serviceDate) }}
-                    </p>
-                    <div>
-                        <div class="row d-flex justify-content-end" v-if="isDateInWeekRange(record.serviceDate)"
-                            v-for="service in record.services">
-                            <div class="col-12 mb-2">
-                                <p class="mb-1 text-dark fs-5">{{ service.time }}</p>
-                            </div>
-                            <div class="col-10">
-                                <div class="m-0 details-card mb-3 rounded-3">
-                                    <p class="mb-0"><span class="">Client: </span><span
-                                            style="font-family: Arial, Helvetica, sans-serif">{{ service.name }}</span>
+        <div class="mt-2 mb-5 m-2" v-if="services !== null">
+            <!--Services Section-->
+            <div v-for="record in services">
+                <p v-if="isDateInWeekRange(record.serviceDate)" :id="isToday(record.serviceDate) ? 'today' : null"
+                    :class="{
+                        'mb-2': true,
+                        'fs-2': true,
+                        'today-class': isToday(record.serviceDate)
+                    }">
+                    {{ formatMonthAndDay(record.serviceDate) }}
+                </p>
+                <div>
+                    <div class="row m-1 d-flex justify-content-end" v-if="isDateInWeekRange(record.serviceDate)"
+                        v-for="service in record.services">
+                        <div class="col-12 mb-2">
+                            <p class="mb-1 text-dark fs-5">{{ service.time }}</p>
+                        </div>
+                        <div class="col-10">
+                            <div class="m-0 details-card mb-3 rounded-3">
+                                <p class="mb-0"><span class="">Client: </span><span
+                                        style="font-family: Arial, Helvetica, sans-serif">{{ service.name }}</span>
+                                </p>
+                                <p class="mb-0"><span class="">Service: </span><span
+                                        style="font-family: Arial, Helvetica, sans-serif">{{ service.serviceName
+                                        }}</span></p>
+                                <!--Collapse Button-->
+                                <button class="btn btn-sm w-100 btn-details mt-3 mb-2" type="button"
+                                    :data-bs-toggle="'collapse'" :data-bs-target="'#collapse' + service.serviceId"
+                                    :aria-expanded="false" :aria-controls="'collapse' + service.serviceId">
+                                    <i class="bi bi-chevron-double-down"></i> Contact Info
+                                </button>
+                                <!--Collapsible Section-->
+                                <div :id="'collapse' + service.serviceId" class="collapse">
+                                    <p class="card-text mb-1 mt-3">
+                                        Email:
+                                        <a :href="'mailto:' + service.email" class="text-decoration-none">
+                                            <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email
+                                                }}</span>
+                                            <i class="bi bi-envelope-plus"></i>
+                                        </a>
                                     </p>
-                                    <p class="mb-0"><span class="">Service: </span><span
-                                            style="font-family: Arial, Helvetica, sans-serif">{{service.serviceName
-                                            }}</span></p>
-                                    <!--Collapse Button-->
-                                    <button class="btn btn-sm w-100 btn-details mt-3 mb-2" type="button"
-                                        :data-bs-toggle="'collapse'" :data-bs-target="'#collapse' + service.serviceId"
-                                        :aria-expanded="false" :aria-controls="'collapse' + service.serviceId">
-                                        <i class="bi bi-chevron-double-down"></i> Contact Info
-                                    </button>
-                                    <!--Collapsible Section-->
-                                    <div :id="'collapse' + service.serviceId" class="collapse">
-                                        <p class="card-text mb-1 mt-3">
-                                            Email:
-                                            <a :href="'mailto:' + service.email" class="text-decoration-none">
-                                                <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email
-                                                    }}</span>
-                                                <i class="bi bi-envelope-plus"></i>
-                                            </a>
-                                        </p>
-                                        <p class="card-text mb-1">
-                                            Phone:
-                                            <a :href="'tel:' + service.phone" class="text-decoration-none">
-                                                <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone
-                                                    }}</span>
-                                                <i class="bi bi-telephone-outbound"></i>
-                                            </a>
-                                        </p>
-                                        <p class="card-text">
-                                        <div v-if="!service.address">
-                                            Online
-                                        </div>
-                                        <div v-else>
-                                            Address: <span style="font-family: Arial, Helvetica, sans-serif">{{
-                                                service.address }}</span>
-                                        </div>
-                                        </p>
+                                    <p class="card-text mb-1">
+                                        Phone:
+                                        <a :href="'tel:' + service.phone" class="text-decoration-none">
+                                            <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone
+                                                }}</span>
+                                            <i class="bi bi-telephone-outbound"></i>
+                                        </a>
+                                    </p>
+                                    <p class="card-text">
+                                    <div v-if="!service.address">
+                                        Online
                                     </div>
-                                    <!--Edit btn-->
-                                    <div class="text-end mt-2">
-                                        <!-- <i @click="deleteService(service.serviceId)" class="bi bi-trash3 me-2">
+                                    <div v-else>
+                                        Address: <span style="font-family: Arial, Helvetica, sans-serif">{{
+                                            service.address }}</span>
+                                    </div>
+                                    </p>
+                                </div>
+                                <!--Edit btn-->
+                                <div class="text-end mt-2">
+                                    <!-- <i @click="deleteService(service.serviceId)" class="bi bi-trash3 me-2">
                                             Cancel</i> -->
-                                        <i @click="editService(service.serviceId)" class="bi bi-pencil"
-                                            style="font-family: Arial, Helvetica, sans-serif"> Edit</i>
-                                    </div>
+                                    <i @click="editService(service.serviceId)" class="bi bi-pencil"
+                                        style="font-family: Arial, Helvetica, sans-serif"> Edit</i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <hr v-if="isDateInWeekRange(record.serviceDate)" class="border-2 mt-3 w-75 m-4">
                 </div>
+                <hr v-if="isDateInWeekRange(record.serviceDate)" class="border-2 mt-3 w-75 m-4">
             </div>
         </div>
     </div>
