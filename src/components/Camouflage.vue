@@ -10,10 +10,10 @@
   </script>
 
   <style scoped>
-  .container {
+  .container-fluid {
     position: relative;
   }
-  .container .overlay {
+  .container-fluid .overlay {
     position: absolute;
     top: 0;
     left: 0;

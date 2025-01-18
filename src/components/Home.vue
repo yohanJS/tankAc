@@ -226,12 +226,12 @@
   </div>
 
   <!--ABOUT US SECTION-->
-  <div class="container-fluid p-3 pt-5 pb-5 aboutUs-bg text-white">
+  <div class="container p-3 pt-4 pb-4 aboutUs-bg text-white">
     <div class="row d-flex justify-content-center">
       <div class="col-12 text-center mb-4">
         <h4>ABOUT US</h4>
       </div>
-      <div class="col-10 col-md-9 col-lg-8 col-xxl-8 p-0">
+      <div class="col-10 col-md-8 p-0">
         <p>
           At TANK A/C & HEAT, we take pride in providing
           top-notch heating and cooling solutions with military precision
@@ -410,7 +410,6 @@ h1 {
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
   background-color: #1A1919DB;
-  height: 39vh;
 }
 
 /* CAMOUFLAGE CSS */
