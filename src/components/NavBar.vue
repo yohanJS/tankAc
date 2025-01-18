@@ -33,11 +33,14 @@
             <router-link to="/Booking" class="nav-link">
                 BOOK
             </router-link>
-            <!-- <li class="nav-item"><a class="nav-link" href="#">FINANCIAL</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li> -->
+            <router-link v-if="isLoggedIn" to="/UpcomingBookings" class="nav-link">
+              UPCOMING BOOKINGS
+            </router-link>
             <router-link v-if="!isLoggedIn" to="/Login" class="nav-link text-primary">
               LOGIN
             </router-link>
+            <!-- <li class="nav-item"><a class="nav-link" href="#">FINANCIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li> -->
             <router-link v-else to="/Login" class="nav-link text-danger" @click="logout">
               LOGOUT
             </router-link>
@@ -75,6 +78,9 @@
             </router-link>
             <router-link to="/Booking" class="nav-link m-3 pt-2">
               BOOK
+            </router-link>
+            <router-link v-if="isLoggedIn" to="/UpcomingBookings" class="nav-link m-3 pt-2">
+              UPCOMING BOOKINGS
             </router-link>
             <!-- <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">FINANCIAL</a></li>
             <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">CONTACT US</a></li> -->
