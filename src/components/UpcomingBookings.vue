@@ -111,9 +111,9 @@
                                     </div>
                                     <!--Edit btn-->
                                     <div class="text-end mt-2">
-                                        <i @click="deleteService(service.serviceId)" class="bi bi-trash3 me-2">
-                                            Cancel</i>
-                                        <!-- <i @click="test" class="bi bi-pencil"> Edit</i> -->
+                                        <!-- <i @click="deleteService(service.serviceId)" class="bi bi-trash3 me-2">
+                                            Cancel</i> -->
+                                        <i @click="editService(service.serviceId)" class="bi bi-pencil"> Edit</i>
                                     </div>
                                 </div>
                             </div>
@@ -152,13 +152,13 @@ export default {
             startOfWeek: moment().startOf('week').format('YYYY-MM-DD'),
             endOfWeek: moment().endOf('week').format('YYYY-MM-DD'),
             GetservicesUrl: "",
-            DeleteservicesUrl: "",
+            EditServicesUrl: "",
         };
     },
     async created() {
         this.getWeekRange();
         this.GetservicesUrl = this.isPrd ? "https://engfuel.com/Bookings/GetAllBookings?businessId=TankAcLLC" : "https://localhost:7144/Bookings/GetAllBookings?businessId=TankAcLLC";
-        this.DeleteservicesUrl = this.isPrd ? "https://engfuel.com/Bookings/DeleteBooking" : "https://localhost:7144/Bookings/DeleteBooking";
+        this.EditServicesUrl = this.isPrd ? "https://engfuel.com/Bookings/EditBooking" : "https://localhost:7144/Bookings/EditBooking";
         await this.fetchServices();
     },
     watch: {
@@ -289,9 +289,10 @@ export default {
                 this.loading = false;
             }
         },
-        async deleteService(id) {
+        async editService(id) {
             try {
-                const response = await axiosClient.post(this.DeleteservicesUrl,
+                this.services
+                const response = await axiosClient.post(this.EditServicesUrl,
                     {
                         serviceId: id,
                     }
