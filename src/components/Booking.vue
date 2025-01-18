@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <NavBar />
-  <div id="bookingFormContainer" class="container p-0 text-dark min-vh-100">
+  <div id="bookingFormContainer" class="container p-0 text-dark">
     <div class="row m-0 p-4 text-center text-white" style="background-color: #454B1BB8;">
       <div class="col-12">
         <h4>TRUST OUR HVAC EXPECTS</h4>
@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <form @submit.prevent="submitForm" class="p-2 rounded-1 min-vh-100">
+    <form @submit.prevent="submitForm" class="p-2 rounded-1">
       <!--Booking Details-->
       <!-- Booking Details -->
       <div v-if="step === 4 && formData.service !== ''" class="p-4 m-3 rounded box-shadow form-style">

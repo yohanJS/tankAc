@@ -30,9 +30,11 @@
             <router-link to="/" class="nav-link active" aria-current="page">
               HOME
             </router-link>
-            <li class="nav-item"><a class="nav-link" href="#">BOOK</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">FINANCIAL</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+            <router-link to="/Booking" class="nav-link">
+                BOOK
+            </router-link>
+            <!-- <li class="nav-item"><a class="nav-link" href="#">FINANCIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li> -->
             <router-link v-if="!isLoggedIn" to="/Login" class="nav-link text-primary">
               LOGIN
             </router-link>
@@ -68,16 +70,18 @@
         <!-- Links -->
         <div class="desktop-navbar col-6">
           <ul class="navbar-nav d-flex flex-row">
-            <router-link to="/" class="nav-link m-3 pt-4 active" aria-current="page">
+            <router-link to="/" class="nav-link m-3 pt-2 active" aria-current="page">
               HOME
-              </router-link>
-            <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">BOOK</a></li>
-            <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">FINANCIAL</a></li>
-            <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">CONTACT US</a></li>
-            <router-link v-if="!isLoggedIn" to="/Login" class="nav-link m-3 pt-4 text-primary">
+            </router-link>
+            <router-link to="/Booking" class="nav-link m-3 pt-2">
+              BOOK
+            </router-link>
+            <!-- <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">FINANCIAL</a></li>
+            <li class="nav-item"><a class="nav-link m-3 pt-4" href="#">CONTACT US</a></li> -->
+            <router-link v-if="!isLoggedIn" to="/Login" class="nav-link m-3 pt-2 text-primary">
               LOGIN
             </router-link>
-            <router-link v-else to="/Login" class="nav-link m-3 pt-4 text-danger" @click="logout">
+            <router-link v-else to="/Login" class="nav-link m-3 pt-2 text-danger" @click="logout">
               LOGOUT
             </router-link>
           </ul>

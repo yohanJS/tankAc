@@ -125,12 +125,10 @@
 import axiosClient from "../util/axiosClient";
 import moment from 'moment';
 import NavBar from './NavBar.vue';
-import FooterComp from './FooterComp.vue'
 
 export default {
     components: {
         NavBar,
-        FooterComp,
     },
     data() {
         return {
@@ -150,6 +148,7 @@ export default {
         };
     },
     async created() {
+        await this.$nextTick();
         this.getWeekRange();
         this.GetservicesUrl = this.isPrd ? "https://engfuel.com/Bookings/GetAllBookings?businessId=TankAcLLC" : "https://localhost:7144/Bookings/GetAllBookings?businessId=TankAcLLC";
         this.EditServicesUrl = this.isPrd ? "https://engfuel.com/Bookings/EditBooking" : "https://localhost:7144/Bookings/EditBooking";
