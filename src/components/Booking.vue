@@ -733,7 +733,7 @@ button:hover {
 /* ONLY DESKTOP */
 @media screen and (min-width: 800px) {
   .time-box:hover:not(.taken):not(.selected) {
-    background-color: #000;
+    background-color: #888585;
   }
 }
 
