@@ -280,13 +280,8 @@ export default {
                 await this.$nextTick();
                 this.todaysDate = document.getElementById("today");
 
-                // if (this.todaysDate) {
-                //     this.todaysDate.scrollIntoView({ behavior: "smooth", block: "start" });
-                // }
                 if (this.todaysDate) {
-                    setTimeout(() => {
-                        this.todaysDate.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }, 10);
+                    this.todaysDate.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
             } catch (error) {
                 alert("Error fetching services:", error);
