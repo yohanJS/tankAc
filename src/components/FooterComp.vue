@@ -1,5 +1,5 @@
 <template>
-      <div class="container pt-5 pb-5 footer-bg">
+      <div class="container-fluid pt-5 pb-5 footer-bg">
     <div class="row">
       <!--IMG LOGO-->
       <div class="col-12">
