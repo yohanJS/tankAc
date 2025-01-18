@@ -70,9 +70,8 @@
                             </div>
                             <div class="col-10">
                                 <div class="m-0 details-card mb-3 rounded-3">
-                                    <p class="mb-0"><span class="">Client: </span>{{ service.name }}</p>
-                                    <p class="mb-0"><span class="">Service: </span>{{
-                                        service.serviceName }}</p>
+                                    <p class="mb-0"><span class="">Client: </span><span style="font-family: Arial, Helvetica, sans-serif">{{ service.name }}</span></p>
+                                    <p class="mb-0"><span class="">Service: </span><span style="font-family: Arial, Helvetica, sans-serif">{{service.serviceName }}</span></p>
                                     <!--Collapse Button-->
                                     <button class="btn btn-sm w-100 btn-details mt-3 mb-2" type="button"
                                         :data-bs-toggle="'collapse'" :data-bs-target="'#collapse' + service.serviceId"
@@ -86,7 +85,7 @@
                                                 Email:
                                             </strong>
                                             <a :href="'mailto:' + service.email" class="text-decoration-none">
-                                                {{ service.email }}
+                                                <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email }}</span>
                                                 <i class="bi bi-envelope-plus"></i>
                                             </a>
                                         </p>
@@ -95,7 +94,7 @@
                                                 Phone:
                                             </strong>
                                             <a :href="'tel:' + service.phone" class="text-decoration-none">
-                                                {{ service.phone }}
+                                                <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone }}</span>                                               
                                                 <i class="bi bi-telephone-outbound"></i>
                                             </a>
                                         </p>
@@ -104,7 +103,7 @@
                                             Online
                                         </div>
                                         <div v-else>
-                                            <strong>Address: <span>{{ service.address }}</span></strong>
+                                            <strong>Address: <span style="font-family: Arial, Helvetica, sans-serif">{{ service.address }}</span></strong>
                                         </div>
                                         </p>
                                     </div>
@@ -112,7 +111,7 @@
                                     <div class="text-end mt-2">
                                         <!-- <i @click="deleteService(service.serviceId)" class="bi bi-trash3 me-2">
                                             Cancel</i> -->
-                                        <i @click="editService(service.serviceId)" class="bi bi-pencil"> Edit</i>
+                                        <i @click="editService(service.serviceId)" class="bi bi-pencil" style="font-family: Arial, Helvetica, sans-serif"> Edit</i>
                                     </div>
                                 </div>
                             </div>
