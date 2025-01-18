@@ -30,15 +30,15 @@
             <router-link to="/" class="nav-link active" aria-current="page">
               HOME
             </router-link>
-            <router-link v-if="!isLoggedIn" to="/Login" class="nav-link">
-              LOGIN
-            </router-link>
-            <router-link v-else to="/Login" class="nav-link" @click="logout">
-              LOGOUT
-            </router-link>
             <li class="nav-item"><a class="nav-link" href="#">BOOK</a></li>
             <li class="nav-item"><a class="nav-link" href="#">FINANCIAL</a></li>
             <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+            <router-link v-if="!isLoggedIn" to="/Login" class="nav-link text-primary">
+              LOGIN
+            </router-link>
+            <router-link v-else to="/Login" class="nav-link text-danger" @click="logout">
+              LOGOUT
+            </router-link>
           </ul>
         </div>
       </div>
