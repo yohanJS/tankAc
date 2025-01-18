@@ -281,7 +281,9 @@ export default {
                 this.todaysDate = document.getElementById("today");
 
                 if (this.todaysDate) {
-                    this.todaysDate.scrollIntoView({ behavior: "smooth", block: "start" });
+                    setTimeout(() => {
+                        this.todaysDate.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 100);
                 }
             } catch (error) {
                 alert("Error fetching services:", error);
