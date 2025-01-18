@@ -25,10 +25,13 @@
           </div>
           <div class="offcanvas-body bg-color">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <router-link to="/UpcomingBookings" class="nav-link">
+                UpcomingBookings
+            </router-link>
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">HOME</a></li>
               <router-link v-if="!isLoggedIn" to="/Login" class="nav-link">
-              LOGIN
-            </router-link>
+                LOGIN
+              </router-link>
             <router-link v-else to="/Login" class="nav-link" @click="logout">
               LOGOUT
             </router-link>
