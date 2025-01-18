@@ -129,13 +129,14 @@
                 </div>
                 <div class="d-flex flex-wrap justify-content-evenly p-3 rounded-2" style="background-color: #ABA18B;">                   
                     <div v-for="record in services" :key="record.id" class="record-card">
-                        <h5 class="text-dark mb-2 p-2" v-if="isDateInWeekRange(record.serviceDate)" :class="{
+                        <h5 class="text-white mb-1 p-2" v-if="isDateInWeekRange(record.serviceDate)" :class="{
                         'today-class': isToday(record.serviceDate)
                     }">
                             {{ formatMonthAndDay(record.serviceDate) }}
                             <hr class="border-2 mt-2" style="width:50%; color: #000;">
                         </h5>
                         <div v-for="service in record.services" v-if="isDateInWeekRange(record.serviceDate)">
+                            <p class="mb-0 text-dark">{{ service.time }}</p>
                             <div class="m-0 details-card mb-3 rounded-3">
                                 <p class="mb-0"><span class="fs-6">Client: <br></span><span
                                         style="font-family: Arial, Helvetica, sans-serif">{{ service.name }}</span>
@@ -493,7 +494,7 @@ export default {
 
 .today-class {
     background-color: #E9A992;
-    color: #000;
+    color: #000 !important;
     padding: 10px;
     border-radius: 5px;
 }
