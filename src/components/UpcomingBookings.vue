@@ -127,7 +127,7 @@
                         <h2 class="text-dark">{{ currentMonth }}</h2>
                     </div>
                 </div>
-                <div class="d-flex flex-wrap justify-content-evenly p-3 rounded-2" style="background-color: #ABA18B;">
+                <div class="d-flex flex-wrap justify-content-evenly p-3 rounded-2" style="background-color: #ABA18B;">                   
                     <div v-for="record in services" :key="record.id" class="record-card">
                         <h5 class="text-dark mb-2 p-2" v-if="isDateInWeekRange(record.serviceDate)">
                             {{ formatMonthAndDay(record.serviceDate) }}
@@ -521,7 +521,7 @@ export default {
 @media screen and (min-width: 1024px) {
     .details-card {
         width: 180px;
-        height: 355px;
+        height: 385px;
         font-size: 0.8rem;
     }
     .details-card:hover {
@@ -532,7 +532,7 @@ export default {
 @media screen and (min-width: 1920px) {
     .details-card {
         width: 250px;
-        height: 320px;
+        height: 350px;
     }
 }
 
