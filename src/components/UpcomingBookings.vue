@@ -150,6 +150,9 @@
                                         <i class="m-1 bi bi-envelope-plus"></i>
                                     </a>
                                 </p>
+                                <p class="mb-0"><span class="fs-6">Time:<br> </span><span
+                                        style="font-family: Arial, Helvetica, sans-serif">{{ service.time
+                                        }}</span></p>
                                 <p class="card-text mb-1">
                                     <span class="fs-6">Phone:</span><br>
                                     <a :href="'tel:' + service.phone" class="text-decoration-none">
