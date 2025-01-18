@@ -75,14 +75,14 @@
                                     <p class="mb-0"><span class="fw-bold">Service: </span>{{
                                         service.serviceName }}</p>
                                     <!--Collapse Button-->
-                                    <button class="btn btn-sm w-100 btn-details mt-2 mb-2" type="button"
+                                    <button class="btn btn-sm w-100 btn-details mt-3 mb-2" type="button"
                                         :data-bs-toggle="'collapse'" :data-bs-target="'#collapse' + service.serviceId"
                                         :aria-expanded="false" :aria-controls="'collapse' + service.serviceId">
                                         <i class="bi bi-chevron-double-down"></i> Contact Info
                                     </button>
                                     <!--Collapsible Section-->
                                     <div :id="'collapse' + service.serviceId" class="collapse">
-                                        <p class="card-text mb-1">
+                                        <p class="card-text mb-1 mt-3">
                                             <strong>
                                                 Email:
                                             </strong>
