@@ -169,10 +169,12 @@
                                 </div>
                                 </p>
                                 <!-- Edit button -->
-                                <div class="text-end mt-3">
+                                 <div class="col-12">
+                                    <div class="text-end mt-3">
                                     <i @click="editService(service.serviceId)" class="bi bi-pencil"
                                         style="font-family: Arial, Helvetica, sans-serif"> Edit</i>
                                 </div>
+                                 </div>
                             </div>
                         </div>
                     </div>

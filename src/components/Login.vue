@@ -9,17 +9,17 @@
                    v-model="email"
                    placeholder="Email"
                    class="form-control rounded-3 py-2"
-                   style="font-size: 1.5rem;" />
+                   style="font-size: 1rem;" />
           </div>
           <div class="mb-3">
             <input required type="password"
                    v-model="password"
                    placeholder="Password"
                    class="form-control rounded-3 py-2"
-                   style="font-size: 1.5rem;" />
+                   style="font-size: 1rem;" />
           </div>
           <button type="submit"
-                  class="btn w-100 btn-book-now mt-2 fs-2">
+                  class="btn w-100 btn-book-now mt-2 fs-5">
             <i class="bi bi-person m-0 fs-2"></i>
             Login
           </button>
@@ -27,18 +27,15 @@
         <p v-if="message != ''" class="text-center mt-3 mb-0" style="font-size: 0.8rem; color: #3f72af;">{{ message }}</p>
       </div>
     </div>
-    <FooterComp></FooterComp>
   </template>
   
   <script>
     import axiosClient from "../util/axiosClient";
     import NavBar from './NavBar.vue';
-    import FooterComp from './FooterComp.vue'
   
     export default {
         components: {
     NavBar,
-    FooterComp,
   },
       data() {
         return {
@@ -95,7 +92,6 @@
     .btn-book-now {
       background-color: #E9A992; /* Semi-transparent background */
       color: #000;
-      padding: 10px 20px;
       border-radius: 25px;
       transition: background-color 0.3s ease;
       backdrop-filter: blur(10px);
