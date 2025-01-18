@@ -72,7 +72,7 @@
         </div>
         <!-- Links -->
         <div class="desktop-navbar col-6">
-          <ul class="navbar-nav d-flex flex-row">
+          <ul class="navbar-nav d-flex flex-row justify-content-center">
             <router-link to="/" class="nav-link m-3 pt-2 active" aria-current="page">
               HOME
             </router-link>
