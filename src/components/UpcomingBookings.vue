@@ -81,18 +81,14 @@
                                     <!--Collapsible Section-->
                                     <div :id="'collapse' + service.serviceId" class="collapse">
                                         <p class="card-text mb-1 mt-3">
-                                            <strong>
-                                                Email:
-                                            </strong>
+                                            Email:
                                             <a :href="'mailto:' + service.email" class="text-decoration-none">
                                                 <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email }}</span>
                                                 <i class="bi bi-envelope-plus"></i>
                                             </a>
                                         </p>
                                         <p class="card-text mb-1">
-                                            <strong>
-                                                Phone:
-                                            </strong>
+                                            Phone:
                                             <a :href="'tel:' + service.phone" class="text-decoration-none">
                                                 <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone }}</span>                                               
                                                 <i class="bi bi-telephone-outbound"></i>
@@ -103,7 +99,7 @@
                                             Online
                                         </div>
                                         <div v-else>
-                                            <strong>Address: <span style="font-family: Arial, Helvetica, sans-serif">{{ service.address }}</span></strong>
+                                            Address: <span style="font-family: Arial, Helvetica, sans-serif">{{ service.address }}</span>
                                         </div>
                                         </p>
                                     </div>
