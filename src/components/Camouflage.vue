@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div class="container-fluid p-0 position-relative">
-      <img src="../assets/rect.png" class="img-fluid w-100" style="height: 50px;">
+      <img src="../assets/rect.png" class="img-fluid w-100" style="height: 50px;" alt="Camouflage Image">
       <div class="overlay"></div>
     </div>
   </template>
