@@ -278,6 +278,8 @@
           <div class="col-12 col-md-6 d-flex justify-content-center">
             <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
               <source src="../assets/tankVideo.mp4" type="video/mp4">
+              <track src="../assets/captions.vtt" kind="subtitles" srclang="en" label="English">
+              <track src="../assets/captions_es.vtt" kind="subtitles" srclang="es" label="Español">
               Your browser does not support the video tag.
             </video>
           </div>
