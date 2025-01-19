@@ -23,7 +23,7 @@
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
             </router-link>
-            <button type="button" class="btn btn-color btn-sm"><a href="tel:+6494461709"
+            <button type="button" class="btn btn-color btn-sm"><a href="tel:+6494461709" aria-label="Call Now Button"
                 class="text-decoration-none text-color">Call Now</a></button>
           </div>
         </div>
@@ -53,7 +53,7 @@
 
           <div class="d-flex justify-content-center">
             <button class="btn card-btn-color btn-sm mt-3 mb-3">
-              <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white"
+              <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white" aria-label="Apply here Syncrony Button"
                 target="_blank">Apply Here</a>
             </button>
           </div>
@@ -76,7 +76,7 @@
 
           <div class="d-flex justify-content-center">
             <button class="btn card-btn-color btn-sm mt-3 mb-3">
-              <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
+              <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning" aria-label="Apply here Breeze Button"
                 class="text-decoration-none text-white">Apply Here</a>
             </button>
           </div>

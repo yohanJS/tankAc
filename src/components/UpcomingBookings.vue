@@ -83,7 +83,7 @@
                                 <div :id="'collapse' + service.serviceId" class="collapse">
                                     <p class="card-text mb-1 mt-3">
                                         Email:
-                                        <a :href="'mailto:' + service.email" class="text-decoration-none">
+                                        <a :href="'mailto:' + service.email" aria-label="Email to button" class="text-decoration-none">
                                             <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email
                                                 }}</span>
                                             <i class="m-1 bi bi-envelope-plus"></i>
@@ -91,7 +91,7 @@
                                     </p>
                                     <p class="card-text mb-1">
                                         Phone:
-                                        <a :href="'tel:' + service.phone" class="text-decoration-none">
+                                        <a :href="'tel:' + service.phone" aria-label="Phone Call Button" class="text-decoration-none">
                                             <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone
                                                 }}</span>
                                             <i class="m-1 bi bi-telephone-outbound"></i>
@@ -147,7 +147,7 @@
 
                                 <p class="card-text mb-1 mt-2">
                                     <span class="fs-6">Email:</span><br>
-                                    <a :href="'mailto:' + service.email" class="text-decoration-none">
+                                    <a :href="'mailto:' + service.email" aria-label="Email to Button" class="text-decoration-none">
                                         <span style="font-family: Arial, Helvetica, sans-serif">{{ service.email
                                             }}</span>
                                         <i class="m-1 bi bi-envelope-plus"></i>
@@ -158,7 +158,7 @@
                                         }}</span></p>
                                 <p class="card-text mb-1">
                                     <span class="fs-6">Phone:</span><br>
-                                    <a :href="'tel:' + service.phone" class="text-decoration-none">
+                                    <a :href="'tel:' + service.phone" aria-label="Call to Button" class="text-decoration-none">
                                         <span style="font-family: Arial, Helvetica, sans-serif">{{ service.phone
                                             }}</span>
                                         <i class="m-1 bi bi-telephone-outbound"></i>

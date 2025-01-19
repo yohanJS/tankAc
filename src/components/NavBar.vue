@@ -39,8 +39,6 @@
             <router-link v-if="!isLoggedIn" to="/Login" class="nav-link text-primary">
               LOGIN
             </router-link>
-            <!-- <li class="nav-item"><a class="nav-link" href="#">FINANCIAL</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li> -->
             <router-link v-else to="/Login" class="nav-link text-danger" @click="logout">
               LOGOUT
             </router-link>
