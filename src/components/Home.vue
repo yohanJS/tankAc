@@ -48,7 +48,7 @@
       <div class="col-6 col-md-3">
         <div class="card-color">
           <div class="d-flex justify-content-center">
-            <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;">
+            <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;" alt="Synchrony Card Image">
           </div>
 
           <div class="d-flex justify-content-center">
@@ -71,8 +71,7 @@
       <div class="col-6 col-md-3">
         <div class="card-color">
           <div class="d-flex justify-content-center">
-            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank"
-              style="width: 130px; height: 59px;">
+            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank" style="width: 130px; height: 59px;" alt="BreezeCard Image">
           </div>
 
           <div class="d-flex justify-content-center">
@@ -99,7 +98,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-0">
-        <img src="../assets/bannerImg.png" class=" banner-img img-fluid">
+        <img src="../assets/bannerImg.png" class=" banner-img img-fluid" alt="Banner Image Of Tank AC and Heat">
       </div>
     </div>
   </div>
