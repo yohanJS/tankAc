@@ -36,10 +36,10 @@
     <div class="row">
       <div class="col-12 text-center mb-3 mt-3">
         <h2 class="">Financing Options</h2>
-        <h6 class="mt-4 mb-3">
+        <p class="mt-4 mb-3">
           Great Options for Financing
           <br>Your New Air Conditioning System!
-        </h6>
+        </p>
       </div>
 
     </div>
@@ -278,7 +278,7 @@
           <div class="col-12 col-md-6 d-flex justify-content-center">
             <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
               <source src="../assets/tankVideo.mp4" type="video/mp4">
-              <track src="../assets/captions.vtt" kind="subtitles" srclang="en" label="English"> 
+              <track src="../assets/captions.vtt" kind="captions" srclang="en" label="English"> 
               <track src="../assets/audiodescription.vtt" kind="descriptions" srclang="en" label="Audio Description"> 
               Your browser does not support the video tag.
             </video>
