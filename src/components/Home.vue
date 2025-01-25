@@ -31,6 +31,9 @@
     </div>
   </div>
 
+  <!--CAMOUFLAGE SECTION-->
+ <Camouflage></Camouflage>
+ 
   <!--FINANCING OPTIONS SECTION-->
   <div class="container bg-color p-3">
     <div class="row">
@@ -94,7 +97,10 @@
     </div>
   </div>
 
+ <!--CAMOUFLAGE SECTION-->
+ <Camouflage></Camouflage>
   <!--BANNER SECTION-->
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-0">
@@ -102,7 +108,6 @@
       </div>
     </div>
   </div>
-
   <!--SERVICES SECTION-->
   <div class="container mb-5">
     <div class="row bg-color d-flex justify-content-center">
@@ -223,13 +228,16 @@
     </div>
   </div>
 
+ <!--CAMOUFLAGE SECTION-->
+ <Camouflage></Camouflage>
+
   <!--ABOUT US SECTION-->
-  <div class="container p-3 pt-4 pb-4 aboutUs-bg text-white">
+  <div class="container-fluid aboutUs-bg text-white">
     <div class="row d-flex justify-content-center">
       <div class="col-12 text-center mb-4">
         <h4>ABOUT US</h4>
       </div>
-      <div class="col-10 col-md-8 p-0">
+      <div class="col-10 col-md-5 p-0">
         <p>
           At TANK A/C & HEAT, we take pride in providing
           top-notch heating and cooling solutions with military precision
@@ -409,6 +417,7 @@ h1 {
 
 /* ABOUT US SECTION CSS */
 .aboutUs-bg {
+  padding: 80px 20px;
   background-color: #1A1919DB;
 }
 
