@@ -4,7 +4,7 @@
   <div id="bookingFormContainer" class="container p-0 text-dark">
     <div class="row m-0 p-4 text-center text-white" style="background-color: #454B1BB8;">
       <div class="col-12">
-        <h4>TRUST OUR HVAC EXPECTS</h4>
+        <h4>TRUST OUR HVAC EXPERTS</h4>
         <p>Professional cooling and heating services at your finger tips</p>
         <p v-if="step === 1" class="text-center mb-0 select-txt-color">Select service</p>
         <!--Step 2-->
