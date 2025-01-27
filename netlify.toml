@@ -4,6 +4,7 @@ to = "index.html"
 status = 200
 
 [[redirects]]
-from = "https://tankac.netlify.app/"
+from = "/*"
 to = "https://tankairandheat.com/"
-status = 200
+status = 301
+force = true
