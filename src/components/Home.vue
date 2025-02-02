@@ -36,13 +36,13 @@
   <Camouflage></Camouflage>
 
   <!--ELITE SECTION-->
-  <div class="container pt-4 pb-5">
-    <div class="row d-flex justify-content-start">
+  <div class="container pt-5 pb-5">
+    <div class="row pt-5 d-flex justify-content-start">
       <div class="col-12 col-md-6">
         <img src="../assets/fleetImg.png" class="img-fluid rounded-2" alt="Fleet truck of Tank AC and Heat" />
       </div>    
     </div>
-    <div class="row mt-5">
+    <div class="row pt-3 pb-5 mt-5">
       <div class="col-12">
         <div class="row d-flex justify-content-around">
           <div class="col-12 col-md-5 align-self-center">
