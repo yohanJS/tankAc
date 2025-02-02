@@ -36,7 +36,7 @@
   <Camouflage></Camouflage>
 
   <!--ELITE SECTION-->
-  <div class="container p-3 pt-4 pb-4 mb-4">
+  <div class="container p-3 pt-5 pb-5 mb-4">
     <div class="row d-flex justify-content-around">
       <div class="col-12 col-md-5 p-0">
         <div class="d-flex justify-content-center">
