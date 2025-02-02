@@ -262,10 +262,10 @@
           <div class="col-10">
             <section class="p-0">
               <div class="image rounded-2">
-                <img src="../assets/truckImg.png" alt="Fleet truck of Tank AC and Heat" />
+                <img src="../assets/fleetImg.png" alt="Fleet truck of Tank AC and Heat" />
               </div>
               <div class="text">
-                <img src="../assets/fleetImg.png" class="img-fluid rounded-2" alt="Fleet of Tank AC and Heat">
+                <img src="../assets/truckImg.png" class="img-fluid rounded-2" alt="Fleet of Tank AC and Heat">
               </div>
             </section>
           </div>
