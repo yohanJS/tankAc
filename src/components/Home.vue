@@ -75,7 +75,8 @@
       </div>
     </div>
   </div>
- 
+   <!--CAMOUFLAGE SECTION-->
+   <Camouflage></Camouflage>
   <!--FINANCING OPTIONS SECTION-->
   <div class="container bg-color p-3">
     <div class="row">
