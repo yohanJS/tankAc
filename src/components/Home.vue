@@ -45,17 +45,14 @@
               <div class="image rounded-2">
                 <img src="../assets/fleetImg.png" alt="Fleet truck of Tank AC and Heat" />
               </div>
-              <div class="text">
-                <img src="../assets/truckImg.png" class="img-fluid rounded-2" alt="Fleet of Tank AC and Heat">
-              </div>
             </section>
           </div>
         </div>
       </div>
       <br>
       <div class="col-10 col-md-6 p-0">
-        <div class="row d-flex justify-content-around mt-5">
-          <div class="col-12 col-md-5 align-self-center mt-5">
+        <div class="row d-flex justify-content-around">
+          <div class="col-12 col-md-5 align-self-center">
             <h2 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h2>
             <p>
               Stay cool and comfortable with top-notch AC service right at your fingertips.
