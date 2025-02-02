@@ -33,6 +33,48 @@
 
   <!--CAMOUFLAGE SECTION-->
  <Camouflage></Camouflage>
+
+   <!--ELITE SECTION-->
+   <div class="container p-3 pt-4 pb-4 mb-4">
+    <div class="row d-flex justify-content-around">
+      <div class="col-12 col-md-5 p-0">
+        <div class="d-flex justify-content-center">
+          <div class="col-10">
+            <section class="p-0">
+              <div class="image rounded-2">
+                <img src="../assets/fleetImg.png" alt="Fleet truck of Tank AC and Heat" />
+              </div>
+              <div class="text">
+                <img src="../assets/truckImg.png" class="img-fluid rounded-2" alt="Fleet of Tank AC and Heat">
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-10 col-md-6 p-0">
+        <div class="row d-flex justify-content-around mt-5">
+          <div class="col-12 col-md-5 align-self-center">
+            <h2 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h2>
+            <p>
+              Stay cool and comfortable with top-notch AC service right at your fingertips.
+              We’re here to make sure your home feels just right, with easy, reliable, and
+              friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve
+              got you covered—no hassle, just great service to keep you chill.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
+              <source src="../assets/tankVideo.mp4" type="video/mp4">
+              <track src="../assets/captions.vtt" kind="captions" srclang="en" label="English"> 
+              <track src="../assets/audiodescription.vtt" kind="descriptions" srclang="en" label="Audio Description"> 
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
  
   <!--FINANCING OPTIONS SECTION-->
   <div class="container bg-color p-3">
@@ -108,6 +150,7 @@
       </div>
     </div>
   </div>
+
   <!--SERVICES SECTION-->
   <div class="container mb-5">
     <div class="row bg-color d-flex justify-content-center">
@@ -250,48 +293,6 @@
           with the same unwavering loyalty and diligence
           that we brought to our military service.
         </p>
-      </div>
-    </div>
-  </div>
-
-  <!--ELITE SECTION-->
-  <div class="container p-3 pt-4 pb-4 mb-4">
-    <div class="row d-flex justify-content-around">
-      <div class="col-12 col-md-5 p-0">
-        <div class="d-flex justify-content-center">
-          <div class="col-10">
-            <section class="p-0">
-              <div class="image rounded-2">
-                <img src="../assets/fleetImg.png" alt="Fleet truck of Tank AC and Heat" />
-              </div>
-              <div class="text">
-                <img src="../assets/truckImg.png" class="img-fluid rounded-2" alt="Fleet of Tank AC and Heat">
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="col-10 col-md-6 p-0">
-        <div class="row d-flex justify-content-around mt-5">
-          <div class="col-12 col-md-5 align-self-center">
-            <h2 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h2>
-            <p>
-              Stay cool and comfortable with top-notch AC service right at your fingertips.
-              We’re here to make sure your home feels just right, with easy, reliable, and
-              friendly help whenever you need it. From quick fixes to regular tune-ups, we’ve
-              got you covered—no hassle, just great service to keep you chill.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 d-flex justify-content-center">
-            <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
-              <source src="../assets/tankVideo.mp4" type="video/mp4">
-              <track src="../assets/captions.vtt" kind="captions" srclang="en" label="English"> 
-              <track src="../assets/audiodescription.vtt" kind="descriptions" srclang="en" label="Audio Description"> 
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
       </div>
     </div>
   </div>
