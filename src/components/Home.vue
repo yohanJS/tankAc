@@ -41,7 +41,7 @@
       <div class="col-12 col-md-5 p-0">
         <div class="d-flex justify-content-center">
           <div class="col-10">
-            <section class="p-0">
+            <section class="p-0 m-0 mt-5">
               <div class="image rounded-2">
                 <img src="../assets/fleetImg.png" alt="Fleet truck of Tank AC and Heat" />
               </div>
