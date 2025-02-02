@@ -10,6 +10,7 @@
 
   <!--NAVBAR COMPONENT-->
   <NavBar />
+  
   <!--HERO SECTION-->
   <div class="container-fluid p-0">
     <div class="text-center hero-section">
@@ -32,10 +33,10 @@
   </div>
 
   <!--CAMOUFLAGE SECTION-->
- <Camouflage></Camouflage>
+  <Camouflage></Camouflage>
 
-   <!--ELITE SECTION-->
-   <div class="container p-3 pt-4 pb-4 mb-4">
+  <!--ELITE SECTION-->
+  <div class="container p-3 pt-4 pb-4 mb-4">
     <div class="row d-flex justify-content-around">
       <div class="col-12 col-md-5 p-0">
         <div class="d-flex justify-content-center">
@@ -66,8 +67,8 @@
           <div class="col-12 col-md-6 d-flex justify-content-center">
             <video class="rounded-2 w-100 align-self-start" autoplay muted loop controls playsinline>
               <source src="../assets/tankVideo.mp4" type="video/mp4">
-              <track src="../assets/captions.vtt" kind="captions" srclang="en" label="English"> 
-              <track src="../assets/audiodescription.vtt" kind="descriptions" srclang="en" label="Audio Description"> 
+              <track src="../assets/captions.vtt" kind="captions" srclang="en" label="English">
+              <track src="../assets/audiodescription.vtt" kind="descriptions" srclang="en" label="Audio Description">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -75,8 +76,10 @@
       </div>
     </div>
   </div>
-   <!--CAMOUFLAGE SECTION-->
-   <Camouflage></Camouflage>
+
+  <!--CAMOUFLAGE SECTION-->
+  <Camouflage></Camouflage>
+
   <!--FINANCING OPTIONS SECTION-->
   <div class="container bg-color p-3">
     <div class="row">
@@ -94,13 +97,14 @@
       <div class="col-6 col-md-3">
         <div class="card-color">
           <div class="d-flex justify-content-center">
-            <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;" alt="Synchrony Card Image">
+            <img src="../assets/synchronyCard.png" class="img-fluid mt-4 mb-3" style="width: 130px; height: 59px;"
+              alt="Synchrony Card Image">
           </div>
 
           <div class="d-flex justify-content-center">
             <button class="btn card-btn-color btn-sm mt-3 mb-3">
-              <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white" aria-label="Apply here Syncrony Button"
-                target="_blank">Apply Here</a>
+              <a href="https://www.mysynchrony.com/mmc/M9203263100" class="text-decoration-none text-white"
+                aria-label="Apply here Syncrony Button" target="_blank">Apply Here</a>
             </button>
           </div>
 
@@ -117,13 +121,14 @@
       <div class="col-6 col-md-3">
         <div class="card-color">
           <div class="d-flex justify-content-center">
-            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank" style="width: 130px; height: 59px;" alt="BreezeCard Image">
+            <img src="../assets/breezeCard.png" class="img-fluid mt-4 mb-3" target="_blank"
+              style="width: 130px; height: 59px;" alt="BreezeCard Image">
           </div>
 
           <div class="d-flex justify-content-center">
             <button class="btn card-btn-color btn-sm mt-3 mb-3">
-              <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning" aria-label="Apply here Breeze Button"
-                class="text-decoration-none text-white">Apply Here</a>
+              <a href="https://www.breezeleasehub.com/apply/TankAirConditioningLLC/tank-air-conditioning"
+                aria-label="Apply here Breeze Button" class="text-decoration-none text-white">Apply Here</a>
             </button>
           </div>
         </div>
@@ -140,10 +145,10 @@
     </div>
   </div>
 
- <!--CAMOUFLAGE SECTION-->
- <Camouflage></Camouflage>
-  <!--BANNER SECTION-->
+  <!--CAMOUFLAGE SECTION-->
+  <Camouflage></Camouflage>
 
+  <!--BANNER SECTION-->
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-0">
@@ -272,8 +277,8 @@
     </div>
   </div>
 
- <!--CAMOUFLAGE SECTION-->
- <Camouflage></Camouflage>
+  <!--CAMOUFLAGE SECTION-->
+  <Camouflage></Camouflage>
 
   <!--ABOUT US SECTION-->
   <div class="container-fluid aboutUs-bg text-white">
