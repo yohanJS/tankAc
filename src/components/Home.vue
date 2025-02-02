@@ -10,7 +10,7 @@
 
   <!--NAVBAR COMPONENT-->
   <NavBar />
-  
+
   <!--HERO SECTION-->
   <div class="container-fluid p-0">
     <div class="text-center hero-section">
@@ -55,7 +55,7 @@
       <br>
       <div class="col-10 col-md-6 p-0">
         <div class="row d-flex justify-content-around mt-5">
-          <div class="col-12 col-md-5 align-self-center">
+          <div class="col-12 col-md-5 align-self-center mt-5">
             <h2 class="text-dark">ELITE SERVICE AT YOUR FINGER TIPS</h2>
             <p>
               Stay cool and comfortable with top-notch AC service right at your fingertips.
