@@ -426,7 +426,7 @@ export default {
     selectDate(date) {
       this.selectedDate = date;
       this.formData.date = moment(date).format('YYYY/MM/DD');
-      this.fetchTimes(moment(date).format('YYYY/MM/DD'));
+      this.fetchTimes(moment(date).format('YYYY/MM/DD'), this.formData.businessId);
       this.goToStep(3);
     },
     isToday(date) {
@@ -459,8 +459,8 @@ export default {
       this.formData.time = time;
       this.goToStep(4);
     },
-    async fetchTimes(date) {
-      await axiosClient.get(this.GetTimesUrl, { params: { serviceDate: date } })
+    async fetchTimes(date, businessId) {
+      await axiosClient.get(this.GetTimesUrl, { params: { serviceDate: date, businessId: businessId } })
         .then((response) => {
           this.takenTimes = response.data;
         });
