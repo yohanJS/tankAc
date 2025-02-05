@@ -58,7 +58,6 @@
 
     <form @submit.prevent="submitForm" class="p-2 rounded-1">
       <!--Booking Details-->
-      <!-- Booking Details -->
       <div v-if="step === 4 && formData.service !== ''" class="p-4 m-3 rounded box-shadow form-style">
         <i class="bi bi-info-circle fs-5"></i>
         <p class=" fs-6 fw-bold">Your Appointment Details:</p>
@@ -123,9 +122,14 @@
       <div v-if="step === 3">
         <div class="timepicker-container m-2 mx-auto rounded-2">
           <div class="time-grid">
-            <div v-for="(time, index) in timeSlots" :key="index"
-              :class="['time-box shadow-sm', { 'taken': takenTimes.includes(time), 'selected': selectedTime === time }]"
-              @click="!takenTimes.includes(time) && selectTime(time)">
+            <div 
+              v-for="(time, index) in timeSlots" 
+              :key="index"
+              :class="['time-box shadow-sm', { 
+                'taken': getTimeCount(time) > 3, 
+                'selected': selectedTime === time 
+              }]"
+              @click="getTimeCount(time) <= 3 && selectTime(time)">
               {{ time }}
             </div>
           </div>
@@ -334,10 +338,19 @@ export default {
     const container = document.getElementById("bookingFormContainer");
     container.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    this.CreateBookingUrl = this.isPrd ? "https://engfuel.com/Bookings/CreateBooking" : "https://localhost:7144/Bookings/CreateBooking";
-    this.GetTimes = this.isPrd ? "https://engfuel.com/Bookings/GetTimes" : "https://localhost:7144/Bookings/GetTimes";
+    this.CreateBookingUrl = this.isPrd ? "/Bookings/CreateBooking" : "/Bookings/CreateBooking";
+    this.GetTimesUrl = this.isPrd ? "/Bookings/GetTimes" : "/Bookings/GetTimes";
   },
   methods: {
+    getTimeCount(time) {
+      let count = 0;
+      this.takenTimes.forEach(t => {
+        if (t === time) {
+          count++;
+        };
+      });
+    return count;
+  },
     validateFormData(formData) {
       for (const key in formData) {
         const value = formData[key];
@@ -447,7 +460,7 @@ export default {
       this.goToStep(4);
     },
     async fetchTimes(date) {
-      await axiosClient.get(this.GetTimes, { params: { serviceDate: date } })
+      await axiosClient.get(this.GetTimesUrl, { params: { serviceDate: date } })
         .then((response) => {
           this.takenTimes = response.data;
         });
