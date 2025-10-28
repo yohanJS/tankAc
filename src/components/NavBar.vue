@@ -30,9 +30,9 @@
             <router-link to="/" class="nav-link active" aria-current="page">
               HOME
             </router-link>
-            <router-link to="/Booking" class="nav-link">
+            <a href="#" @click.prevent="showMaintenanceModal" class="nav-link">
                 BOOK
-            </router-link>
+            </a>
             <router-link v-if="isLoggedIn" to="/UpcomingBookings" class="nav-link">
               UPCOMING BOOKINGS
             </router-link>
@@ -74,9 +74,9 @@
             <router-link to="/" class="nav-link m-3 pt-2 active" aria-current="page">
               HOME
             </router-link>
-            <router-link to="/Booking" class="nav-link m-3 pt-2">
+            <a href="#" @click.prevent="showMaintenanceModal" class="nav-link m-3 pt-2">
               BOOK
-            </router-link>
+            </a>
             <router-link v-if="isLoggedIn" to="/UpcomingBookings" class="nav-link m-3 pt-2">
               UPCOMING BOOKINGS
             </router-link>
@@ -93,10 +93,31 @@
       </div>
     </div>
   </nav>
+
+  <!-- Maintenance Modal -->
+  <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modern-modal rounded-2 border-0 shadow-lg">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="maintenanceModalLabel">System Maintenance</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <i class="bi bi-wrench-adjustable fs-1 mb-3"></i>
+          <p>Our booking system is currently undergoing maintenance. We apologize for any inconvenience.</p>
+          <p>Please contact us directly at:</p>
+          <a href="tel:+6494461709" class="btn btn-color text-color mt-2">
+            <i class="bi bi-telephone-fill me-2"></i>Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import * as bootstrap from 'bootstrap';
 
 export default {
   data() {
@@ -110,6 +131,11 @@ export default {
       // Set a flag in localStorage to indicate successful login
       sessionStorage.setItem("isLoggedIn", "false");
       this.isLoggedIn = false;
+    },
+    showMaintenanceModal() {
+      const modalElement = document.getElementById('maintenanceModal');
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
     },
   },
   setup() {
@@ -196,5 +222,24 @@ export default {
   top: 0;
   width: 100%;
   z-index: 9999;
+}
+
+/* Modal styles */
+.modern-modal {
+  background-color: #d9d9d9;
+  color: #000;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.btn-color {
+  background-color: #d9d9d9;
+}
+
+.text-color {
+  color: #E95722;
 }
 </style>
