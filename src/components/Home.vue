@@ -2,30 +2,10 @@
 <template id="home">
   <div>
     <!-- Floating Booking Icon -->
-    <button @click="showMaintenanceModal" class="booking-icon btn btn-color text-color btn-sm">
+    <router-link to="/Booking" class="booking-icon btn btn-color text-color btn-sm">
       Book Visit
       <i class="bi bi-chevron-double-right"></i>
-    </button>
-  </div>
-
-  <!-- Maintenance Modal -->
-  <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content modern-modal rounded-2 border-0 shadow-lg">
-        <div class="modal-header border-0">
-          <h5 class="modal-title" id="maintenanceModalLabel">System Maintenance</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center p-4">
-          <i class="bi bi-wrench-adjustable fs-1 mb-3"></i>
-          <p>Our booking system is currently undergoing maintenance. We apologize for any inconvenience.</p>
-          <p>Please contact us directly at:</p>
-          <a href="tel:+6494461709" class="btn btn-color text-color mt-2">
-            <i class="bi bi-telephone-fill me-2"></i>Call Now
-          </a>
-        </div>
-      </div>
-    </div>
+    </router-link>
   </div>
 
   <!--NAVBAR COMPONENT-->
@@ -40,10 +20,10 @@
         <div class="col-lg-6 mx-auto">
           <p class="m-0 text-white">Help is one click away</p>
           <div class="d-flex justify-content-center gap-2 mt-4">
-            <button @click="showMaintenanceModal" class="btn btn-color text-color btn-sm">
+            <router-link to="/Booking" class="btn btn-color text-color btn-sm">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
-            </button>
+            </router-link>
             <button type="button" class="btn btn-color btn-sm"><a href="tel:+6494461709" aria-label="Call Now Button"
                 class="text-decoration-none text-color">Call Now</a></button>
           </div>
@@ -192,10 +172,10 @@
             <p class="text-center">
               Get your air conditioner back to optimal performance with our fast, reliable repair services.
             </p>
-            <button @click="showMaintenanceModal" class="btn btn-color text-color btn">
+            <router-link to="/Booking" class="btn btn-color text-color btn">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -209,10 +189,10 @@
             <p class="text-center">
               Keep your cooling system running efficiently year-round with our comprehensive maintenance plans.
             </p>
-            <button @click="showMaintenanceModal" class="btn btn-color text-color btn">
+            <router-link to="/Booking" class="btn btn-color text-color btn">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -226,10 +206,10 @@
             <p class="text-center">
               Trust our experts for seamless and energy-efficient AC installations tailored to your needs.
             </p>
-            <button @click="showMaintenanceModal" class="btn btn-color text-color btn">
+            <router-link to="/Booking" class="btn btn-color text-color btn">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -243,10 +223,10 @@
             <p class="text-center">
               Improve Indoor Air Quality. Professional Air Duct Cleaning.
             </p>
-            <button @click="showMaintenanceModal" class="btn btn-color text-color btn">
+            <router-link to="/Booking" class="btn btn-color text-color btn">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -260,10 +240,10 @@
             <p class="text-center">
               Identify & Eliminate Indoor Air Pollutants. Comprehensive IAQ Testing.
             </p>
-            <button @click="showMaintenanceModal" class="btn btn-color text-color btn">
+            <router-link to="/Booking" class="btn btn-color text-color btn">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -277,10 +257,10 @@
             <p class="text-center">
               Prevent Mold & Bacteria Growth. UV Light Installation for Your HVAC System.
             </p>
-            <button @click="showMaintenanceModal" class="btn btn-color text-color btn">
+            <router-link to="/Booking" class="btn btn-color text-color btn">
               Book Visit
               <i class="bi bi-chevron-double-right"></i>
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -520,7 +500,6 @@ section>.text {
 import NavBar from './NavBar.vue';
 import Camouflage from './Camouflage.vue'
 import FooterComp from './FooterComp.vue'
-import * as bootstrap from 'bootstrap'
 
 export default {
   components: {
@@ -537,13 +516,6 @@ export default {
     return {
       currentYear: new Date().getFullYear(),
     };
-  },
-  methods: {
-    showMaintenanceModal() {
-      const modalElement = document.getElementById('maintenanceModal');
-      const modal = new bootstrap.Modal(modalElement);
-      modal.show();
-    }
   },
 };
 </script>
