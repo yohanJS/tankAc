@@ -219,8 +219,8 @@ export default {
     async created() {
         await this.$nextTick();
         this.getWeekRange();
-        this.GetservicesUrl = this.isPrd ? "https://engfuel.com/Bookings/GetAllBookings?businessId=TankAcLLC" : "https://localhost:7091/Bookings/GetAllBookings?businessId=TankAcLLC";
-        this.EditServicesUrl = this.isPrd ? "https://engfuel.com/Bookings/EditBooking" : "https://localhost:7091/Bookings/EditBooking";
+        this.GetservicesUrl = this.isPrd ? "https://syvoonapi-degpcfa9ddh0evbb.canadacentral-01.azurewebsites.net/Bookings/GetAllBookings?businessId=TankAcLLC" : "https://localhost:7091/Bookings/GetAllBookings?businessId=TankAcLLC";
+        this.EditServicesUrl = this.isPrd ? "https://syvoonapi-degpcfa9ddh0evbb.canadacentral-01.azurewebsites.net/Bookings/EditBooking" : "https://localhost:7091/Bookings/EditBooking";
         await this.fetchServices();
     },
     watch: {

@@ -49,12 +49,12 @@
       },
       methods: {
         async created() {
-          this.LoginUrl = this.isPrd ? "https://engfuel.com/Account/login" : "https://localhost:7144/Account/login";
+          this.LoginUrl = this.isPrd ? "https://syvoonapi-degpcfa9ddh0evbb.canadacentral-01.azurewebsites.net/Account/login" : "https://localhost:7144/Account/login";
         },
         async login() {
           try {
               //const response = await axiosClient.post("https://localhost:7144/Account/login", {
-              const response = await axiosClient.post("https://engfuel.com/Account/login", {
+              const response = await axiosClient.post("https://syvoonapi-degpcfa9ddh0evbb.canadacentral-01.azurewebsites.net/Account/login", {
               email: this.email,
               password: this.password,
               });
